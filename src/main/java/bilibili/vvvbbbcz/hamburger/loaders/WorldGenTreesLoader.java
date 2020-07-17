@@ -1,6 +1,6 @@
 package bilibili.vvvbbbcz.hamburger.loaders;
 
-import bilibili.vvvbbbcz.largeprojectslao8.world.trees.WorldGenLemonTree;
+import bilibili.vvvbbbcz.hamburger.world.trees.WorldGenLemonTree;
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.math.BlockPos;

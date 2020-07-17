@@ -1,11 +1,11 @@
 package bilibili.vvvbbbcz.hamburger.loaders;
 
-import bilibili.vvvbbbcz.largeprojectslao8.LargeprojectsLao8;
-import bilibili.vvvbbbcz.largeprojectslao8.configure.ModConfig;
-import bilibili.vvvbbbcz.largeprojectslao8.entities.EntityDuck;
-import bilibili.vvvbbbcz.largeprojectslao8.entities.EntityDuckEgg;
-import bilibili.vvvbbbcz.largeprojectslao8.entities.renders.RenderDuck;
-import bilibili.vvvbbbcz.largeprojectslao8.entities.renders.RenderDuckEgg;
+import bilibili.vvvbbbcz.hamburger.hamburger;
+import bilibili.vvvbbbcz.hamburger.configure.ModConfig;
+import bilibili.vvvbbbcz.hamburger.entities.EntityDuck;
+import bilibili.vvvbbbcz.hamburger.entities.EntityDuckEgg;
+import bilibili.vvvbbbcz.hamburger.entities.renders.RenderDuck;
+import bilibili.vvvbbbcz.hamburger.entities.renders.RenderDuckEgg;
 import net.minecraft.entity.EnumCreatureType;
 import net.minecraft.init.Biomes;
 import net.minecraft.util.ResourceLocation;
@@ -21,7 +21,7 @@ public class EntityLoader {
         event.getRegistry().register(EntityEntryBuilder.create()
                 .entity(EntityDuck.class)
                 .egg(0xd5ff00, 0x8ca700)
-                .id(new ResourceLocation(LargeprojectsLao8.MODID, "duck"), ModConfig.ID_ENTITY_DUCK)
+                .id(new ResourceLocation(hamburger.MODID, "duck"), ModConfig.ID_ENTITY_DUCK)
                 .tracker(80, 3, false)
                 .spawn(EnumCreatureType.CREATURE, 10, 4, 4, Biomes.JUNGLE, Biomes.PLAINS)
                 .name("duck")
@@ -29,7 +29,7 @@ public class EntityLoader {
 
         event.getRegistry().register(EntityEntryBuilder.create()
                 .entity(EntityDuckEgg.class)
-                .id(new ResourceLocation(LargeprojectsLao8.MODID, "duck_egg"), ModConfig.ID_ENTITY_DUCK_EGG)
+                .id(new ResourceLocation(hamburger.MODID, "duck_egg"), ModConfig.ID_ENTITY_DUCK_EGG)
                 .tracker(64, 1, false)
                 .name("duckEgg")
                 .build());

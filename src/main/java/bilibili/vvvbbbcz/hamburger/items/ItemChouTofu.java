@@ -1,11 +1,10 @@
 package bilibili.vvvbbbcz.hamburger.items;
 
-import bilibili.vvvbbbcz.largeprojectslao8.loaders.CreativeTabLoader;
+import bilibili.vvvbbbcz.hamburger.loaders.ItemGroupLoader;
 import net.minecraft.item.Item;
 
 public class ItemChouTofu extends Item {
     public ItemChouTofu() {
-        this.setUnlocalizedName("chouTofu");
-        this.setCreativeTab(CreativeTabLoader.tabLao8);
+        super(new Properties().group(ItemGroupLoader.tabLao8));
     }
 }

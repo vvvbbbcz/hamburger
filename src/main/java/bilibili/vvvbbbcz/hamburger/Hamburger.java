@@ -17,6 +17,7 @@ import org.apache.logging.log4j.Logger;
 @Mod("hamburger")
 public class Hamburger {
     private static final Logger LOGGER = LogManager.getLogger();
+    public static final String MODID = "Hamburger";
 
     public Hamburger() {
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
@@ -42,14 +43,5 @@ public class Hamburger {
     @SubscribeEvent
     public void onServerStarting(FMLServerStartingEvent event) {
         // do something when the server starts
-    }
-
-    @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
-    public static class RegistryEvents {
-        @SubscribeEvent
-        public static void onBlocksRegistry(final RegistryEvent.Register<Block> blockRegistryEvent) {
-            // register a new block here
-            LOGGER.info("HELLO from Register Block");
-        }
     }
 }

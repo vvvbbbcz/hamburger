@@ -1,11 +1,10 @@
 package bilibili.vvvbbbcz.hamburger.items;
 
-import bilibili.vvvbbbcz.largeprojectslao8.loaders.CreativeTabLoader;
+import bilibili.vvvbbbcz.hamburger.loaders.ItemGroupLoader;
 import net.minecraft.item.Item;
 
 public class ItemSalt extends Item {
     public ItemSalt() {
-        this.setUnlocalizedName("salt");
-        this.setCreativeTab(CreativeTabLoader.tabLao8);
+        super(new Properties().group(ItemGroupLoader.tabLao8));
     }
 }

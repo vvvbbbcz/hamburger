@@ -1,6 +1,6 @@
 package bilibili.vvvbbbcz.hamburger.loaders;
 
-import bilibili.vvvbbbcz.largeprojectslao8.fluid.FluidShit;
+import bilibili.vvvbbbcz.hamburger.fluid.FluidShit;
 import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fluids.FluidRegistry;
 

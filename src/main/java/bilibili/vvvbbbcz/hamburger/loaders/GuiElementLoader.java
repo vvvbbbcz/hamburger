@@ -1,10 +1,10 @@
 package bilibili.vvvbbbcz.hamburger.loaders;
 
-import bilibili.vvvbbbcz.largeprojectslao8.configure.ModConfig;
-import bilibili.vvvbbbcz.largeprojectslao8.gui.container.ContainerIronPan;
-import bilibili.vvvbbbcz.largeprojectslao8.gui.GuiIronPan;
-import bilibili.vvvbbbcz.largeprojectslao8.gui.tileentity.TileEntityIronPan;
-import bilibili.vvvbbbcz.largeprojectslao8.LargeprojectsLao8;
+import bilibili.vvvbbbcz.hamburger.configure.ModConfig;
+import bilibili.vvvbbbcz.hamburger.gui.container.ContainerIronPan;
+import bilibili.vvvbbbcz.hamburger.gui.GuiIronPan;
+import bilibili.vvvbbbcz.hamburger.gui.tileentity.TileEntityIronPan;
+import bilibili.vvvbbbcz.hamburger.hamburger;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
@@ -15,7 +15,7 @@ import javax.annotation.Nullable;
 
 public class GuiElementLoader implements IGuiHandler {
     public GuiElementLoader() {
-        NetworkRegistry.INSTANCE.registerGuiHandler(LargeprojectsLao8.instance, this);
+        NetworkRegistry.INSTANCE.registerGuiHandler(hamburger.instance, this);
     }
 
     @Nullable

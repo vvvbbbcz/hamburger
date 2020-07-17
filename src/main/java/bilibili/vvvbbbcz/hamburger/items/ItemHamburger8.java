@@ -1,30 +1,30 @@
 package bilibili.vvvbbbcz.hamburger.items;
 
-import bilibili.vvvbbbcz.largeprojectslao8.loaders.CreativeTabLoader;
-import bilibili.vvvbbbcz.largeprojectslao8.loaders.PotionLoader;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.MobEffects;
-import net.minecraft.item.ItemFood;
+import bilibili.vvvbbbcz.hamburger.loaders.EffectLoader;
+import bilibili.vvvbbbcz.hamburger.loaders.ItemGroupLoader;
+import net.minecraft.item.Food;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.potion.PotionEffect;
-import net.minecraft.world.World;
-import net.minecraftforge.fml.relauncher.Side;
-import net.minecraftforge.fml.relauncher.SideOnly;
+import net.minecraft.potion.EffectInstance;
+import net.minecraft.potion.Effects;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 
-public class ItemHamburger8 extends ItemFood {
+public class ItemHamburger8 extends Item {
+    private static final EffectInstance SHIT = new EffectInstance(EffectLoader.SHIT);
+    private static final EffectInstance NAUSEA = new EffectInstance(Effects.NAUSEA);
+    private static final Food FOOD = (new Food.Builder())
+            .hunger(10)
+            .saturation(10.0F)
+            .effect(SHIT, 1.0F)
+            .effect(NAUSEA, 1.0F)
+            .build();
+
     public ItemHamburger8() {
-        super(10, 10.0F, false);
-        this.setUnlocalizedName("hamburger8");
-        this.setCreativeTab(CreativeTabLoader.tabLao8);
+        super(new Properties().food(FOOD).group(ItemGroupLoader.tabLao8));
     }
 
-    @Override
-    protected void onFoodEaten(ItemStack stack, World worldIn, EntityPlayer player) {
-        player.addPotionEffect(new PotionEffect(PotionLoader.potionShit, 2400, 2));
-        player.addPotionEffect(new PotionEffect(MobEffects.NAUSEA, 2400, 0));
-    }
-
-    @SideOnly(Side.CLIENT)
+    @OnlyIn(Dist.CLIENT)
     @Override
     public boolean hasEffect(ItemStack stack) {
         return true;

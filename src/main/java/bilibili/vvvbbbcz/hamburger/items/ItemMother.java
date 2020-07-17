@@ -1,11 +1,10 @@
 package bilibili.vvvbbbcz.hamburger.items;
 
-import bilibili.vvvbbbcz.largeprojectslao8.loaders.CreativeTabLoader;
+import bilibili.vvvbbbcz.hamburger.loaders.ItemGroupLoader;
 import net.minecraft.item.Item;
 
-public class ItemMother extends Item {
+public class ItemMother extends Item { // 老干妈
     public ItemMother() {
-        this.setUnlocalizedName("mother");
-        this.setCreativeTab(CreativeTabLoader.tabLao8);
+        super(new Properties().group(ItemGroupLoader.tabLao8));
     }
 }

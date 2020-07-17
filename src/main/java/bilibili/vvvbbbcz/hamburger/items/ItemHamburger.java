@@ -1,22 +1,20 @@
 package bilibili.vvvbbbcz.hamburger.items;
 
-import bilibili.vvvbbbcz.largeprojectslao8.loaders.CreativeTabLoader;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.MobEffects;
-import net.minecraft.item.ItemFood;
-import net.minecraft.item.ItemStack;
-import net.minecraft.potion.PotionEffect;
-import net.minecraft.world.World;
+import bilibili.vvvbbbcz.hamburger.loaders.ItemGroupLoader;
+import net.minecraft.item.Food;
+import net.minecraft.item.Item;
+import net.minecraft.potion.EffectInstance;
+import net.minecraft.potion.Effects;
 
-public class ItemHamburger extends ItemFood {
+public class ItemHamburger extends Item {
+    private static final EffectInstance NAUSEA = new EffectInstance(Effects.NAUSEA, 2400, 0);
+    private static final Food FOOD = (new Food.Builder())
+            .hunger(8)
+            .saturation(6.0F)
+            .effect(NAUSEA, 1.0F)
+            .build();
+
     public ItemHamburger() {
-        super(8, 6.0F, false);
-        this.setUnlocalizedName("hamburger");
-        this.setCreativeTab(CreativeTabLoader.tabLao8);
-    }
-
-    @Override
-    protected void onFoodEaten(ItemStack stack, World worldIn, EntityPlayer player) {
-        player.addPotionEffect(new PotionEffect(MobEffects.NAUSEA, 2400, 0));
+        super(new Properties().food(FOOD).group(ItemGroupLoader.tabLao8));
     }
 }

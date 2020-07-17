@@ -3,8 +3,8 @@ package bilibili.vvvbbbcz.hamburger.items;
 import bilibili.vvvbbbcz.hamburger.loaders.ItemGroupLoader;
 import net.minecraft.item.Item;
 
-public class ItemTofu extends Item {
-    public ItemTofu() {
+public class ItemBeanCurd extends Item {
+    public ItemBeanCurd() {
         super(new Properties().group(ItemGroupLoader.tabLao8));
     }
 }

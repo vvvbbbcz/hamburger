@@ -2,7 +2,11 @@ package bilibili.vvvbbbcz.hamburger.entities;
 
 import bilibili.vvvbbbcz.largeprojectslao8.loaders.RegisterLoader;
 import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.entity.EntityType;
+import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.projectile.EggEntity;
 import net.minecraft.entity.projectile.EntityThrowable;
+import net.minecraft.entity.projectile.ProjectileItemEntity;
 import net.minecraft.item.Item;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.EnumParticleTypes;
@@ -11,17 +15,17 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class EntityDuckEgg extends EntityThrowable {
-    public EntityDuckEgg(World worldIn) {
-        super(worldIn);
+public class EntityDuckEgg extends ProjectileItemEntity {
+    public EntityDuckEgg(EntityType<? extends ProjectileItemEntity> type, World worldIn) {
+        super(type, worldIn);
     }
 
-    public EntityDuckEgg(World worldIn, double x, double y, double z) {
-        super(worldIn, x, y, z);
+    public EntityDuckEgg(EntityType<? extends ProjectileItemEntity> type, double x, double y, double z, World worldIn) {
+        super(type, x, y, z, worldIn);
     }
 
-    public EntityDuckEgg(World worldIn, EntityLivingBase throwerIn) {
-        super(worldIn, throwerIn);
+    public EntityDuckEgg(LivingEntity livingEntityIn, World worldIn) {
+        super(null, livingEntityIn, worldIn); // TODO
     }
 
     @SideOnly(Side.CLIENT)
@@ -59,5 +63,10 @@ public class EntityDuckEgg extends EntityThrowable {
             this.world.setEntityState(this, (byte) 3);
             this.setDead();
         }
+    }
+
+    @Override
+    protected Item getDefaultItem() {
+        return null;
     }
 }

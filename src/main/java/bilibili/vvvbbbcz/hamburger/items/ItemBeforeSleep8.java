@@ -1,41 +1,42 @@
 package bilibili.vvvbbbcz.hamburger.items;
 
-import bilibili.vvvbbbcz.largeprojectslao8.loaders.CreativeTabLoader;
-import bilibili.vvvbbbcz.largeprojectslao8.loaders.PotionLoader;
-import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.Items;
-import net.minecraft.init.MobEffects;
-import net.minecraft.item.ItemFood;
+import bilibili.vvvbbbcz.hamburger.loaders.ItemGroupLoader;
+import bilibili.vvvbbbcz.hamburger.loaders.EffectLoader;
+import net.minecraft.entity.LivingEntity;
+import net.minecraft.item.Food;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.potion.PotionEffect;
+import net.minecraft.item.Items;
+import net.minecraft.potion.EffectInstance;
+import net.minecraft.potion.Effects;
 import net.minecraft.world.World;
-import net.minecraftforge.fml.relauncher.Side;
-import net.minecraftforge.fml.relauncher.SideOnly;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 
 import javax.annotation.Nonnull;
 
-public class ItemBeforeSleep8 extends ItemFood {
-    public ItemBeforeSleep8() {
-        super(10, 10.0F, false);
-        this.setUnlocalizedName("beforeSleep8");
-        this.setCreativeTab(CreativeTabLoader.tabLao8);
-    }
+public class ItemBeforeSleep8 extends Item {
+    private static final EffectInstance SHIT = new EffectInstance(EffectLoader.SHIT, 2400, 2);
+    private static final EffectInstance NAUSEA = new EffectInstance(Effects.NAUSEA, 2400, 0);
+    private static final Food FOOD = (new Food.Builder())
+            .hunger(10)
+            .saturation(10.0F)
+            .effect(SHIT, 1.0F)
+            .effect(NAUSEA, 1.0F)
+            .build();
 
-    @Override
-    protected void onFoodEaten(ItemStack stack, World worldIn, EntityPlayer player) {
-        player.addPotionEffect(new PotionEffect(PotionLoader.potionShit, 2400, 2));
-        player.addPotionEffect(new PotionEffect(MobEffects.NAUSEA, 2400, 0));
+    public ItemBeforeSleep8() {
+        super(new Properties().food(FOOD).group(ItemGroupLoader.tabLao8));
     }
 
     @Nonnull
     @Override
-    public ItemStack onItemUseFinish(ItemStack stack, World worldIn, EntityLivingBase entityLiving) {
+    public ItemStack onItemUseFinish(ItemStack stack, World worldIn, LivingEntity entityLiving) {
         super.onItemUseFinish(stack, worldIn, entityLiving);
         return new ItemStack(Items.BOWL);
     }
 
-    @SideOnly(Side.CLIENT)
+    @OnlyIn(Dist.CLIENT)
     @Override
     public boolean hasEffect(ItemStack stack) {
         return true;

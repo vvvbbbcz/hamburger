@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "largeprojectslao8:stone_wc/stone_wc_0"
+    },
+    "facing=south": {
+      "model": "largeprojectslao8:stone_wc/stone_wc_1"
+    },
+    "facing=west": {
+      "model": "largeprojectslao8:stone_wc/stone_wc_2"
+    },
+    "facing=east": {
+      "model": "largeprojectslao8:stone_wc/stone_wc_3"
+    }
+  }
+}

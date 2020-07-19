@@ -1,0 +1,37 @@
+{
+  "ao": {
+    "category": "player",
+    "subtitle": "largeprojectslao8.sound.ao",
+    "sounds": [
+      "largeprojectslao8:ao"
+    ]
+  },
+  "li": {
+    "category": "player",
+    "subtitle": "largeprojectslao8.sound.ao",
+    "sounds": [
+      "largeprojectslao8:li"
+    ]
+  },
+  "gei": {
+    "category": "player",
+    "subtitle": "largeprojectslao8.sound.ao",
+    "sounds": [
+      "largeprojectslao8:gei"
+    ]
+  },
+  "gan": {
+    "category": "player",
+    "subtitle": "largeprojectslao8.sound.ao",
+    "sounds": [
+      "largeprojectslao8:gan"
+    ]
+  },
+  "le": {
+    "category": "player",
+    "subtitle": "largeprojectslao8.sound.ao",
+    "sounds": [
+      "largeprojectslao8:le"
+    ]
+  }
+}

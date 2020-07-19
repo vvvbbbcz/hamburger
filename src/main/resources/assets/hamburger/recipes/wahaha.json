@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#$#",
+    "$X$",
+    "#$#"
+  ],
+  "key": {
+    "#": [
+      {
+        "item": "largeprojectslao8:lemon"
+      }
+    ],
+    "X": [
+      {
+        "item": "minecraft:milk_bucket"
+      }
+    ],
+    "$": [
+      {
+        "item": "minecraft:sugar"
+      }
+    ]
+  },
+  "result": {
+    "item": "largeprojectslao8:wahaha"
+  }
+}

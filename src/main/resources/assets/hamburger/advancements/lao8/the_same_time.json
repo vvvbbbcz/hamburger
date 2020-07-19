@@ -1,0 +1,53 @@
+{
+  "display": {
+    "icon": {
+      "item": "largeprojectslao8:iron_wc"
+    },
+    "title": {
+      "translate": "advancements.lao8.the_same_time.title"
+    },
+    "description": {
+      "translate": "advancements.lao8.the_same_time.description"
+    }
+  },
+  "parent": "largeprojectslao8:lao8/welcome",
+  "criteria": {
+    "get_wood_wc": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "largeprojectslao8:wood_wc"
+          }
+        ]
+      }
+    },
+    "get_stone_wc": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "largeprojectslao8:stone_wc"
+          }
+        ]
+      }
+    },
+    "get_iron_wc": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "largeprojectslao8:iron_wc"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "get_wood_wc",
+      "get_stone_wc",
+      "get_iron_wc"
+    ]
+  ]
+}

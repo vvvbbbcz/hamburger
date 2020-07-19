@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "axis=y":  { "model": "largeprojectslao8:lemon_log" },
+    "axis=z":   { "model": "largeprojectslao8:lemon_log", "x": 90 },
+    "axis=x":   { "model": "largeprojectslao8:lemon_log", "x": 90, "y": 90 },
+    "axis=none": { "model": "largeprojectslao8:lemon_bark" }
+  }
+}

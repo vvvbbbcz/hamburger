@@ -1,0 +1,38 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " A ",
+    "BCD",
+    " # "
+  ],
+  "key": {
+    "A": [
+      {
+        "item": "largeprojectslao8:chou_tofu"
+      }
+    ],
+    "B": [
+      {
+        "item": "largeprojectslao8:furu"
+      }
+    ],
+    "C": [
+      {
+        "item": "largeprojectslao8:mother"
+      }
+    ],
+    "D": [
+      {
+        "item": "largeprojectslao8:wahaha"
+      }
+    ],
+    "#": [
+      {
+        "item": "minecraft:bowl"
+      }
+    ]
+  },
+  "result": {
+    "item": "largeprojectslao8:before_sleep"
+  }
+}

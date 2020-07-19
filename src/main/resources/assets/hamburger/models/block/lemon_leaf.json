@@ -1,0 +1,6 @@
+{
+  "parent": "block/leaves",
+  "textures": {
+    "all": "largeprojectslao8:blocks/lemon_leaf"
+  }
+}

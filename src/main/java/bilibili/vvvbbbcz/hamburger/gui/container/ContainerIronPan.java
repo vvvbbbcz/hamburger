@@ -1,15 +1,17 @@
 package bilibili.vvvbbbcz.hamburger.gui.container;
 
-import bilibili.vvvbbbcz.largeprojectslao8.gui.tileentity.TileEntityIronPan;
-import bilibili.vvvbbbcz.largeprojectslao8.loaders.RegisterLoader;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.inventory.Container;
-import net.minecraft.inventory.IContainerListener;
-import net.minecraft.inventory.Slot;
+import bilibili.vvvbbbcz.hamburger.loaders.GuiLoader;
+import bilibili.vvvbbbcz.hamburger.loaders.RegisterLoader;
+import bilibili.vvvbbbcz.hamburger.tileentity.TileEntityIronPan;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.player.PlayerInventory;
+import net.minecraft.inventory.container.Container;
+import net.minecraft.inventory.container.Slot;
 import net.minecraft.item.ItemStack;
-import net.minecraftforge.fml.relauncher.Side;
-import net.minecraftforge.fml.relauncher.SideOnly;
-import net.minecraftforge.items.CapabilityItemHandler;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.World;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.SlotItemHandler;
 
@@ -19,20 +21,21 @@ public class ContainerIronPan extends Container {
     private final TileEntityIronPan tileEntity;
     private int burnTime;
 
-    public ContainerIronPan(TileEntityIronPan tileEntity, EntityPlayer player) {
-        this.tileEntity = tileEntity;
-        IItemHandler handler = this.tileEntity.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null);
+    public ContainerIronPan(int id, PlayerInventory inventory, World world, BlockPos pos) {
+        super(GuiLoader.IRON_PAN, id);
+        this.tileEntity = (TileEntityIronPan) world.getTileEntity(pos);
+        IItemHandler handler = this.tileEntity.getPanItemStacks();
 
-        this.addSlotToContainer(new SlotItemHandler(handler, 0, 28, 20) {
+        this.addSlot(new SlotItemHandler(handler, 0, 28, 20) {
             @Override
             public boolean isItemValid(@Nonnull ItemStack stack) {
                 return stack.getItem().equals(RegisterLoader.itemShit);
             }
         });
 
-        this.addSlotToContainer(new SlotItemHandler(handler, 1, 53, 20));
+        this.addSlot(new SlotItemHandler(handler, 1, 53, 20));
 
-        this.addSlotToContainer(new SlotItemHandler(handler, 2, 129, 20) {
+        this.addSlot(new SlotItemHandler(handler, 2, 129, 20) {
             @Override
             public boolean isItemValid(@Nonnull ItemStack stack) {
                 return false;
@@ -41,25 +44,25 @@ public class ContainerIronPan extends Container {
 
         for (int i = 0; i < 3; ++i) {
             for (int j = 0; j < 9; ++j) {
-                this.addSlotToContainer(new Slot(player.inventory, j + i * 9 + 9, 8 + j * 18, 51 + i * 18));
+                this.addSlot(new Slot(inventory, j + i * 9 + 9, 8 + j * 18, 51 + i * 18));
             }
         }
 
         for (int i = 0; i < 9; ++i) {
-            this.addSlotToContainer(new Slot(player.inventory, i, 8 + i * 18, 109));
+            this.addSlot(new Slot(inventory, i, 8 + i * 18, 109));
         }
     }
 
-    @Override
-    public void detectAndSendChanges() {
-        super.detectAndSendChanges();
+//    @Override
+//    public void detectAndSendChanges() { // TODO 可能不需要此方法
+//        super.detectAndSendChanges();
+//
+//        for (IContainerListener i : this.listeners) {
+//            i.sendWindowProperty(this, 0, tileEntity.getBurnTime());
+//        }
+//    }
 
-        for (IContainerListener i : this.listeners) {
-            i.sendWindowProperty(this, 0, tileEntity.getBurnTime());
-        }
-    }
-
-    @SideOnly(Side.CLIENT)
+    @OnlyIn(Dist.CLIENT)
     @Override
     public void updateProgressBar(int id, int data) {
         super.updateProgressBar(id, data);
@@ -72,7 +75,7 @@ public class ContainerIronPan extends Container {
 
     @Nonnull
     @Override
-    public ItemStack transferStackInSlot(@Nonnull EntityPlayer playerIn, int index) {
+    public ItemStack transferStackInSlot(@Nonnull PlayerEntity playerIn, int index) {
         ItemStack itemStack = ItemStack.EMPTY;
         Slot slot = this.inventorySlots.get(index);
         if (slot != null && slot.getHasStack()) {
@@ -117,7 +120,7 @@ public class ContainerIronPan extends Container {
     }
 
     @Override
-    public boolean canInteractWith(@Nonnull EntityPlayer playerIn) {
+    public boolean canInteractWith(@Nonnull PlayerEntity playerIn) {
         return this.tileEntity.isUsableByPlayer(playerIn);
     }
 }

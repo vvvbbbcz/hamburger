@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#",
+    "#"
+  ],
+  "key": {
+    "#": [
+      {
+        "item": "largeprojectslao8:lemon_plank"
+      }
+    ]
+  },
+  "result": {
+    "item": "minecraft:stick",
+    "count": 4
+  }
+}

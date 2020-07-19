@@ -1,17 +1,18 @@
 package bilibili.vvvbbbcz.hamburger.loaders;
 
-import bilibili.vvvbbbcz.hamburger.gui.tileentity.TileEntityIronPan;
-import bilibili.vvvbbbcz.hamburger.hamburger;
-import net.minecraft.tileentity.TileEntity;
-import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.fml.common.registry.GameRegistry;
+import bilibili.vvvbbbcz.hamburger.Hamburger;
+import bilibili.vvvbbbcz.hamburger.tileentity.TileEntityIronPan;
+import net.minecraft.tileentity.TileEntityType;
+import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.common.Mod;
 
+@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class TileEntityLoader {
-    public static void register() {
-        reg(TileEntityIronPan.class, "iron_pan");
-    }
+    public static final TileEntityType<TileEntityIronPan> IRON_PAN = TileEntityType.Builder.create(TileEntityIronPan::new, RegisterLoader.blockIronPan).build(null);
 
-    private static void reg(Class<? extends TileEntity> tileEntityClass, String name) {
-        GameRegistry.registerTileEntity(tileEntityClass, new ResourceLocation(hamburger.MODID + ":" + name));
+    @SubscribeEvent
+    public static void register(RegistryEvent.Register<TileEntityType<?>> event) {
+        event.getRegistry().register(IRON_PAN.setRegistryName(Hamburger.MODID, "iron_pan"));
     }
 }

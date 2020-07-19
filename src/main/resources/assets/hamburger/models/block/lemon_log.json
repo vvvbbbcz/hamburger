@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_column",
+  "textures": {
+    "end": "largeprojectslao8:blocks/lemon_log_top",
+    "side": "largeprojectslao8:blocks/lemon_log"
+  }
+}

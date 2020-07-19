@@ -1,0 +1,43 @@
+{
+  "display": {
+    "icon": {
+      "item": "largeprojectslao8:gold_wc"
+    },
+    "title": {
+      "translate": "advancements.lao8.food_home.title"
+    },
+    "description": {
+      "translate": "advancements.lao8.food_home.description"
+    }
+  },
+  "parent": "largeprojectslao8:lao8/welcome",
+  "rewards": {
+    "experience": 100
+  },
+  "criteria": {
+    "hamburger_8": {
+      "trigger": "consume_item",
+      "conditions": {
+        "item": {
+          "item": "largeprojectslao8:hamburger_8"
+        }
+      }
+    },
+    "before_sleep_8": {
+      "trigger": "consume_item",
+      "conditions": {
+        "item": {
+          "item": "largeprojectslao8:before_sleep_8"
+        }
+      }
+    },
+    "duck_8": {
+      "trigger": "consume_item",
+      "conditions": {
+        "item": {
+          "item": "largeprojectslao8:duck_8"
+        }
+      }
+    }
+  }
+}

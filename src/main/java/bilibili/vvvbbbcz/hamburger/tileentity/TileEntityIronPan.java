@@ -1,26 +1,32 @@
-package bilibili.vvvbbbcz.hamburger.gui.tileentity;
+package bilibili.vvvbbbcz.hamburger.tileentity;
 
-import bilibili.vvvbbbcz.largeprojectslao8.blocks.BlockIronPan;
-import bilibili.vvvbbbcz.largeprojectslao8.loaders.RegisterLoader;
-import net.minecraft.block.state.IBlockState;
-import net.minecraft.entity.player.EntityPlayer;
+import bilibili.vvvbbbcz.hamburger.blocks.BlockIronPan;
+import bilibili.vvvbbbcz.hamburger.gui.container.ContainerIronPan;
+import bilibili.vvvbbbcz.hamburger.loaders.RegisterLoader;
+import bilibili.vvvbbbcz.hamburger.loaders.TileEntityLoader;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.player.PlayerInventory;
+import net.minecraft.inventory.container.Container;
+import net.minecraft.inventory.container.INamedContainerProvider;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.nbt.CompoundNBT;
+import net.minecraft.tileentity.ITickableTileEntity;
 import net.minecraft.tileentity.TileEntity;
-import net.minecraft.util.EnumFacing;
-import net.minecraft.util.ITickable;
+import net.minecraft.util.Direction;
 import net.minecraft.util.NonNullList;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.World;
+import net.minecraft.util.text.ITextComponent;
+import net.minecraft.util.text.StringTextComponent;
 import net.minecraftforge.common.capabilities.Capability;
+import net.minecraftforge.common.util.LazyOptional;
 import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.ItemStackHandler;
 
 import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 import java.util.List;
 
-public class TileEntityIronPan extends TileEntity implements ITickable {
+public class TileEntityIronPan extends TileEntity implements ITickableTileEntity, INamedContainerProvider {
     private final ItemStackHandler panItemStacks = new ItemStackHandler(3);
     public static int totalBurnTime = 20;
     protected int burnTime = 0;
@@ -28,18 +34,19 @@ public class TileEntityIronPan extends TileEntity implements ITickable {
     private final List<Recipe> burnList = NonNullList.create();
 
     public TileEntityIronPan() {
+        super(TileEntityLoader.IRON_PAN);
         burnList.add(new Recipe(RegisterLoader.itemHamburger, RegisterLoader.itemHamburger8));
         burnList.add(new Recipe(RegisterLoader.itemBeforeSleep, RegisterLoader.itemBeforeSleep8));
         burnList.add(new Recipe(RegisterLoader.itemDuckCooked, RegisterLoader.itemDuck8));
     }
 
-    @Override
-    public boolean shouldRefresh(World world, BlockPos pos, IBlockState oldState, IBlockState newState) {
-        return oldState.getBlock() != newState.getBlock();
-    }
+//    @Override
+//    public boolean shouldRefresh(World world, BlockPos pos, IBlockState oldState, IBlockState newState) {
+//        return oldState.getBlock() != newState.getBlock();
+//    }
 
     @Override
-    public void update() {
+    public void tick() {
         boolean flag = this.isBurning();
         boolean flag1 = false;
 
@@ -103,58 +110,65 @@ public class TileEntityIronPan extends TileEntity implements ITickable {
         return this.burnTime;
     }
 
-    @Override
-    public void readFromNBT(NBTTagCompound compound) {
-        super.readFromNBT(compound);
-        this.panItemStacks.deserializeNBT(compound.getCompoundTag("Inventory"));
-
-        if (compound.hasKey("CustomName", 8)) {
-            this.customName = compound.getString("CustomName");
-        }
+    public ItemStackHandler getPanItemStacks() {
+        return panItemStacks;
     }
 
-    @Nonnull
     @Override
-    public NBTTagCompound writeToNBT(NBTTagCompound compound) {
-        super.writeToNBT(compound);
-        compound.setTag("Inventory", this.panItemStacks.serializeNBT());
+    public void read(CompoundNBT compound) {
+        this.panItemStacks.deserializeNBT(compound.getCompound("Inventory"));
 
-        if (this.hasCustomName()) {
-            compound.setString("CustomName", this.customName);
+        if (compound.hasUniqueId("CustomName")) {
+            this.customName = compound.getString("CustomName");
         }
 
-        return compound;
+        super.read(compound);
+    }
+
+    @Override
+    public CompoundNBT write(CompoundNBT compound) {
+        compound.put("Inventory", this.panItemStacks.serializeNBT());
+
+        if (this.hasCustomName()) {
+            compound.putString("CustomName", this.customName);
+        }
+
+        return super.write(compound);
     }
 
     public boolean hasCustomName() {
         return this.customName != null && !this.customName.isEmpty();
     }
 
+    @Nonnull
     @Override
-    public boolean hasCapability(@Nonnull Capability<?> capability, EnumFacing facing) {
-        if (capability == CapabilityItemHandler.ITEM_HANDLER_CAPABILITY) {
-            return true;
-        } else {
-            return false;
-        }
-    }
-
-    @Override
-    public <T> T getCapability(@Nonnull Capability<T> capability, EnumFacing facing) {
-        if (capability == CapabilityItemHandler.ITEM_HANDLER_CAPABILITY) {
+    public <T> LazyOptional<T> getCapability(@Nonnull Capability<T> cap, @Nullable Direction side) {
+        if (cap == CapabilityItemHandler.ITEM_HANDLER_CAPABILITY) {
             @SuppressWarnings("unchecked")
             T result = (T) this.panItemStacks;
-            return result;
+            return LazyOptional.of(() -> result);
         }
-        return super.getCapability(capability, facing);
+        return super.getCapability(cap, side);
     }
 
-    public boolean isUsableByPlayer(EntityPlayer player) {
+    public boolean isUsableByPlayer(PlayerEntity player) {
         if (this.world.getTileEntity(this.pos) != this) {
             return false;
         } else {
             return player.getDistanceSq((double) this.pos.getX() + 0.5D, (double) this.pos.getY() + 0.5D, (double) this.pos.getZ() + 0.5D) <= 64.0D;
         }
+    }
+
+    @Nonnull
+    @Override
+    public ITextComponent getDisplayName() {
+        return new StringTextComponent("Iron Pan");
+    }
+
+    @Nullable
+    @Override
+    public Container createMenu(int id, @Nonnull PlayerInventory inventory, @Nonnull PlayerEntity player) {
+        return new ContainerIronPan(id, inventory, this.getWorld(), this.getPos());
     }
 
     private static class Recipe {

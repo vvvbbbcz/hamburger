@@ -19,7 +19,7 @@ public class RegisterLoader {
     public static Item itemShit = new ItemShit();
     public static Item itemTofu = new ItemTofu();
     public static Item itemChouTofu = new ItemChouTofu();
-    public static Item itemFuru = new ItemBeanCurd();
+    public static Item itemBeanCurd = new ItemBeanCurd();
     public static Item itemMother = new ItemMother();
     public static Block blockSaltOre = new BlockSaltOre();
     public static Item itemSalt = new ItemSalt();
@@ -31,14 +31,14 @@ public class RegisterLoader {
     public static Block blockLemonLeaf = new BlockLemonLeaf();
     public static Block blockLemonPlank = new BlockLemonPlank();
     public static Item itemDuckEgg = new ItemDuckEgg();
-    public static ItemFood itemDuck = new ItemDuck();
-    public static ItemFood itemDuckCooked = new ItemDuckCooked();
+    public static Item itemDuck = new ItemDuck();
+    public static Item itemDuckCooked = new ItemDuckCooked();
     public static Block blockIronPan = new BlockIronPan();
-    public static ItemFood itemHamburger = new ItemHamburger();
-    public static ItemFood itemHamburger8 = new ItemHamburger8();
-    public static ItemFood itemBeforeSleep = new ItemBeforeSleep();
-    public static ItemFood itemBeforeSleep8 = new ItemBeforeSleep8();
-    public static ItemFood itemDuck8 = new ItemDuck8();
+    public static Item itemHamburger = new ItemHamburger();
+    public static Item itemHamburger8 = new ItemHamburger8();
+    public static Item itemBeforeSleep = new ItemBeforeSleep();
+    public static Item itemBeforeSleep8 = new ItemBeforeSleep8();
+    public static Item itemDuck8 = new ItemDuck8();
     // Fluids
     public static BlockFluidClassic fluidShit = new BlockFluidShit();
 
@@ -47,7 +47,7 @@ public class RegisterLoader {
         event.getRegistry().register(itemShit.setRegistryName("shit"));
         event.getRegistry().register(itemTofu.setRegistryName("tofu"));
         event.getRegistry().register(itemChouTofu.setRegistryName("chou_tofu"));
-        event.getRegistry().register(itemFuru.setRegistryName("furu"));
+        event.getRegistry().register(itemBeanCurd.setRegistryName("bean_curd"));
         event.getRegistry().register(itemMother.setRegistryName("mother"));
         event.getRegistry().register(itemSalt.setRegistryName("salt"));
         event.getRegistry().register(itemWahaha.setRegistryName("wahaha"));
@@ -63,15 +63,15 @@ public class RegisterLoader {
         event.getRegistry().register(itemDuck8.setRegistryName("duck_8"));
 
         /*---===方块的物品形式===---*/
-        event.getRegistry().register(new BlockItem(blockWoodWC).setRegistryName("wood_wc"));
-        event.getRegistry().register(new BlockItem(blockStoneWC).setRegistryName("stone_wc"));
-        event.getRegistry().register(new BlockItem(blockIronWC).setRegistryName("iron_wc"));
-        event.getRegistry().register(new BlockItem(blockGoldWC).setRegistryName("gold_wc"));
-        event.getRegistry().register(new BlockItem(blockLemonLog).setRegistryName("lemon_log"));
-        event.getRegistry().register(new BlockItem(blockLemonLeaf).setRegistryName("lemon_leaf"));
-        event.getRegistry().register(new BlockItem(blockLemonPlank).setRegistryName("lemon_plank"));
-        event.getRegistry().register(new BlockItem(blockSaltOre).setRegistryName("salt_ore"));
-        event.getRegistry().register(new BlockItem(blockIronPan).setRegistryName("iron_pan"));
+        event.getRegistry().register(new BlockItem(blockWoodWC, (new Item.Properties()).group(ItemGroupLoader.tabLao8)).setRegistryName("wood_wc"));
+        event.getRegistry().register(new BlockItem(blockStoneWC, (new Item.Properties()).group(ItemGroupLoader.tabLao8)).setRegistryName("stone_wc"));
+        event.getRegistry().register(new BlockItem(blockIronWC, (new Item.Properties()).group(ItemGroupLoader.tabLao8)).setRegistryName("iron_wc"));
+        event.getRegistry().register(new BlockItem(blockGoldWC, (new Item.Properties()).group(ItemGroupLoader.tabLao8)).setRegistryName("gold_wc"));
+        event.getRegistry().register(new BlockItem(blockLemonLog, (new Item.Properties()).group(ItemGroupLoader.tabLao8)).setRegistryName("lemon_log"));
+        event.getRegistry().register(new BlockItem(blockLemonLeaf, (new Item.Properties()).group(ItemGroupLoader.tabLao8)).setRegistryName("lemon_leaf"));
+        event.getRegistry().register(new BlockItem(blockLemonPlank, (new Item.Properties()).group(ItemGroupLoader.tabLao8)).setRegistryName("lemon_plank"));
+        event.getRegistry().register(new BlockItem(blockSaltOre, (new Item.Properties()).group(ItemGroupLoader.tabLao8)).setRegistryName("salt_ore"));
+        event.getRegistry().register(new BlockItem(blockIronPan, (new Item.Properties()).group(ItemGroupLoader.tabLao8)).setRegistryName("iron_pan"));
     }
 
     @SubscribeEvent
@@ -88,8 +88,6 @@ public class RegisterLoader {
         event.getRegistry().register(blockIronPan.setRegistryName("iron_pan"));
         // Fluids
         event.getRegistry().register(fluidShit.setRegistryName("fluid_shit"));
-
-        TileEntityLoader.register();
     }
     
     @SubscribeEvent

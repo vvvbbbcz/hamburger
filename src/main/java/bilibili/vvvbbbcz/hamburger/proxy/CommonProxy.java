@@ -1,10 +1,7 @@
 package bilibili.vvvbbbcz.hamburger.proxy;
 
-import bilibili.vvvbbbcz.largeprojectslao8.loaders.*;
-import net.minecraftforge.fml.common.event.FMLInitializationEvent;
-import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
-import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import net.minecraftforge.registries.ForgeRegistries;
 
 public class CommonProxy {
     public void preInit(FMLPreInitializationEvent event) {

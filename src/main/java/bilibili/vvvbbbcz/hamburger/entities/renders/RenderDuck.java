@@ -1,33 +1,35 @@
 package bilibili.vvvbbbcz.hamburger.entities.renders;
 
-import bilibili.vvvbbbcz.largeprojectslao8.entities.EntityDuck;
-import bilibili.vvvbbbcz.largeprojectslao8.entities.models.ModelDuck;
-import bilibili.vvvbbbcz.largeprojectslao8.LargeprojectsLao8;
-import net.minecraft.client.renderer.entity.RenderLiving;
-import net.minecraft.client.renderer.entity.RenderManager;
+import bilibili.vvvbbbcz.hamburger.Hamburger;
+import bilibili.vvvbbbcz.hamburger.entities.EntityDuck;
+import bilibili.vvvbbbcz.hamburger.entities.models.ModelDuck;
+import net.minecraft.client.renderer.entity.EntityRendererManager;
+import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.MathHelper;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
 
-public class RenderDuck extends RenderLiving<EntityDuck> {
-    private static final ResourceLocation TEXTURE = new ResourceLocation(LargeprojectsLao8.MODID + ":textures/entities/duck.png");
+@OnlyIn(Dist.CLIENT)
+public class RenderDuck extends MobRenderer<EntityDuck, ModelDuck> {
+    private static final ResourceLocation TEXTURE = new ResourceLocation(Hamburger.MODID, "textures/entities/duck.png");
 
-    public RenderDuck(RenderManager rendermanagerIn) {
-        super(rendermanagerIn, new ModelDuck(), 0.5F);
+    public RenderDuck(EntityRendererManager renderManagerIn) {
+        super(renderManagerIn, new ModelDuck(), 0.3F);
     }
 
-    @Nullable
+    @Nonnull
     @Override
-    protected ResourceLocation getEntityTexture(@Nonnull EntityDuck entity) {
+    public ResourceLocation getEntityTexture(@Nonnull EntityDuck entity) {
         return TEXTURE;
     }
 
     @Override
     protected float handleRotationFloat(EntityDuck livingBase, float partialTicks) {
-        float f = livingBase.oFlap + (livingBase.wingRotation - livingBase.oFlap) * partialTicks;
-        float f1 = livingBase.oFlapSpeed + (livingBase.destPos - livingBase.oFlapSpeed) * partialTicks;
+        float f = MathHelper.lerp(partialTicks, livingBase.oFlap, livingBase.wingRotation);
+        float f1 = MathHelper.lerp(partialTicks, livingBase.oFlapSpeed, livingBase.destPos);
         return (MathHelper.sin(f) + 1.0F) * f1;
     }
 }

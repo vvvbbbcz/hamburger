@@ -1,7 +1,6 @@
 package bilibili.vvvbbbcz.hamburger.loaders;
 
 import bilibili.vvvbbbcz.hamburger.blocks.*;
-import bilibili.vvvbbbcz.hamburger.blocks.fluid.BlockFluidShit;
 import bilibili.vvvbbbcz.hamburger.items.*;
 import net.minecraft.block.Block;
 import net.minecraft.item.BlockItem;
@@ -40,7 +39,7 @@ public class RegisterLoader {
     public static Item itemBeforeSleep8 = new ItemBeforeSleep8();
     public static Item itemDuck8 = new ItemDuck8();
     // Fluids
-    public static BlockFluidClassic fluidShit = new BlockFluidShit();
+//    public static BlockFluidClassic fluidShit = new BlockFluidShit();
 
     @SubscribeEvent
     public static void registerItems(final RegistryEvent.Register<Item> event) {
@@ -87,11 +86,6 @@ public class RegisterLoader {
         event.getRegistry().register(blockSaltOre.setRegistryName("salt_ore"));
         event.getRegistry().register(blockIronPan.setRegistryName("iron_pan"));
         // Fluids
-        event.getRegistry().register(fluidShit.setRegistryName("fluid_shit"));
-    }
-    
-    @SubscribeEvent
-    public static void registerEntities(final RegistryEvent.Register<EntityEntry> event) {
-        EntityLoader.registerEntities(event);
+//        event.getRegistry().register(fluidShit.setRegistryName("fluid_shit"));
     }
 }

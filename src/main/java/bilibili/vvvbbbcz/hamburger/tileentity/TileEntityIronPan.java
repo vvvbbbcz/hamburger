@@ -118,7 +118,7 @@ public class TileEntityIronPan extends TileEntity implements ITickableTileEntity
     public void read(CompoundNBT compound) {
         this.panItemStacks.deserializeNBT(compound.getCompound("Inventory"));
 
-        if (compound.hasUniqueId("CustomName")) {
+        if (compound.contains("CustomName")) {
             this.customName = compound.getString("CustomName");
         }
 

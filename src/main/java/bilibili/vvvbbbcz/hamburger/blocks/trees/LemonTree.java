@@ -25,7 +25,7 @@ public class LemonTree extends Tree {
 
     @Nullable
     @Override
-    protected ConfiguredFeature<TreeFeatureConfig, ?> getTreeFeature(Random randomIn, boolean p_225546_2_) {
+    public ConfiguredFeature<TreeFeatureConfig, ?> getTreeFeature(Random randomIn, boolean p_225546_2_) {
         return Feature.NORMAL_TREE.withConfiguration(CONFIG);
     }
 }

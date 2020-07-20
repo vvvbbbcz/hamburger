@@ -1,7 +1,7 @@
 package bilibili.vvvbbbcz.hamburger.loaders;
 
 import bilibili.vvvbbbcz.hamburger.Hamburger;
-import bilibili.vvvbbbcz.hamburger.potions.PotionShit;
+import bilibili.vvvbbbcz.hamburger.potions.EffectShit;
 import net.minecraft.potion.Effect;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.event.RegistryEvent;
@@ -10,7 +10,7 @@ import net.minecraftforge.fml.common.Mod;
 
 @Mod.EventBusSubscriber
 public class EffectLoader {
-    public static final Effect SHIT = new PotionShit();
+    public static final Effect SHIT = new EffectShit();
 //    public static Potion potionSequelaOfWar = new PotionSequelaOfWar();
 
     @SubscribeEvent

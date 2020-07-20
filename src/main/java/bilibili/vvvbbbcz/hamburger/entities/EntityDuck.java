@@ -1,72 +1,65 @@
 package bilibili.vvvbbbcz.hamburger.entities;
 
-import bilibili.vvvbbbcz.largeprojectslao8.loaders.LootTableLoader;
-import bilibili.vvvbbbcz.largeprojectslao8.loaders.RegisterLoader;
-import com.google.common.collect.Sets;
-import net.minecraft.block.Block;
+import bilibili.vvvbbbcz.hamburger.loaders.EntityTypeLoader;
+import bilibili.vvvbbbcz.hamburger.loaders.RegisterLoader;
+import net.minecraft.block.BlockState;
 import net.minecraft.entity.*;
-import net.minecraft.entity.ai.*;
-import net.minecraft.entity.passive.EntityAnimal;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.Items;
-import net.minecraft.init.SoundEvents;
-import net.minecraft.item.Item;
+import net.minecraft.entity.ai.goal.*;
+import net.minecraft.entity.passive.AnimalEntity;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.item.Items;
+import net.minecraft.item.crafting.Ingredient;
+import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.pathfinding.PathNodeType;
 import net.minecraft.util.DamageSource;
-import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundEvent;
+import net.minecraft.util.SoundEvents;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
+import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 
 import javax.annotation.Nullable;
-import java.util.Set;
 
-public class EntityDuck extends EntityAnimal {
-    private static final Set<Item> TEMPTATION_ITEMS = Sets.newHashSet(Items.WHEAT_SEEDS, Items.MELON_SEEDS, Items.PUMPKIN_SEEDS, Items.BEETROOT_SEEDS);
+public class EntityDuck extends AnimalEntity {
+    private static final Ingredient TEMPTATION_ITEMS = Ingredient.fromItems(Items.WHEAT_SEEDS, Items.MELON_SEEDS, Items.PUMPKIN_SEEDS, Items.BEETROOT_SEEDS);
     public float wingRotation;
     public float destPos;
     public float oFlapSpeed;
     public float oFlap;
     public float wingRotDelta = 1.0F;
-    public int timeUntilNextEgg;
+    public int timeUntilNextEgg = this.rand.nextInt(6000) + 6000;
 
-    public EntityDuck(World worldIn) {
-        super(worldIn);
-        this.setSize(0.5F, 0.8F);
-        this.timeUntilNextEgg = this.rand.nextInt(6000) + 6000;
+    public EntityDuck(EntityType<? extends AnimalEntity> type, World worldIn) {
+        super(type, worldIn);
         this.setPathPriority(PathNodeType.WATER, 0.0F);
     }
 
-    @Override
-    protected void initEntityAI() {
-        this.tasks.addTask(0, new EntityAISwimming(this));
-        this.tasks.addTask(1, new EntityAIPanic(this, 1.4D));
-        this.tasks.addTask(2, new EntityAIMate(this, 1.0D));
-        this.tasks.addTask(3, new EntityAITempt(this, 1.0D, false, TEMPTATION_ITEMS));
-        this.tasks.addTask(4, new EntityAIFollowParent(this, 1.1D));
-        this.tasks.addTask(5, new EntityAIWanderAvoidWater(this, 1.0D));
-        this.tasks.addTask(6, new EntityAIWatchClosest(this, EntityPlayer.class, 6.0F));
-        this.tasks.addTask(7, new EntityAILookIdle(this));
+    protected void registerGoals() {
+        this.goalSelector.addGoal(0, new SwimGoal(this));
+        this.goalSelector.addGoal(1, new PanicGoal(this, 1.4D));
+        this.goalSelector.addGoal(2, new BreedGoal(this, 1.0D));
+        this.goalSelector.addGoal(3, new TemptGoal(this, 1.0D, false, TEMPTATION_ITEMS));
+        this.goalSelector.addGoal(4, new FollowParentGoal(this, 1.1D));
+        this.goalSelector.addGoal(5, new WaterAvoidingRandomWalkingGoal(this, 1.0D));
+        this.goalSelector.addGoal(6, new LookAtGoal(this, PlayerEntity.class, 6.0F));
+        this.goalSelector.addGoal(7, new LookRandomlyGoal(this));
+    }
+
+    protected float getStandingEyeHeight(Pose poseIn, EntitySize sizeIn) {
+        return this.isChild() ? sizeIn.height * 0.85F : sizeIn.height * 0.92F;
+    }
+
+    protected void registerAttributes() {
+        super.registerAttributes();
+        this.getAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(4.0D);
+        this.getAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).setBaseValue(0.3D);
     }
 
     @Override
-    public float getEyeHeight() {
-        return this.height;
-    }
-
-    @Override
-    protected void applyEntityAttributes() {
-        super.applyEntityAttributes();
-        this.getEntityAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(4.0D);
-        this.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).setBaseValue(0.3D);
-    }
-
-    @Override
-    public void onLivingUpdate() {//TODO
-        super.onLivingUpdate();
+    public void livingTick() {
+        super.livingTick();
         this.oFlap = this.wingRotation;
         this.oFlapSpeed = this.destPos;
         this.destPos = (float) ((double) this.destPos + (double) (this.onGround ? -1 : 4) * 0.3D);
@@ -78,21 +71,23 @@ public class EntityDuck extends EntityAnimal {
 
         this.wingRotDelta = (float) ((double) this.wingRotDelta * 0.9D);
 
-        if (!this.onGround && this.motionY < 0.0D) {
-            this.motionY *= 0.6D;
+        Vec3d vec3d = this.getMotion();
+        if (!this.onGround && vec3d.y < 0.0D) {
+            this.setMotion(vec3d.mul(1.0D, 0.6D, 1.0D));
         }
 
         this.wingRotation += this.wingRotDelta * 2.0F;
 
         if (!this.world.isRemote && !this.isChild() && --this.timeUntilNextEgg <= 0) {
             this.playSound(SoundEvents.ENTITY_CHICKEN_EGG, 1.0F, (this.rand.nextFloat() - this.rand.nextFloat()) * 0.2F + 1.0F);
-            this.dropItem(RegisterLoader.itemDuckEgg, 1);
+            this.entityDropItem(RegisterLoader.itemDuckEgg, 1);
             this.timeUntilNextEgg = this.rand.nextInt(6000) + 6000;
         }
     }
 
     @Override
-    public void fall(float distance, float damageMultiplier) {
+    public boolean onLivingFall(float distance, float damageMultiplier) {
+        return false;
     }
 
     @Override
@@ -111,44 +106,44 @@ public class EntityDuck extends EntityAnimal {
     }//TODO
 
     @Override
-    protected void playStepSound(BlockPos pos, Block blockIn) {
+    protected void playStepSound(BlockPos pos, BlockState blockIn) {
         this.playSound(SoundEvents.ENTITY_CHICKEN_STEP, 0.15F, 1.0F);//TODO
     }
 
-    @Nullable
-    @Override
-    protected ResourceLocation getLootTable() {
-        return LootTableLoader.DUCK;//TODO
-    }
+//    @Nullable
+//    @Override
+//    protected ResourceLocation getLootTable() { // TODO 可能不需要此方法
+//        return LootTableLoader.DUCK;
+//    }
 
     @Nullable
     @Override
-    public EntityAgeable createChild(EntityAgeable ageable) {
-        return new EntityDuck(this.world);
+    public AgeableEntity createChild(AgeableEntity ageable) {
+        return EntityTypeLoader.DUCK.create(this.world);
     }
 
     @Override
     public boolean isBreedingItem(ItemStack stack) {
-        return TEMPTATION_ITEMS.contains(stack.getItem());//TODO
+        return TEMPTATION_ITEMS.test(stack);
     }
 
     @Override
-    protected int getExperiencePoints(EntityPlayer player) {
+    protected int getExperiencePoints(PlayerEntity player) {
         return 3 + this.world.rand.nextInt(3);
     }
 
     @Override
-    public void readEntityFromNBT(NBTTagCompound compound) {
-        super.readEntityFromNBT(compound);
+    public void readAdditional(CompoundNBT compound) {
+        super.readAdditional(compound);
 
-        if (compound.hasKey("EggLayTime")) {
-            this.timeUntilNextEgg = compound.getInteger("EggLayTime");
+        if (compound.contains("EggLayTime")) {
+            this.timeUntilNextEgg = compound.getInt("EggLayTime");
         }
     }
 
     @Override
-    public void writeEntityToNBT(NBTTagCompound compound) {
-        super.writeEntityToNBT(compound);
-        compound.setInteger("EggLayTime", this.timeUntilNextEgg);
+    public void writeAdditional(CompoundNBT compound) {
+        super.writeAdditional(compound);
+        compound.putInt("EggLayTime", this.timeUntilNextEgg);
     }
 }

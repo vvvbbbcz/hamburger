@@ -1,5 +1,9 @@
 package bilibili.vvvbbbcz.hamburger;
 
+//import bilibili.vvvbbbcz.hamburger.blocks.trees.LemonTree;
+//import bilibili.vvvbbbcz.hamburger.loaders.EntityTypeLoader;
+//import bilibili.vvvbbbcz.hamburger.loaders.RegisterLoader;
+
 import bilibili.vvvbbbcz.hamburger.blocks.trees.LemonTree;
 import bilibili.vvvbbbcz.hamburger.loaders.EntityTypeLoader;
 import bilibili.vvvbbbcz.hamburger.loaders.RegisterLoader;
@@ -50,7 +54,6 @@ public class Hamburger {
             );
 
             if (biome == Biomes.PLAINS) {
-
                 biome.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION, Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(), (new LemonTree()).getTreeFeature(new Random(), true).withPlacement(Placement.NOPE.configure(IPlacementConfig.NO_PLACEMENT_CONFIG)))));
             }
         }
@@ -68,6 +71,6 @@ public class Hamburger {
 
     @SubscribeEvent
     public void onServerStarting(FMLServerStartingEvent event) {
-        // do something when the server starts
+//         do something when the server starts
     }
 }

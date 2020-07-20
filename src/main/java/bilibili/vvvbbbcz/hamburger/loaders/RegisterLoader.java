@@ -62,15 +62,15 @@ public class RegisterLoader {
         event.getRegistry().register(itemDuck8.setRegistryName("duck_8"));
 
         /*---===方块的物品形式===---*/
-        event.getRegistry().register(new BlockItem(blockWoodWC, (new Item.Properties()).group(ItemGroupLoader.tabLao8)).setRegistryName("wood_wc"));
-        event.getRegistry().register(new BlockItem(blockStoneWC, (new Item.Properties()).group(ItemGroupLoader.tabLao8)).setRegistryName("stone_wc"));
-        event.getRegistry().register(new BlockItem(blockIronWC, (new Item.Properties()).group(ItemGroupLoader.tabLao8)).setRegistryName("iron_wc"));
-        event.getRegistry().register(new BlockItem(blockGoldWC, (new Item.Properties()).group(ItemGroupLoader.tabLao8)).setRegistryName("gold_wc"));
-        event.getRegistry().register(new BlockItem(blockLemonLog, (new Item.Properties()).group(ItemGroupLoader.tabLao8)).setRegistryName("lemon_log"));
-        event.getRegistry().register(new BlockItem(blockLemonLeaf, (new Item.Properties()).group(ItemGroupLoader.tabLao8)).setRegistryName("lemon_leaf"));
-        event.getRegistry().register(new BlockItem(blockLemonPlank, (new Item.Properties()).group(ItemGroupLoader.tabLao8)).setRegistryName("lemon_plank"));
-        event.getRegistry().register(new BlockItem(blockSaltOre, (new Item.Properties()).group(ItemGroupLoader.tabLao8)).setRegistryName("salt_ore"));
-        event.getRegistry().register(new BlockItem(blockIronPan, (new Item.Properties()).group(ItemGroupLoader.tabLao8)).setRegistryName("iron_pan"));
+        event.getRegistry().register(new BlockItem(blockWoodWC, (new Item.Properties()).group(ItemGroupLoader.HAMBURGER)).setRegistryName("wood_wc"));
+        event.getRegistry().register(new BlockItem(blockStoneWC, (new Item.Properties()).group(ItemGroupLoader.HAMBURGER)).setRegistryName("stone_wc"));
+        event.getRegistry().register(new BlockItem(blockIronWC, (new Item.Properties()).group(ItemGroupLoader.HAMBURGER)).setRegistryName("iron_wc"));
+        event.getRegistry().register(new BlockItem(blockGoldWC, (new Item.Properties()).group(ItemGroupLoader.HAMBURGER)).setRegistryName("gold_wc"));
+        event.getRegistry().register(new BlockItem(blockLemonLog, (new Item.Properties()).group(ItemGroupLoader.HAMBURGER)).setRegistryName("lemon_log"));
+        event.getRegistry().register(new BlockItem(blockLemonLeaf, (new Item.Properties()).group(ItemGroupLoader.HAMBURGER)).setRegistryName("lemon_leaf"));
+        event.getRegistry().register(new BlockItem(blockLemonPlank, (new Item.Properties()).group(ItemGroupLoader.HAMBURGER)).setRegistryName("lemon_plank"));
+        event.getRegistry().register(new BlockItem(blockSaltOre, (new Item.Properties()).group(ItemGroupLoader.HAMBURGER)).setRegistryName("salt_ore"));
+        event.getRegistry().register(new BlockItem(blockIronPan, (new Item.Properties()).group(ItemGroupLoader.HAMBURGER)).setRegistryName("iron_pan"));
     }
 
     @SubscribeEvent

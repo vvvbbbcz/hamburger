@@ -21,7 +21,7 @@ public class ItemDuck8 extends Item {
             .build();
 
     public ItemDuck8() {
-        super(new Properties().food(FOOD).group(ItemGroupLoader.tabLao8));
+        super(new Properties().food(FOOD).group(ItemGroupLoader.HAMBURGER));
     }
 
     @OnlyIn(Dist.CLIENT)

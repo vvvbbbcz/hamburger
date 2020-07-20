@@ -1,8 +1,8 @@
 {
 	"parent": "block/block",
 	"textures": {
-		"0": "largeprojectslao8:items/tofu",
-		"particle": "largeprojectslao8:items/tofu"
+		"0": "hamburger:items/tofu",
+		"particle": "hamburger:items/tofu"
 	},
 	"elements": [
 		{

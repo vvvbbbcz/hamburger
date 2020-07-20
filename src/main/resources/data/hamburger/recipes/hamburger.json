@@ -13,21 +13,21 @@
     ],
     "A": [
       {
-        "item": "largeprojectslao8:chou_tofu"
+        "item": "hamburger:chou_tofu"
       }
     ],
     "B": [
       {
-        "item": "largeprojectslao8:furu"
+        "item": "hamburger:furu"
       }
     ],
     "C": [
       {
-        "item": "largeprojectslao8:lemon"
+        "item": "hamburger:lemon"
       }
     ]
   },
   "result": {
-    "item": "largeprojectslao8:hamburger"
+    "item": "hamburger:hamburger"
   }
 }

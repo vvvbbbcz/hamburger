@@ -34,7 +34,7 @@ public class ItemShit extends Item {
             .build();
 
     public ItemShit() {
-        super(new Properties().food(FOOD).group(ItemGroupLoader.tabLao8));
+        super(new Properties().food(FOOD).group(ItemGroupLoader.HAMBURGER));
     }
 
     @Nonnull

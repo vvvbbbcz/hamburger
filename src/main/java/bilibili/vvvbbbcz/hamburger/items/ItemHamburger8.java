@@ -21,7 +21,7 @@ public class ItemHamburger8 extends Item {
             .build();
 
     public ItemHamburger8() {
-        super(new Properties().food(FOOD).group(ItemGroupLoader.tabLao8));
+        super(new Properties().food(FOOD).group(ItemGroupLoader.HAMBURGER));
     }
 
     @OnlyIn(Dist.CLIENT)

@@ -2,8 +2,8 @@
 	"parent": "block/block",
 	"texture_size": [64, 64],
 	"textures": {
-		"0": "largeprojectslao8:blocks/iron_pan_1",
-		"particle": "largeprojectslao8:blocks/iron_pan_1"
+		"0": "hamburger:blocks/iron_pan_1",
+		"particle": "hamburger:blocks/iron_pan_1"
 	},
 	"elements": [
 		{

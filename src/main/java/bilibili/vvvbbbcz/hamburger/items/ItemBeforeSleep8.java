@@ -26,7 +26,7 @@ public class ItemBeforeSleep8 extends Item {
             .build();
 
     public ItemBeforeSleep8() {
-        super(new Properties().food(FOOD).group(ItemGroupLoader.tabLao8));
+        super(new Properties().food(FOOD).group(ItemGroupLoader.HAMBURGER));
     }
 
     @Nonnull

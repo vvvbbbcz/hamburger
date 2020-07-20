@@ -6,12 +6,12 @@
   "key": {
     "#": [
       {
-        "item": "largeprojectslao8:lemon"
+        "item": "hamburger:lemon"
       }
     ]
   },
   "result": {
-    "item": "largeprojectslao8:lemon_seed",
+    "item": "hamburger:lemon_seed",
     "count": 2
   }
 }

@@ -1,4 +1,4 @@
-package bilibili.vvvbbbcz.hamburger.creativetabs;
+package bilibili.vvvbbbcz.hamburger.itemgroup;
 
 import bilibili.vvvbbbcz.hamburger.loaders.RegisterLoader;
 import net.minecraft.item.ItemGroup;
@@ -6,8 +6,8 @@ import net.minecraft.item.ItemStack;
 
 import javax.annotation.Nonnull;
 
-public class ItemGroupLao8 extends ItemGroup {
-    public ItemGroupLao8() {
+public class ItemGroupHamburger extends ItemGroup {
+    public ItemGroupHamburger() {
         super("lao8");
     }
 

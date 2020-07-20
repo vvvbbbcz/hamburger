@@ -2,8 +2,8 @@
 	"parent": "block/block",
 	"texture_size": [64, 64],
 	"textures": {
-		"0": "largeprojectslao8:items/hamburger",
-		"particle": "largeprojectslao8:items/hamburger"
+		"0": "hamburger:items/hamburger",
+		"particle": "hamburger:items/hamburger"
 	},
 	"elements": [
 		{

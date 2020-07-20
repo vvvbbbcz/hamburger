@@ -8,22 +8,22 @@
   "key": {
     "A": [
       {
-        "item": "largeprojectslao8:chou_tofu"
+        "item": "hamburger:chou_tofu"
       }
     ],
     "B": [
       {
-        "item": "largeprojectslao8:furu"
+        "item": "hamburger:furu"
       }
     ],
     "C": [
       {
-        "item": "largeprojectslao8:mother"
+        "item": "hamburger:mother"
       }
     ],
     "D": [
       {
-        "item": "largeprojectslao8:wahaha"
+        "item": "hamburger:wahaha"
       }
     ],
     "#": [
@@ -33,6 +33,6 @@
     ]
   },
   "result": {
-    "item": "largeprojectslao8:before_sleep"
+    "item": "hamburger:before_sleep"
   }
 }

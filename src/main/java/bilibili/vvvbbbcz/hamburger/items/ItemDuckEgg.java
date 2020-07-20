@@ -16,7 +16,7 @@ import javax.annotation.Nonnull;
 
 public class ItemDuckEgg extends EggItem {
     public ItemDuckEgg() {
-        super(new Properties().maxStackSize(16).group(ItemGroupLoader.tabLao8));
+        super(new Properties().maxStackSize(16).group(ItemGroupLoader.HAMBURGER));
     }
 
     @Nonnull

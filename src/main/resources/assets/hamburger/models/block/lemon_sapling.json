@@ -1,6 +1,6 @@
 {
     "parent": "block/cross",
     "textures": {
-        "cross": "largeprojectslao8:blocks/lemon_sapling"
+        "cross": "hamburger:blocks/lemon_sapling"
     }
 }

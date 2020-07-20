@@ -1,6 +1,6 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "all": "largeprojectslao8:blocks/lemon_plank"
+    "all": "hamburger:blocks/lemon_plank"
   }
 }

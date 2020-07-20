@@ -1,6 +1,6 @@
 {
     "variants": {
-        "stage=0": { "model": "largeprojectslao8:lemon_sapling" },
-        "stage=1": { "model": "largeprojectslao8:lemon_sapling" }
+        "stage=0": { "model": "hamburger:lemon_sapling" },
+        "stage=1": { "model": "hamburger:lemon_sapling" }
     }
 }

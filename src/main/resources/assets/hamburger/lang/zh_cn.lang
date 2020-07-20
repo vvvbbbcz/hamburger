@@ -1,25 +1,18 @@
-itemGroup.lao8=老八秘制小汉堡
+itemGroup.hamburger=老八秘制小汉堡
 itemGroup.grilledGluten=烤面筋
 
-config.largeprojects.general=老八秘制小汉堡MOD配置文件
-config.largeprojects.general.id_gui_iron_pan=老八的小铁盘的GUI ID
-config.largeprojects.general.id_gui_iron_pan.tooltip=在本MOD的GUI ID与其他MOD的GUI ID冲突时，请尝试更改它到任意值，直到与其他MOD的GUI ID不冲突
-config.largeprojects.general.id_entity_duck=大扒鸭的实体ID
-config.largeprojects.general.id_entity_duck.tooltip=在本MOD的实体ID与其他MOD的实体ID冲突时，请尝试更改它到任意值，直到与其他MOD的实体ID不冲突
-config.largeprojects.general.id_entity_duck_egg=扒鸭蛋的实体ID
-
-advancements.lao8.welcome.title=老八秘制小汉堡MOD
-advancements.lao8.welcome.description=感谢下载老八秘制小汉堡MOD
-advancements.lao8.the_same_time.title=老铁们啊,虽然不是同一时间
-advancements.lao8.the_same_time.description=但是同一个撤硕
-advancements.lao8.not_sad.title=一日三餐没烦恼！！！
-advancements.lao8.not_sad.description=今天就吃老八秘制小汉堡
-advancements.lao8.before_sleep.title=吃饱喝足，我就碎了！
-advancements.lao8.before_sleep.description=老八睡前小甜点！
-advancements.lao8.duck.title=要问扒鸭哪里好
-advancements.lao8.duck.description=扒鸭屁股是块宝
-advancements.lao8.food_home.title=万人称我美食家！
-advancements.lao8.food_home.description=吃遍所有美汁汁！
+advancements.hamburger.welcome.title=老八秘制小汉堡MOD
+advancements.hamburger.welcome.description=感谢下载老八秘制小汉堡MOD
+advancements.hamburger.the_same_time.title=老铁们啊,虽然不是同一时间
+advancements.hamburger.the_same_time.description=但是同一个撤硕
+advancements.hamburger.not_sad.title=一日三餐没烦恼！！！
+advancements.hamburger.not_sad.description=今天就吃老八秘制小汉堡
+advancements.hamburger.before_sleep.title=吃饱喝足，我就碎了！
+advancements.hamburger.before_sleep.description=老八睡前小甜点！
+advancements.hamburger.duck.title=要问扒鸭哪里好
+advancements.hamburger.duck.description=扒鸭屁股是块宝
+advancements.hamburger.food_home.title=万人称我美食家！
+advancements.hamburger.food_home.description=吃遍所有美汁汁！
 
 gui.ironPan.title=老⑧的小铁盘
 
@@ -58,4 +51,4 @@ entity.duckEgg.name=扒鸭蛋
 
 effect.shit.name=撤硕的力量
 
-largeprojectslao8.sound.ao=撤硕之声
+hamburger.sound.ao=撤硕之声

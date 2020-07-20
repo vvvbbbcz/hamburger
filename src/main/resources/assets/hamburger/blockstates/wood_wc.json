@@ -1,16 +1,16 @@
 {
   "variants": {
     "facing=north": {
-      "model": "largeprojectslao8:wood_wc/wood_wc_0"
+      "model": "hamburger:wood_wc/wood_wc_0"
     },
     "facing=south": {
-      "model": "largeprojectslao8:wood_wc/wood_wc_1"
+      "model": "hamburger:wood_wc/wood_wc_1"
     },
     "facing=west": {
-      "model": "largeprojectslao8:wood_wc/wood_wc_2"
+      "model": "hamburger:wood_wc/wood_wc_2"
     },
     "facing=east": {
-      "model": "largeprojectslao8:wood_wc/wood_wc_3"
+      "model": "hamburger:wood_wc/wood_wc_3"
     }
   }
 }

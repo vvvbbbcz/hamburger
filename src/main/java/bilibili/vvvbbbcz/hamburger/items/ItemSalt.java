@@ -5,6 +5,6 @@ import net.minecraft.item.Item;
 
 public class ItemSalt extends Item {
     public ItemSalt() {
-        super(new Properties().group(ItemGroupLoader.tabLao8));
+        super(new Properties().group(ItemGroupLoader.HAMBURGER));
     }
 }

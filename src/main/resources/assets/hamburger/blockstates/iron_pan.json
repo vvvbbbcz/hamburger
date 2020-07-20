@@ -1,10 +1,10 @@
 {
   "variants": {
     "using=false": {
-      "model": "largeprojectslao8:iron_pan_0"
+      "model": "hamburger:iron_pan_0"
     },
     "using=true": {
-      "model": "largeprojectslao8:iron_pan_1"
+      "model": "hamburger:iron_pan_1"
     }
   }
 }

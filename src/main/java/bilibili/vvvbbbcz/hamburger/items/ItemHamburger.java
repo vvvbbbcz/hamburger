@@ -15,6 +15,6 @@ public class ItemHamburger extends Item {
             .build();
 
     public ItemHamburger() {
-        super(new Properties().food(FOOD).group(ItemGroupLoader.tabLao8));
+        super(new Properties().food(FOOD).group(ItemGroupLoader.HAMBURGER));
     }
 }

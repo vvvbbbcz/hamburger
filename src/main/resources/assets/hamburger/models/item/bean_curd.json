@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "largeprojectslao8:items/furu"
+    "layer0": "hamburger:items/bean_curd"
   }
 }

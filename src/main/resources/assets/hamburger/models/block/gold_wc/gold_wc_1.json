@@ -1,8 +1,8 @@
 {
 	"parent": "block/block",
 	"textures": {
-		"0": "largeprojectslao8:blocks/gold_wc",
-		"particle": "largeprojectslao8:blocks/gold_wc"
+		"0": "hamburger:blocks/gold_wc",
+		"particle": "hamburger:blocks/gold_wc"
 	},
 	"elements": [
 		{

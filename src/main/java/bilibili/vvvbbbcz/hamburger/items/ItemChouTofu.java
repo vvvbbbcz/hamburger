@@ -5,6 +5,6 @@ import net.minecraft.item.Item;
 
 public class ItemChouTofu extends Item {
     public ItemChouTofu() {
-        super(new Properties().group(ItemGroupLoader.tabLao8));
+        super(new Properties().group(ItemGroupLoader.HAMBURGER));
     }
 }

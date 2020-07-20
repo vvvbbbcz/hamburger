@@ -1,8 +1,8 @@
 {
 	"parent": "block/block",
 	"textures": {
-		"0": "largeprojectslao8:blocks/wood_wc",
-		"particle": "largeprojectslao8:blocks/wood_wc"
+		"0": "hamburger:blocks/wood_wc",
+		"particle": "hamburger:blocks/wood_wc"
 	},
 	"elements": [
 		{

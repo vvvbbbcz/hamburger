@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "largeprojectslao8:iron_wc"
+      "item": "hamburger:iron_wc"
     },
     "title": {
       "translate": "advancements.lao8.the_same_time.title"
@@ -10,14 +10,14 @@
       "translate": "advancements.lao8.the_same_time.description"
     }
   },
-  "parent": "largeprojectslao8:lao8/welcome",
+  "parent": "hamburger:lao8/welcome",
   "criteria": {
     "get_wood_wc": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "item": "largeprojectslao8:wood_wc"
+            "item": "hamburger:wood_wc"
           }
         ]
       }
@@ -27,7 +27,7 @@
       "conditions": {
         "items": [
           {
-            "item": "largeprojectslao8:stone_wc"
+            "item": "hamburger:stone_wc"
           }
         ]
       }
@@ -37,7 +37,7 @@
       "conditions": {
         "items": [
           {
-            "item": "largeprojectslao8:iron_wc"
+            "item": "hamburger:iron_wc"
           }
         ]
       }

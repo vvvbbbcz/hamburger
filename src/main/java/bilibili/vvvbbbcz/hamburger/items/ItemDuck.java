@@ -11,6 +11,6 @@ public class ItemDuck extends Item {
                 .build();
 
     public ItemDuck() {
-        super(new Properties().food(FOOD).group(ItemGroupLoader.tabLao8));
+        super(new Properties().food(FOOD).group(ItemGroupLoader.HAMBURGER));
     }
 }

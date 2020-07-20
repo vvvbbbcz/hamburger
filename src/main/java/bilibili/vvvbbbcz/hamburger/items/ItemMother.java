@@ -5,6 +5,6 @@ import net.minecraft.item.Item;
 
 public class ItemMother extends Item { // 老干妈
     public ItemMother() {
-        super(new Properties().group(ItemGroupLoader.tabLao8));
+        super(new Properties().group(ItemGroupLoader.HAMBURGER));
     }
 }

@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "largeprojectslao8:before_sleep_8"
+      "item": "hamburger:before_sleep_8"
     },
     "title": {
       "translate": "advancements.lao8.before_sleep.title"
@@ -10,14 +10,14 @@
       "translate": "advancements.lao8.before_sleep.description"
     }
   },
-  "parent": "largeprojectslao8:lao8/the_same_time",
+  "parent": "hamburger:lao8/the_same_time",
   "criteria": {
     "get_before_sleep": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "item": "largeprojectslao8:before_sleep_8"
+            "item": "hamburger:before_sleep_8"
           }
         ]
       }

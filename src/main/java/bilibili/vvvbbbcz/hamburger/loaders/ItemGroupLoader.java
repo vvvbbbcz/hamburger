@@ -1,8 +1,8 @@
 package bilibili.vvvbbbcz.hamburger.loaders;
 
-import bilibili.vvvbbbcz.hamburger.creativetabs.ItemGroupLao8;
+import bilibili.vvvbbbcz.hamburger.itemgroup.ItemGroupHamburger;
 import net.minecraft.item.ItemGroup;
 
 public class ItemGroupLoader {
-    public static ItemGroup tabLao8 = new ItemGroupLao8();
+    public static final ItemGroup HAMBURGER = new ItemGroupHamburger();
 }

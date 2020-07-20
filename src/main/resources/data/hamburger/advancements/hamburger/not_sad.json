@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "largeprojectslao8:hamburger_8"
+      "item": "hamburger:hamburger_8"
     },
     "title": {
       "translate": "advancements.lao8.not_sad.title"
@@ -10,14 +10,14 @@
       "translate": "advancements.lao8.not_sad.description"
     }
   },
-  "parent": "largeprojectslao8:lao8/the_same_time",
+  "parent": "hamburger:lao8/the_same_time",
   "criteria": {
     "get_hamburger_8": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "item": "largeprojectslao8:hamburger_8"
+            "item": "hamburger:hamburger_8"
           }
         ]
       }

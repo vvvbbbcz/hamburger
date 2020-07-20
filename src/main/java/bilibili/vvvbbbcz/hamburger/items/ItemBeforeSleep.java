@@ -22,7 +22,7 @@ public class ItemBeforeSleep extends Item {
             .build();
 
     public ItemBeforeSleep() {
-        super(new Properties().food(FOOD).group(ItemGroupLoader.tabLao8));
+        super(new Properties().food(FOOD).group(ItemGroupLoader.HAMBURGER));
     }
 
     @Nonnull

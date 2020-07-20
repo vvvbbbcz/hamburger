@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "largeprojectslao8:duck_8"
+      "item": "hamburger:duck_8"
     },
     "title": {
       "translate": "advancements.lao8.duck.title"
@@ -10,14 +10,14 @@
       "translate": "advancements.lao8.duck.description"
     }
   },
-  "parent": "largeprojectslao8:lao8/the_same_time",
+  "parent": "hamburger:lao8/the_same_time",
   "criteria": {
     "get_duck": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "item": "largeprojectslao8:duck_8"
+            "item": "hamburger:duck_8"
           }
         ]
       }

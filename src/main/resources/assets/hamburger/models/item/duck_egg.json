@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "largeprojectslao8:items/duck_egg"
+    "layer0": "hamburger:items/duck_egg"
   }
 }

@@ -1,6 +1,6 @@
 //package bilibili.vvvbbbcz.hamburger.fluid;
 //
-//import bilibili.vvvbbbcz.largeprojectslao8.loaders.RegisterLoader;
+//import bilibili.vvvbbbcz.hamburger.loaders.RegisterLoader;
 //import net.minecraft.util.ResourceLocation;
 //import net.minecraftforge.fluids.Fluid;
 //

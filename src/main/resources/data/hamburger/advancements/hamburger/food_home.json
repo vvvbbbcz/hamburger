@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "largeprojectslao8:gold_wc"
+      "item": "hamburger:gold_wc"
     },
     "title": {
       "translate": "advancements.lao8.food_home.title"
@@ -10,7 +10,7 @@
       "translate": "advancements.lao8.food_home.description"
     }
   },
-  "parent": "largeprojectslao8:lao8/welcome",
+  "parent": "hamburger:lao8/welcome",
   "rewards": {
     "experience": 100
   },
@@ -19,7 +19,7 @@
       "trigger": "consume_item",
       "conditions": {
         "item": {
-          "item": "largeprojectslao8:hamburger_8"
+          "item": "hamburger:hamburger_8"
         }
       }
     },
@@ -27,7 +27,7 @@
       "trigger": "consume_item",
       "conditions": {
         "item": {
-          "item": "largeprojectslao8:before_sleep_8"
+          "item": "hamburger:before_sleep_8"
         }
       }
     },
@@ -35,7 +35,7 @@
       "trigger": "consume_item",
       "conditions": {
         "item": {
-          "item": "largeprojectslao8:duck_8"
+          "item": "hamburger:duck_8"
         }
       }
     }

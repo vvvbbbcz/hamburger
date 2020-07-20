@@ -5,6 +5,6 @@ import net.minecraft.item.Item;
 
 public class ItemWahaha extends Item {
     public ItemWahaha() {
-        super(new Properties().group(ItemGroupLoader.tabLao8));
+        super(new Properties().group(ItemGroupLoader.HAMBURGER));
     }
 }

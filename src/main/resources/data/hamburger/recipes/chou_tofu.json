@@ -8,16 +8,16 @@
   "key": {
     "#": [
       {
-        "item": "largeprojectslao8:shit"
+        "item": "hamburger:shit"
       }
     ],
     "X": [
       {
-        "item": "largeprojectslao8:tofu"
+        "item": "hamburger:tofu"
       }
     ]
   },
   "result": {
-    "item": "largeprojectslao8:chou_tofu"
+    "item": "hamburger:chou_tofu"
   }
 }

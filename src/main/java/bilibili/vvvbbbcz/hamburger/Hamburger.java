@@ -31,7 +31,7 @@ import java.util.Random;
 @Mod("hamburger")
 public class Hamburger {
     private static final Logger LOGGER = LogManager.getLogger();
-    public static final String MODID = "Hamburger";
+    public static final String MODID = "hamburger";
 
     public Hamburger() {
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);

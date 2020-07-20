@@ -1,37 +1,37 @@
 {
   "ao": {
     "category": "player",
-    "subtitle": "largeprojectslao8.sound.ao",
+    "subtitle": "hamburger.sound.ao",
     "sounds": [
-      "largeprojectslao8:ao"
+      "hamburger:ao"
     ]
   },
   "li": {
     "category": "player",
-    "subtitle": "largeprojectslao8.sound.ao",
+    "subtitle": "hamburger.sound.ao",
     "sounds": [
-      "largeprojectslao8:li"
+      "hamburger:li"
     ]
   },
   "gei": {
     "category": "player",
-    "subtitle": "largeprojectslao8.sound.ao",
+    "subtitle": "hamburger.sound.ao",
     "sounds": [
-      "largeprojectslao8:gei"
+      "hamburger:gei"
     ]
   },
   "gan": {
     "category": "player",
-    "subtitle": "largeprojectslao8.sound.ao",
+    "subtitle": "hamburger.sound.ao",
     "sounds": [
-      "largeprojectslao8:gan"
+      "hamburger:gan"
     ]
   },
   "le": {
     "category": "player",
-    "subtitle": "largeprojectslao8.sound.ao",
+    "subtitle": "hamburger.sound.ao",
     "sounds": [
-      "largeprojectslao8:le"
+      "hamburger:le"
     ]
   }
 }

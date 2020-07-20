@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "#X#",
+    "###"
+  ],
+  "key": {
+    "#": [
+      {
+        "item": "largeprojectslao8:shit"
+      }
+    ],
+    "X": [
+      {
+        "item": "largeprojectslao8:tofu"
+      }
+    ]
+  },
+  "result": {
+    "item": "largeprojectslao8:chou_tofu"
+  }
+}

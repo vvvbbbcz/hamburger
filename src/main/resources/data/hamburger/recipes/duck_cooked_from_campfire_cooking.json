@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "ingredient": {
+    "item": "hamburger:duck"
+  },
+  "result": "hamburger:duck_cooked",
+  "experience": 1.0,
+  "cookingtime": 600
+}

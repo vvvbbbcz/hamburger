@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "# #",
+    "###",
+    "#X#"
+  ],
+  "key": {
+    "#": [
+      {
+        "item": "minecraft:gold_ingot"
+      }
+    ],
+    "X": [
+      {
+        "item": "minecraft:gold_block"
+      }
+    ]
+  },
+  "result": {
+    "item": "largeprojectslao8:gold_wc"
+  }
+}

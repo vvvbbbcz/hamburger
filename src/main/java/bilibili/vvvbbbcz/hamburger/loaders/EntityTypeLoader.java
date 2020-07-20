@@ -37,8 +37,8 @@ public class EntityTypeLoader {
 
     @SubscribeEvent
     public static void register(RegistryEvent.Register<EntityType<?>> event) {
-        event.getRegistry().register(DUCK);
-        event.getRegistry().register(DUCK_EGG);
+        event.getRegistry().register(DUCK.setRegistryName("duck"));
+        event.getRegistry().register(DUCK_EGG.setRegistryName("duck_egg"));
     }
 
     @OnlyIn(Dist.CLIENT)

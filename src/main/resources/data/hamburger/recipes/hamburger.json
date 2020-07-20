@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " # ",
+    "ABC",
+    " # "
+  ],
+  "key": {
+    "#": [
+      {
+        "item": "minecraft:bread"
+      }
+    ],
+    "A": [
+      {
+        "item": "largeprojectslao8:chou_tofu"
+      }
+    ],
+    "B": [
+      {
+        "item": "largeprojectslao8:furu"
+      }
+    ],
+    "C": [
+      {
+        "item": "largeprojectslao8:lemon"
+      }
+    ]
+  },
+  "result": {
+    "item": "largeprojectslao8:hamburger"
+  }
+}

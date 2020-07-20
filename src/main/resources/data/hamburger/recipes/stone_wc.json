@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "# #",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": [
+      {
+        "item": "minecraft:stonebrick",
+        "data": 0
+      }
+    ]
+  },
+  "result": {
+    "item": "largeprojectslao8:stone_wc"
+  }
+}

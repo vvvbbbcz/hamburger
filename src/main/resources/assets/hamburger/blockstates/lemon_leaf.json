@@ -1,8 +1,5 @@
 {
   "variants": {
-    "check_decay=false,decayable=false": { "model": "hamburger:lemon_leaf" },
-    "check_decay=false,decayable=true": { "model": "hamburger:lemon_leaf" },
-    "check_decay=true,decayable=false": { "model": "hamburger:lemon_leaf" },
-    "check_decay=true,decayable=true": { "model": "hamburger:lemon_leaf" }
+    "": { "model": "hamburger:block/lemon_leaf" }
   }
 }

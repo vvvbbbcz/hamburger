@@ -1,16 +1,16 @@
 {
   "variants": {
     "facing=north": {
-      "model": "hamburger:iron_wc/iron_wc_0"
+      "model": "hamburger:block/iron_wc_0"
     },
     "facing=south": {
-      "model": "hamburger:iron_wc/iron_wc_1"
+      "model": "hamburger:block/iron_wc_1"
     },
     "facing=west": {
-      "model": "hamburger:iron_wc/iron_wc_2"
+      "model": "hamburger:block/iron_wc_2"
     },
     "facing=east": {
-      "model": "hamburger:iron_wc/iron_wc_3"
+      "model": "hamburger:block/iron_wc_3"
     }
   }
 }

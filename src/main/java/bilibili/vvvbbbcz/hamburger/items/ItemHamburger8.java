@@ -11,8 +11,8 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
 public class ItemHamburger8 extends Item {
-    private static final EffectInstance SHIT = new EffectInstance(EffectLoader.SHIT);
-    private static final EffectInstance NAUSEA = new EffectInstance(Effects.NAUSEA);
+    private static final EffectInstance SHIT = new EffectInstance(EffectLoader.SHIT, 2400, 1);
+    private static final EffectInstance NAUSEA = new EffectInstance(Effects.NAUSEA, 2400, 0);
     private static final Food FOOD = (new Food.Builder())
             .hunger(10)
             .saturation(10.0F)

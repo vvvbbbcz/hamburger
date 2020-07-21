@@ -3,6 +3,7 @@ package bilibili.vvvbbbcz.hamburger.loaders;
 import bilibili.vvvbbbcz.hamburger.entities.EntityDuck;
 import bilibili.vvvbbbcz.hamburger.entities.EntityDuckEgg;
 import bilibili.vvvbbbcz.hamburger.entities.renders.RenderDuck;
+import bilibili.vvvbbbcz.hamburger.entities.renders.RenderDuckEgg;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.EntityType;
 import net.minecraftforge.api.distmarker.Dist;
@@ -44,6 +45,6 @@ public class EntityTypeLoader {
     @OnlyIn(Dist.CLIENT)
     public static void registerEntityRenders() {
         RenderingRegistry.registerEntityRenderingHandler(DUCK, RenderDuck::new);
-//        RenderingRegistry.registerEntityRenderingHandler(DUCK_EGG, RenderDuckEgg::new); // TODO 可能不需要
+        RenderingRegistry.registerEntityRenderingHandler(DUCK_EGG, RenderDuckEgg::new);
     }
 }

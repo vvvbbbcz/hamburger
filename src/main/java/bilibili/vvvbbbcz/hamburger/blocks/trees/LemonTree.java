@@ -17,7 +17,7 @@ public class LemonTree extends Tree {
 //            .heightRandA(2)
 //            .foliageHeight(3)
 //            .ignoreVines()
-//            .setSapling((net.minecraftforge.common.IPlantable) Blocks.BIRCH_SAPLING)
+//            .setSapling((net.minecraftforge.common.IPlantable) RegisterLoader.blockLemonSapling)
 //            .build();
 
 //    private static final TreeFeatureConfig CONFIG = (new TreeFeatureConfig.Builder(new SimpleBlockStateProvider(BIRCH_LOG), new SimpleBlockStateProvider(BIRCH_LEAVES), new BlobFoliagePlacer(2, 0))).baseHeight(5).heightRandA(2).foliageHeight(3).ignoreVines().setSapling((net.minecraftforge.common.IPlantable) Blocks.BIRCH_SAPLING).build()

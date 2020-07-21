@@ -1,5 +1,5 @@
 {
   "variants": {
-    "normal": { "model": "hamburger:lemon_plank" }
+    "": { "model": "hamburger:block/lemon_plank" }
   }
 }

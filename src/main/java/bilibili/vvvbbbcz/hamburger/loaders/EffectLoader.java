@@ -1,21 +1,19 @@
 package bilibili.vvvbbbcz.hamburger.loaders;
 
-import bilibili.vvvbbbcz.hamburger.Hamburger;
 import bilibili.vvvbbbcz.hamburger.potions.EffectShit;
 import net.minecraft.potion.Effect;
-import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
-@Mod.EventBusSubscriber
+@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD )
 public class EffectLoader {
     public static final Effect SHIT = new EffectShit();
 //    public static Potion potionSequelaOfWar = new PotionSequelaOfWar();
 
     @SubscribeEvent
     public static void register(RegistryEvent.Register<Effect> event) {
-        event.getRegistry().register(SHIT.setRegistryName(new ResourceLocation(Hamburger.MODID, "shit")));
+        event.getRegistry().register(SHIT.setRegistryName("shit"));
 //        event.getRegistry().register(potionSequelaOfWar.setRegistryName(new ResourceLocation(hamburger.MODID, "sequela_of_war")));
     }
 

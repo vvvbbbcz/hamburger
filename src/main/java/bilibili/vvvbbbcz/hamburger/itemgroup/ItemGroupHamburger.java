@@ -8,7 +8,7 @@ import javax.annotation.Nonnull;
 
 public class ItemGroupHamburger extends ItemGroup {
     public ItemGroupHamburger() {
-        super("lao8");
+        super("hamburger");
     }
 
     @Nonnull

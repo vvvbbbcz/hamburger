@@ -1,10 +1,10 @@
 {
   "variants": {
     "using=false": {
-      "model": "hamburger:iron_pan_0"
+      "model": "hamburger:block/iron_pan_0"
     },
     "using=true": {
-      "model": "hamburger:iron_pan_1"
+      "model": "hamburger:block/iron_pan_1"
     }
   }
 }

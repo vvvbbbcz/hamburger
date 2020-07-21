@@ -1,8 +1,7 @@
 {
   "variants": {
-    "axis=y":  { "model": "hamburger:lemon_log" },
-    "axis=z":   { "model": "hamburger:lemon_log", "x": 90 },
-    "axis=x":   { "model": "hamburger:lemon_log", "x": 90, "y": 90 },
-    "axis=none": { "model": "hamburger:lemon_bark" }
+    "axis=y":  { "model": "hamburger:block/lemon_log" },
+    "axis=z":   { "model": "hamburger:block/lemon_log", "x": 90 },
+    "axis=x":   { "model": "hamburger:block/lemon_log", "x": 90, "y": 90 }
   }
 }

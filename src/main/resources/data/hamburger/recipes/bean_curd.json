@@ -1,23 +1,23 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    " # ",
+    "###",
     "#X#",
-    " # "
+    "###"
   ],
   "key": {
     "#": [
       {
-        "item": "minecraft:iron_ingot"
+        "item": "hamburger:salt"
       }
     ],
     "X": [
       {
-        "item": "minecraft:iron_nugget"
+        "item": "hamburger:tofu"
       }
     ]
   },
   "result": {
-    "item": "hamburger:iron_web"
+    "item": "hamburger:bean_curd"
   }
 }

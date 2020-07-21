@@ -18,36 +18,36 @@ public class ModelDuck extends AgeableModel<EntityDuck> {
     private final ModelRenderer bill;
 
     public ModelDuck() {
-        this.textureWidth = 64;
-        this.textureHeight = 64;
+        textureWidth = 64;
+        textureHeight = 64;
 
-        this.head = new ModelRenderer(this);
-        this.head.setRotationPoint(0.0F, 15.0F, -2.0F);
-        this.head.addBox(14, 0, -2.0F, -5.0F, -4.0F, 4, 5, 5, 0.0F);
+        head = new ModelRenderer(this);
+        head.setRotationPoint(0.0F, 15.0F, -2.0F);
+        head.setTextureOffset(14, 0).addBox(-2.0F, -5.0F, -4.0F, 4.0F, 5.0F, 5.0F, 0.0F, false);
 
         body = new ModelRenderer(this);
         body.setRotationPoint(0.0F, 15.0F, 3.0F);
-        body.addBox(0, 10, -3.0F, -5.0F, -4.0F, 6, 11, 6, 0.0F);
+        body.setTextureOffset(0, 10).addBox(-3.0F, -5.0F, -4.0F, 6.0F, 11.0F, 6.0F, 0.0F, false);
 
-        this.rightLeg = new ModelRenderer(this);
-        this.rightLeg.setRotationPoint(-1.0F, 19.0F, 7.0F);
-        this.rightLeg.addBox(52, 0, -2.0F, 0.0F, -3.0F, 3, 5, 3, 0.0F);
+        rightLeg = new ModelRenderer(this);
+        rightLeg.setRotationPoint(-1.0F, 19.0F, 7.0F);
+        rightLeg.setTextureOffset(52, 0).addBox(-2.0F, 0.0F, -3.0F, 3.0F, 5.0F, 3.0F, 0.0F, false);
 
-        this.leftLeg = new ModelRenderer(this);
-        this.leftLeg.setRotationPoint(1.0F, 19.0F, 7.0F);
-        this.leftLeg.addBox(52, 0, -1.0F, 0.0F, -3.0F, 3, 5, 3, 0.0F);
+        leftLeg = new ModelRenderer(this);
+        leftLeg.setRotationPoint(1.0F, 19.0F, 7.0F);
+        leftLeg.setTextureOffset(52, 0).addBox(-1.0F, 0.0F, -3.0F, 3.0F, 5.0F, 3.0F, 0.0F, false);
 
         rightWing = new ModelRenderer(this);
         rightWing.setRotationPoint(-3.0F, 13.0F, 4.0F);
-        rightWing.addBox(0, 27, -1.0F, 0.0F, -5.0F, 1, 5, 9, 0.0F);
+        rightWing.setTextureOffset(0, 27).addBox(-1.0F, 0.0F, -5.0F, 1.0F, 5.0F, 9.0F, 0.0F, false);
 
         leftWing = new ModelRenderer(this);
         leftWing.setRotationPoint(3.0F, 13.0F, 4.0F);
-        leftWing.addBox(0, 27, 0.0F, 0.0F, -5.0F, 1, 5, 9, 0.0F);
+        leftWing.setTextureOffset(0, 27).addBox(0.0F, 0.0F, -5.0F, 1.0F, 5.0F, 9.0F, 0.0F, false);
 
-        this.bill = new ModelRenderer(this);
-        this.bill.setRotationPoint(0.0F, 15.0F, -2.0F);
-        this.bill.addBox(0, 0, -2.0F, -3.0F, -7.0F, 4, 2, 3, 0.0F);
+        bill = new ModelRenderer(this);
+        bill.setRotationPoint(0.0F, 15.0F, -2.0F);
+        bill.setTextureOffset(0, 0).addBox(-2.0F, -3.0F, -7.0F, 4.0F, 2.0F, 3.0F, 0.0F, false);
     }
 
     @Nonnull

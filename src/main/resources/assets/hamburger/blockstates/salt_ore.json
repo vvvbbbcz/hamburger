@@ -1,5 +1,5 @@
 {
   "variants": {
-    "normal": { "model": "hamburger:salt_ore" }
+    "": { "model": "hamburger:block/salt_ore" }
   }
 }

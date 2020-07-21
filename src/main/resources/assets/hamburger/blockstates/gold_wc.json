@@ -1,16 +1,16 @@
 {
   "variants": {
     "facing=north": {
-      "model": "hamburger:gold_wc/gold_wc_0"
+      "model": "hamburger:block/gold_wc_0"
     },
     "facing=south": {
-      "model": "hamburger:gold_wc/gold_wc_1"
+      "model": "hamburger:block/gold_wc_1"
     },
     "facing=west": {
-      "model": "hamburger:gold_wc/gold_wc_2"
+      "model": "hamburger:block/gold_wc_2"
     },
     "facing=east": {
-      "model": "hamburger:gold_wc/gold_wc_3"
+      "model": "hamburger:block/gold_wc_3"
     }
   }
 }

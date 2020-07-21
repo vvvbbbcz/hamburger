@@ -1,6 +1,5 @@
 {
     "variants": {
-        "stage=0": { "model": "hamburger:lemon_sapling" },
-        "stage=1": { "model": "hamburger:lemon_sapling" }
+        "": { "model": "hamburger:block/lemon_sapling" }
     }
 }

@@ -1,0 +1,55 @@
+{
+  "itemGroup.hamburger": "老八秘制小汉堡",
+
+  "advancements.hamburger.welcome.title": "老八秘制小汉堡MOD",
+  "advancements.hamburger.welcome.description": "感谢游van♂老八秘制小汉堡MOD",
+  "advancements.hamburger.the_same_time.title": "老铁们啊,虽然不是同一时间",
+  "advancements.hamburger.the_same_time.description": "但是同一个撤硕",
+  "advancements.hamburger.not_sad.title": "一日三餐没烦恼！！！",
+  "advancements.hamburger.not_sad.description": "今天就吃老八秘制小汉堡",
+  "advancements.hamburger.before_sleep.title": "吃饱喝足，我就碎了！",
+  "advancements.hamburger.before_sleep.description": "老八睡前小甜点！",
+  "advancements.hamburger.duck.title": "要问扒鸭哪里好",
+  "advancements.hamburger.duck.description": "扒鸭屁股是块宝",
+  "advancements.hamburger.food_home.title": "万人称我美食家！",
+  "advancements.hamburger.food_home.description": "吃遍所有美汁汁！",
+
+  "block.hamburger.lemon_plant": "柠檬",
+  "block.hamburger.wood_wc": "木制撤硕",
+  "block.hamburger.stone_wc": "石砖撤硕",
+  "block.hamburger.iron_wc": "肛铁撤硕",
+  "block.hamburger.gold_wc": "黄金撤硕",
+  "block.hamburger.salt_ore": "盐矿",
+  "block.hamburger.iron_plate": "老⑧的小铁盘",
+  "block.hamburger.lemon_log": "柠檬原木",
+  "block.hamburger.lemon_plank": "柠檬木板",
+  "block.hamburger.lemon_leaf": "柠檬树叶",
+  "block.hamburger.lemon_sapling": "柠檬树苗",
+
+  "item.hamburger.hamburger": "小汉堡",
+  "item.hamburger.before_sleep": "睡前小甜点",
+  "item.hamburger.shit": "粑粑",
+  "item.hamburger.tofu": "豆腐",
+  "item.hamburger.chou_tofu": "臭豆腐",
+  "item.hamburger.bean_curd": "腐乳",
+  "item.hamburger.mother": "老干妈",
+  "item.hamburger.wahaha": "哇哈哈",
+  "item.hamburger.lemon_seed": "柠檬种子",
+  "item.hamburger.lemon": "柠檬",
+  "item.hamburger.duck_egg": "扒鸭蛋",
+  "item.hamburger.duck": "生扒鸭",
+  "item.hamburger.duck_cooked": "烤扒鸭",
+  "item.hamburger.salt": "盐",
+  "item.hamburger.hamburger_8": "老八秘制小汉堡",
+  "item.hamburger.before_sleep_8": "老八睡前小甜点",
+  "item.hamburger.duck_8": "扒鸭屁股",
+
+  "entity.duck": "大扒鸭",
+  "entity.duck_egg": "扒鸭蛋",
+
+  "gui.iron_plate.title": "老八的小铁盘",
+
+  "effect.shit": "撤硕的力量",
+
+  "hamburger.sound.ao": "撤硕之声"
+}

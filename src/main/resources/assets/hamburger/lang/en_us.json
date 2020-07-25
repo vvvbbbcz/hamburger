@@ -1,0 +1,55 @@
+{
+  "itemGroup.hamburger": "老八秘制小汉堡",
+
+  "advancements.hamburger.welcome.title": "老八秘制小汉堡MOD",
+  "advancements.hamburger.welcome.description": "Thanks for playing 老八秘制小汉堡MOD",
+  "advancements.hamburger.the_same_time.title": "老铁们啊,虽然不是同一时间",
+  "advancements.hamburger.the_same_time.description": "但是同一个撤硕",
+  "advancements.hamburger.not_sad.title": "一日三餐没烦恼！！！",
+  "advancements.hamburger.not_sad.description": "今天就吃老八秘制小汉堡",
+  "advancements.hamburger.before_sleep.title": "吃饱喝足，我就碎了！",
+  "advancements.hamburger.before_sleep.description": "老八睡前小甜点！",
+  "advancements.hamburger.duck.title": "要问扒鸭哪里好",
+  "advancements.hamburger.duck.description": "扒鸭屁股是块宝",
+  "advancements.hamburger.food_home.title": "All Of People Called Me Foodie",
+  "advancements.hamburger.food_home.description": "吃遍所有美汁汁！",
+
+  "block.hamburger.lemon_plant": "Lemon",
+  "block.hamburger.wood_wc": "Wood 撤硕",
+  "block.hamburger.stone_wc": "Stone Brick 撤硕",
+  "block.hamburger.iron_wc": "Iron 撤硕",
+  "block.hamburger.gold_wc": "Gold 撤硕",
+  "block.hamburger.salt_ore": "Salt Ore",
+  "block.hamburger.iron_plate": "The Iron Plate Of 老八",
+  "block.hamburger.lemon_log": "Lemon Log",
+  "block.hamburger.lemon_plank": "Lemon Planks",
+  "block.hamburger.lemon_leaf": "Lemon Leaves",
+  "block.hamburger.lemon_sapling": "Lemon Sapling",
+
+  "item.hamburger.hamburger": "Little Hamburger",
+  "item.hamburger.before_sleep": "Sweets Before Bed",
+  "item.hamburger.shit": "Shit",
+  "item.hamburger.tofu": "Tofu",
+  "item.hamburger.chou_tofu": "Stinky Tofu",
+  "item.hamburger.bean_curd": "Fermented Bean Curd",
+  "item.hamburger.mother": "Old Godmother",
+  "item.hamburger.wahaha": "Wow HaHa",
+  "item.hamburger.lemon_seed": "Lemon Seed",
+  "item.hamburger.lemon": "Lemon",
+  "item.hamburger.duck_egg": "Duck Eggs",
+  "item.hamburger.duck": "Raw Duck",
+  "item.hamburger.duck_cooked": "Grilled Duck",
+  "item.hamburger.salt": "Salt",
+  "item.hamburger.hamburger_8": "The Secret Burger Of 老八",
+  "item.hamburger.before_sleep_8": "The Sweets Before Bed Of 老八",
+  "item.hamburger.duck_8": "Duck Butt",
+
+  "entity.duck": "Duck",
+  "entity.duck_egg": "Duck Eggs",
+
+  "gui.iron_plate.title": "The Iron Plate Of 老八",
+
+  "effect.shit": "The Power Of 撤硕",
+
+  "hamburger.sound.ao": "The Sound Of 撤硕"
+}

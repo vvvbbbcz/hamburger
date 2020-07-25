@@ -4,13 +4,13 @@
       "item": "hamburger:iron_wc"
     },
     "title": {
-      "translate": "advancements.lao8.the_same_time.title"
+      "translate": "advancements.hamburger.the_same_time.title"
     },
     "description": {
-      "translate": "advancements.lao8.the_same_time.description"
+      "translate": "advancements.hamburger.the_same_time.description"
     }
   },
-  "parent": "hamburger:lao8/welcome",
+  "parent": "hamburger:hamburger/welcome",
   "criteria": {
     "get_wood_wc": {
       "trigger": "minecraft:inventory_changed",

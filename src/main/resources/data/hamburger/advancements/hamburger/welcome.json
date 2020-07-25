@@ -4,25 +4,32 @@
       "item": "hamburger:wood_wc"
     },
     "title": {
-      "translate": "advancements.lao8.welcome.title"
+      "translate": "advancements.hamburger.welcome.title"
     },
     "description": {
-      "translate": "advancements.lao8.welcome.description"
+      "translate": "advancements.hamburger.welcome.description"
     },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false,
     "background": "minecraft:textures/gui/advancements/backgrounds/adventure.png"
   },
   "criteria": {
-    "killed_something": {
-      "trigger": "minecraft:player_killed_entity"
-    },
-    "killed_by_something": {
-      "trigger": "minecraft:entity_killed_player"
+    "crafting_table": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:crafting_table"
+          }
+        ]
+      }
     }
   },
   "requirements": [
     [
-      "killed_something",
-      "killed_by_something"
+      "crafting_table"
     ]
   ]
 }

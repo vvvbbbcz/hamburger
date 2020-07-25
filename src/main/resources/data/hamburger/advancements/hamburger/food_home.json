@@ -4,13 +4,13 @@
       "item": "hamburger:gold_wc"
     },
     "title": {
-      "translate": "advancements.lao8.food_home.title"
+      "translate": "advancements.hamburger.food_home.title"
     },
     "description": {
-      "translate": "advancements.lao8.food_home.description"
+      "translate": "advancements.hamburger.food_home.description"
     }
   },
-  "parent": "hamburger:lao8/welcome",
+  "parent": "hamburger:hamburger/welcome",
   "rewards": {
     "experience": 100
   },

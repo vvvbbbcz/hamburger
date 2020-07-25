@@ -4,13 +4,13 @@
       "item": "hamburger:before_sleep_8"
     },
     "title": {
-      "translate": "advancements.lao8.before_sleep.title"
+      "translate": "advancements.hamburger.before_sleep.title"
     },
     "description": {
-      "translate": "advancements.lao8.before_sleep.description"
+      "translate": "advancements.hamburger.before_sleep.description"
     }
   },
-  "parent": "hamburger:lao8/the_same_time",
+  "parent": "hamburger:hamburger/the_same_time",
   "criteria": {
     "get_before_sleep": {
       "trigger": "minecraft:inventory_changed",

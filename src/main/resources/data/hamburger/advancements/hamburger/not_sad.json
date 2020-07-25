@@ -4,13 +4,13 @@
       "item": "hamburger:hamburger_8"
     },
     "title": {
-      "translate": "advancements.lao8.not_sad.title"
+      "translate": "advancements.hamburger.not_sad.title"
     },
     "description": {
-      "translate": "advancements.lao8.not_sad.description"
+      "translate": "advancements.hamburger.not_sad.description"
     }
   },
-  "parent": "hamburger:lao8/the_same_time",
+  "parent": "hamburger:hamburger/the_same_time",
   "criteria": {
     "get_hamburger_8": {
       "trigger": "minecraft:inventory_changed",

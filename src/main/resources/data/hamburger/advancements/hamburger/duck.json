@@ -4,13 +4,13 @@
       "item": "hamburger:duck_8"
     },
     "title": {
-      "translate": "advancements.lao8.duck.title"
+      "translate": "advancements.hamburger.duck.title"
     },
     "description": {
-      "translate": "advancements.lao8.duck.description"
+      "translate": "advancements.hamburger.duck.description"
     }
   },
-  "parent": "hamburger:lao8/the_same_time",
+  "parent": "hamburger:hamburger/the_same_time",
   "criteria": {
     "get_duck": {
       "trigger": "minecraft:inventory_changed",

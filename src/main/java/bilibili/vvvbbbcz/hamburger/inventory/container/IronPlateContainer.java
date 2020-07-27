@@ -21,14 +21,14 @@ public class IronPlateContainer extends Container {
     private int burnTime;
 
     public IronPlateContainer(int id, PlayerInventory inventory, World world, BlockPos pos) {
-        super(Containers.IRON_PLATE.get(), id);
+        super(Containers.IRON_PLATE, id);
         this.tileEntity = (IronPlateTileEntity) world.getTileEntity(pos);
         IItemHandler handler = this.tileEntity.getPlateItemStacks();
 
         this.addSlot(new SlotItemHandler(handler, 0, 28, 36) {
             @Override
             public boolean isItemValid(@Nonnull ItemStack stack) {
-                return stack.getItem().equals(Items.SHIT.get());
+                return stack.getItem().equals(Items.SHIT);
             }
         });
 

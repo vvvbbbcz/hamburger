@@ -12,7 +12,7 @@ public class DuckButtItem extends Item {
     private static final Food FOOD = (new Food.Builder())
             .hunger(12)
             .saturation(12.0F)
-            .effect(() -> new EffectInstance(bilibili.vvvbbbcz.hamburger.potion.Effects.SHIT.get(), 2400, 1), 1.0F)
+            .effect(() -> new EffectInstance(bilibili.vvvbbbcz.hamburger.potion.Effects.SHIT, 2400, 1), 1.0F)
             .effect(() -> new EffectInstance(Effects.NAUSEA, 2400, 0), 1.0F)
             .build();
 

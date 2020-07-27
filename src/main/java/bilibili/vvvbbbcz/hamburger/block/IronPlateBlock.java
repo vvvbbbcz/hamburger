@@ -87,10 +87,10 @@ public class IronPlateBlock extends ContainerBlock {
         TileEntity tileentity = worldIn.getTileEntity(pos);
 
         if (active) {
-            worldIn.setBlockState(pos, Blocks.IRON_PLATE.get().getDefaultState().with(USING, Boolean.TRUE), 3);
+            worldIn.setBlockState(pos, Blocks.IRON_PLATE.getDefaultState().with(USING, Boolean.TRUE), 3);
 //            worldIn.setBlockState(pos, RegisterLoader.blockIronPan.getDefaultState().withProperty(USING, Boolean.TRUE), 3);
         } else {
-            worldIn.setBlockState(pos, Blocks.IRON_PLATE.get().getDefaultState().with(USING, Boolean.FALSE), 3);
+            worldIn.setBlockState(pos, Blocks.IRON_PLATE.getDefaultState().with(USING, Boolean.FALSE), 3);
 //            worldIn.setBlockState(pos, RegisterLoader.blockIronPan.getDefaultState().withProperty(USING, Boolean.FALSE), 3);
         }
 

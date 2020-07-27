@@ -41,8 +41,8 @@ public class IronToiletBlock extends Block {
     @Override
     public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity playerIn, Hand handIn, BlockRayTraceResult hit) {
         if (playerIn.getFoodStats().getFoodLevel() >= 6) {
-            playerIn.playSound(SoundEvents.AO.get(), 1.0F, 1.0F);
-            playerIn.addItemStackToInventory(new ItemStack(Items.SHIT.get(), 1));
+            playerIn.playSound(SoundEvents.AO, 1.0F, 1.0F);
+            playerIn.addItemStackToInventory(new ItemStack(Items.SHIT, 1));
             playerIn.getFoodStats().addStats(-6, 0);
             return ActionResultType.SUCCESS;
         }

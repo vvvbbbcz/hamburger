@@ -8,6 +8,6 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 @OnlyIn(Dist.CLIENT)
 public class Screens {
     public static void register() {
-        ScreenManager.registerFactory(Containers.IRON_PLATE.get(), GuiIronPlate::new);
+        ScreenManager.registerFactory(Containers.IRON_PLATE, GuiIronPlate::new);
     }
 }

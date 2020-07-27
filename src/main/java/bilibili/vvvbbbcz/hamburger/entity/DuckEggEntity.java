@@ -22,7 +22,7 @@ public class DuckEggEntity extends ProjectileItemEntity {
     }
 
     public DuckEggEntity(LivingEntity throwerIn, World worldIn) {
-        super(Entities.DUCK_EGG.get(), throwerIn, worldIn); // TODO
+        super(Entities.DUCK_EGG, throwerIn, worldIn); // TODO
     }
 
     public DuckEggEntity(EntityType<? extends ProjectileItemEntity> type, double x, double y, double z, World worldIn) {
@@ -53,7 +53,7 @@ public class DuckEggEntity extends ProjectileItemEntity {
                 }
 
                 for (int j = 0; j < i; ++j) {
-                    DuckEntity entityDuck = Entities.DUCK.get().create(this.world);
+                    DuckEntity entityDuck = Entities.DUCK.create(this.world);
                     entityDuck.setGrowingAge(-24000);
                     entityDuck.setLocationAndAngles(this.getPosX(), this.getPosY(), this.getPosZ(), this.rotationYaw, 0.0F);
                     this.world.addEntity(entityDuck);
@@ -68,6 +68,6 @@ public class DuckEggEntity extends ProjectileItemEntity {
     @Nonnull
     @Override
     protected Item getDefaultItem() {
-        return Items.DUCK_EGG.get();
+        return Items.DUCK_EGG;
     }
 }

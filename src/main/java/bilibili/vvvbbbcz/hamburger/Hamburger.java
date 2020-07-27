@@ -13,6 +13,7 @@ import bilibili.vvvbbbcz.hamburger.tileentity.TileEntities;
 import bilibili.vvvbbbcz.hamburger.util.SoundEvents;
 import bilibili.vvvbbbcz.hamburger.world.OreGenerations;
 import bilibili.vvvbbbcz.hamburger.world.TreeGenerations;
+import bilibili.vvvbbbcz.hamburger.world.biome.Biomes;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
@@ -31,6 +32,7 @@ public class Hamburger {
 
     public Hamburger() {
         Blocks.BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
+        Biomes.BIOMES.register(FMLJavaModLoadingContext.get().getModEventBus());
         Containers.CONTAINERS.register(FMLJavaModLoadingContext.get().getModEventBus());
         Effects.EFFECTS.register(FMLJavaModLoadingContext.get().getModEventBus());
         Entities.ENTITIES.register(FMLJavaModLoadingContext.get().getModEventBus());
@@ -51,6 +53,7 @@ public class Hamburger {
     private void setup(final FMLCommonSetupEvent event) {
         OreGenerations.register();
         TreeGenerations.register();
+        Biomes.add();
     }
 
     private void doClientStuff(final FMLClientSetupEvent event) {

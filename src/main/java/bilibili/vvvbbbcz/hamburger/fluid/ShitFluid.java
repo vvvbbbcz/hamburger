@@ -29,19 +29,19 @@ public abstract class ShitFluid extends FlowingFluid {
     @Nonnull
     @Override
     public Item getFilledBucket() {
-        return Items.SHIT_BUCKET.get();
+        return Items.SHIT_BUCKET;
     }
 
     @Nonnull
     @Override
     public Fluid getFlowingFluid() {
-        return Fluids.FLOWING_SHIT.get();
+        return Fluids.FLOWING_SHIT;
     }
 
     @Nonnull
     @Override
     public Fluid getStillFluid() {
-        return Fluids.SHIT.get();
+        return Fluids.SHIT;
     }
 
     @Override
@@ -74,12 +74,12 @@ public abstract class ShitFluid extends FlowingFluid {
     @Nonnull
     @Override
     protected BlockState getBlockState(@Nonnull IFluidState state) {
-        return Blocks.SHIT_FLUID_BLOCK.get().getDefaultState().with(FlowingFluidBlock.LEVEL, getLevelFromState(state));
+        return Blocks.SHIT_FLUID_BLOCK.getDefaultState().with(FlowingFluidBlock.LEVEL, getLevelFromState(state));
     }
 
     @Override
     public boolean isEquivalentTo(@Nonnull Fluid fluidIn) {
-        return fluidIn == Fluids.SHIT.get() || fluidIn == Fluids.FLOWING_SHIT.get();
+        return fluidIn == Fluids.SHIT || fluidIn == Fluids.FLOWING_SHIT;
     }
 
     @Override

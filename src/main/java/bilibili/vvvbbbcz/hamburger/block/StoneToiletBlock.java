@@ -45,19 +45,19 @@ public class StoneToiletBlock extends Block {
         if (player.getFoodStats().getFoodLevel() >= 6) {
             switch (clickTime) {
                 case 1:
-                    player.playSound(SoundEvents.AO.get(), 1.0F, 1.0F);
+                    player.playSound(SoundEvents.AO, 1.0F, 1.0F);
                     clickTime++;
                     return ActionResultType.SUCCESS;
                 case 3:
-                    player.playSound(SoundEvents.LI.get(), 1.0F, 1.0F);
+                    player.playSound(SoundEvents.LI, 1.0F, 1.0F);
                     clickTime++;
                     return ActionResultType.SUCCESS;
                 case 5:
-                    player.playSound(SoundEvents.GEI.get(), 1.0F, 1.0F);
+                    player.playSound(SoundEvents.GEI, 1.0F, 1.0F);
                     clickTime++;
                     return ActionResultType.SUCCESS;
                 case 6:
-                    player.addItemStackToInventory(new ItemStack(Items.SHIT.get(), 1));
+                    player.addItemStackToInventory(new ItemStack(Items.SHIT, 1));
                     player.getFoodStats().addStats(-6, 0);
                     clickTime = 1;
                     return ActionResultType.SUCCESS;

@@ -78,7 +78,7 @@ public class DuckEntity extends AnimalEntity {
 
         if (!this.world.isRemote && !this.isChild() && --this.timeUntilNextEgg <= 0) {
             this.playSound(SoundEvents.ENTITY_CHICKEN_EGG, 1.0F, (this.rand.nextFloat() - this.rand.nextFloat()) * 0.2F + 1.0F);
-            this.entityDropItem(bilibili.vvvbbbcz.hamburger.item.Items.DUCK_EGG.get(), 1);
+            this.entityDropItem(bilibili.vvvbbbcz.hamburger.item.Items.DUCK_EGG, 1);
             this.timeUntilNextEgg = this.rand.nextInt(6000) + 6000;
         }
     }
@@ -117,7 +117,7 @@ public class DuckEntity extends AnimalEntity {
     @Nullable
     @Override
     public AgeableEntity createChild(AgeableEntity ageable) {
-        return Entities.DUCK.get().create(this.world);
+        return Entities.DUCK.create(this.world);
     }
 
     @Override

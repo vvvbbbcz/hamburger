@@ -54,7 +54,7 @@ public class LemonLeavesBlock extends LeavesBlock {
     }
 
     private static int getDistance(BlockState neighbor) {
-        if (neighbor.getBlock() == Blocks.LEMON_LOG.get()) {
+        if (neighbor.getBlock() == Blocks.LEMON_LOG) {
             return 0;
         } else {
             return neighbor.getBlock() instanceof LeavesBlock ? neighbor.get(DISTANCE) : 7;

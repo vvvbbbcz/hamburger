@@ -23,6 +23,6 @@ public class LemonSaplingBlock extends SaplingBlock {
 
     @Override
     public ItemStack getPickBlock(BlockState state, RayTraceResult target, IBlockReader world, BlockPos pos, PlayerEntity player) {
-        return new ItemStack(Items.LEMON_SEED.get());
+        return new ItemStack(Items.LEMON_SEED);
     }
 }

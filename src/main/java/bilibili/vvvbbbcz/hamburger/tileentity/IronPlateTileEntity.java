@@ -33,10 +33,10 @@ public class IronPlateTileEntity extends TileEntity implements ITickableTileEnti
     private final List<Recipe> burnList = NonNullList.create();
 
     public IronPlateTileEntity() {
-        super(TileEntities.IRON_PLATE.get());
-        burnList.add(new Recipe(Items.HAMBURGER.get(), Items.HAMBURGER_8.get()));
-        burnList.add(new Recipe(Items.SWEETS_BEFORE_SLEEP.get(), Items.SWEETS_BEFORE_SLEEP_8.get()));
-        burnList.add(new Recipe(Items.GRILLED_DUCK.get(), Items.DUCK_BUTT.get()));
+        super(TileEntities.IRON_PLATE);
+        burnList.add(new Recipe(Items.HAMBURGER, Items.HAMBURGER_8));
+        burnList.add(new Recipe(Items.SWEETS_BEFORE_SLEEP, Items.SWEETS_BEFORE_SLEEP_8));
+        burnList.add(new Recipe(Items.GRILLED_DUCK, Items.DUCK_BUTT));
     }
 
 //    @Override

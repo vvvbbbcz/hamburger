@@ -5,6 +5,6 @@ import net.minecraft.item.BlockNamedItem;
 
 public class LemonSeedItem extends BlockNamedItem {
     public LemonSeedItem() {
-        super(Blocks.LEMON_SAPLING.get(), new Properties().group(ItemGroups.HAMBURGER));
+        super(Blocks.LEMON_SAPLING, new Properties().group(ItemGroups.HAMBURGER));
     }
 }

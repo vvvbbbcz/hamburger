@@ -22,13 +22,11 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 
 public class ShitItem extends Item {
-    private static final EffectInstance SHIT = new EffectInstance(bilibili.vvvbbbcz.hamburger.potion.Effects.SHIT.get(), 2400, 0);
-    private static final EffectInstance NAUSEA = new EffectInstance(Effects.NAUSEA, 2400, 0);
     private static final Food FOOD = (new Food.Builder())
             .hunger(2)
             .saturation(4.0F)
-            .effect(() -> SHIT, 1.0F)
-            .effect(() -> NAUSEA, 1.0F)
+            .effect(() -> new EffectInstance(bilibili.vvvbbbcz.hamburger.potion.Effects.SHIT.get(), 2400, 0), 1.0F)
+            .effect(() -> new EffectInstance(Effects.NAUSEA, 2400, 0), 1.0F)
             .build();
 
     public ShitItem() {

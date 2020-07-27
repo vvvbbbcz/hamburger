@@ -8,22 +8,22 @@
   "key": {
     "A": [
       {
-        "item": "hamburger:chou_tofu"
+        "item": "hamburger:stinky_tofu"
       }
     ],
     "B": [
       {
-        "item": "hamburger:bean_curd"
+        "item": "hamburger:ferment_bean_curd"
       }
     ],
     "C": [
       {
-        "item": "hamburger:mother"
+        "item": "hamburger:old_godmother"
       }
     ],
     "D": [
       {
-        "item": "hamburger:wahaha"
+        "item": "hamburger:wow_ha_ha"
       }
     ],
     "#": [
@@ -33,6 +33,6 @@
     ]
   },
   "result": {
-    "item": "hamburger:before_sleep"
+    "item": "hamburger:sweets_before_sleep"
   }
 }

@@ -9,13 +9,11 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
 public class DuckButtItem extends Item {
-    private static final EffectInstance SHIT = new EffectInstance(bilibili.vvvbbbcz.hamburger.potion.Effects.SHIT.get());
-    private static final EffectInstance NAUSEA = new EffectInstance(Effects.NAUSEA);
     private static final Food FOOD = (new Food.Builder())
             .hunger(12)
             .saturation(12.0F)
-            .effect(SHIT, 1.0F)
-            .effect(NAUSEA, 1.0F)
+            .effect(() -> new EffectInstance(bilibili.vvvbbbcz.hamburger.potion.Effects.SHIT.get(), 2400, 1), 1.0F)
+            .effect(() -> new EffectInstance(Effects.NAUSEA, 2400, 0), 1.0F)
             .build();
 
     public DuckButtItem() {

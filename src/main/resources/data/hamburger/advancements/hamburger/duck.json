@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "hamburger:duck_8"
+      "item": "hamburger:duck_butt"
     },
     "title": {
       "translate": "advancements.hamburger.duck.title"
@@ -17,7 +17,7 @@
       "conditions": {
         "items": [
           {
-            "item": "hamburger:duck_8"
+            "item": "hamburger:duck_butt"
           }
         ]
       }

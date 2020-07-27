@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "hamburger:gold_wc"
+      "item": "hamburger:gold_toilet"
     },
     "title": {
       "translate": "advancements.hamburger.food_home.title"
@@ -23,19 +23,19 @@
         }
       }
     },
-    "before_sleep_8": {
+    "sweets_sweets_before_sleep_8": {
       "trigger": "consume_item",
       "conditions": {
         "item": {
-          "item": "hamburger:before_sleep_8"
+          "item": "hamburger:sweets_sweets_before_sleep_8"
         }
       }
     },
-    "duck_8": {
+    "duck_butt": {
       "trigger": "consume_item",
       "conditions": {
         "item": {
-          "item": "hamburger:duck_8"
+          "item": "hamburger:duck_butt"
         }
       }
     }

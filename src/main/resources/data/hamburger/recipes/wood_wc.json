@@ -8,32 +8,32 @@
   "key": {
     "#": [
       {
-        "item": "minecraft:planks",
+        "item": "minecraft:plankss",
         "data": 0
       },
       {
-        "item": "minecraft:planks",
+        "item": "minecraft:plankss",
         "data": 1
       },
       {
-        "item": "minecraft:planks",
+        "item": "minecraft:plankss",
         "data": 2
       },
       {
-        "item": "minecraft:planks",
+        "item": "minecraft:plankss",
         "data": 3
       },
       {
-        "item": "minecraft:planks",
+        "item": "minecraft:plankss",
         "data": 4
       },
       {
-        "item": "minecraft:planks",
+        "item": "minecraft:plankss",
         "data": 5
       }
     ]
   },
   "result": {
-    "item": "hamburger:wood_wc"
+    "item": "hamburger:wood_toilet"
   }
 }

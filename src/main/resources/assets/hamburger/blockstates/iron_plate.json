@@ -1,10 +1,10 @@
 {
   "variants": {
     "using=false": {
-      "model": "hamburger:block/iron_plate_0"
+      "model": "hamburger:block/iron_plate"
     },
     "using=true": {
-      "model": "hamburger:block/iron_plate_1"
+      "model": "hamburger:block/iron_plate_using"
     }
   }
 }

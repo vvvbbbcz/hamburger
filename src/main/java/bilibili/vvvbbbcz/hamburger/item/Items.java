@@ -27,6 +27,7 @@ public class Items {
     public static final RegistryObject<Item> SWEETS_BEFORE_SLEEP = ITEMS.register("sweets_before_sleep", SweetsBeforeSleepItem::new);
     public static final RegistryObject<Item> SWEETS_BEFORE_SLEEP_8 = ITEMS.register("sweets_before_sleep_8", SweetsBeforeSleep8Item::new);
     public static final RegistryObject<Item> DUCK_BUTT = ITEMS.register("duck_butt", DuckButtItem::new);
+//    public static final RegistryObject<Item> SHIT_BUCKET = ITEMS.register("shit_bucket", ShitFluidBucketItem::new);
 
     // BlockItems
     public static final RegistryObject<Item> WOOD_TOILET = ITEMS.register("wood_toilet", () -> new BlockItem(Blocks.WOOD_TOILET.get(), new Item.Properties().group(ItemGroups.HAMBURGER)));
@@ -38,6 +39,4 @@ public class Items {
     public static final RegistryObject<Item> LEMON_PLANKS = ITEMS.register("lemon_planks", () -> new BlockItem(Blocks.LEMON_PLANKS.get(), new Item.Properties().group(ItemGroups.HAMBURGER)));
     public static final RegistryObject<Item> SALT_ORE = ITEMS.register("salt_ore", () -> new BlockItem(Blocks.SALT_ORE.get(), new Item.Properties().group(ItemGroups.HAMBURGER)));
     public static final RegistryObject<Item> IRON_PLATE = ITEMS.register("iron_plate", () -> new BlockItem(Blocks.IRON_PLATE.get(), new Item.Properties().group(ItemGroups.HAMBURGER)));
-
-//    public static final RegistryObject<Item> SHIT_BUCKET = ITEMS.register("shit_bucket", ShitFluidBucketItem::new);
 }

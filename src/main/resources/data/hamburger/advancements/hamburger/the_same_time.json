@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "hamburger:iron_wc"
+      "item": "hamburger:iron_toilet"
     },
     "title": {
       "translate": "advancements.hamburger.the_same_time.title"
@@ -12,32 +12,32 @@
   },
   "parent": "hamburger:hamburger/welcome",
   "criteria": {
-    "get_wood_wc": {
+    "get_wood_toilet": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "item": "hamburger:wood_wc"
+            "item": "hamburger:wood_toilet"
           }
         ]
       }
     },
-    "get_stone_wc": {
+    "get_stone_toilet": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "item": "hamburger:stone_wc"
+            "item": "hamburger:stone_toilet"
           }
         ]
       }
     },
-    "get_iron_wc": {
+    "get_iron_toilet": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "item": "hamburger:iron_wc"
+            "item": "hamburger:iron_toilet"
           }
         ]
       }
@@ -45,9 +45,9 @@
   },
   "requirements": [
     [
-      "get_wood_wc",
-      "get_stone_wc",
-      "get_iron_wc"
+      "get_wood_toilet",
+      "get_stone_toilet",
+      "get_iron_toilet"
     ]
   ]
 }

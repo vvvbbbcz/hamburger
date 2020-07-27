@@ -1,23 +1,23 @@
 {
   "display": {
     "icon": {
-      "item": "hamburger:before_sleep_8"
+      "item": "hamburger:sweets_sweets_before_sleep_8"
     },
     "title": {
-      "translate": "advancements.hamburger.before_sleep.title"
+      "translate": "advancements.hamburger.sweets_before_sleep.title"
     },
     "description": {
-      "translate": "advancements.hamburger.before_sleep.description"
+      "translate": "advancements.hamburger.sweets_before_sleep.description"
     }
   },
   "parent": "hamburger:hamburger/the_same_time",
   "criteria": {
-    "get_before_sleep": {
+    "get_sweets_before_sleep": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "item": "hamburger:before_sleep_8"
+            "item": "hamburger:sweets_sweets_before_sleep_8"
           }
         ]
       }

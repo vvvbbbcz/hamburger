@@ -14,13 +14,11 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 import javax.annotation.Nonnull;
 
 public class SweetsBeforeSleep8Item extends Item {
-    private static final EffectInstance SHIT = new EffectInstance(bilibili.vvvbbbcz.hamburger.potion.Effects.SHIT.get(), 2400, 2);
-    private static final EffectInstance NAUSEA = new EffectInstance(Effects.NAUSEA, 2400, 0);
     private static final Food FOOD = (new Food.Builder())
             .hunger(10)
             .saturation(10.0F)
-            .effect(SHIT, 1.0F)
-            .effect(NAUSEA, 1.0F)
+            .effect(() -> new EffectInstance(bilibili.vvvbbbcz.hamburger.potion.Effects.SHIT.get(), 2400, 1), 1.0F)
+            .effect(() -> new EffectInstance(Effects.NAUSEA, 2400, 0), 1.0F)
             .build();
 
     public SweetsBeforeSleep8Item() {

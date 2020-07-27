@@ -1,7 +1,7 @@
 /*package bilibili.vvvbbbcz.hamburger.fluid;
 
-import bilibili.vvvbbbcz.hamburger.blocks.Blocks;
-import bilibili.vvvbbbcz.hamburger.items.Items;
+import bilibili.vvvbbbcz.hamburger.block.Blocks;
+import bilibili.vvvbbbcz.hamburger.item.Items;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.FlowingFluidBlock;
@@ -103,7 +103,7 @@ public abstract class ShitFluid extends FlowingFluid {
     }
 
     public static class Flowing extends ShitFluid {
-        protected void fillStateContainer(StateContainer.Builder<Fluid, IFluidState> builder) {
+        protected void fillStateContainer(@Nonnull StateContainer.Builder<Fluid, IFluidState> builder) {
             super.fillStateContainer(builder);
             builder.add(LEVEL_1_8);
         }
@@ -120,7 +120,7 @@ public abstract class ShitFluid extends FlowingFluid {
     }
 
     public static class Source extends ShitFluid {
-        public int getLevel(IFluidState p_207192_1_) {
+        public int getLevel(@Nonnull IFluidState p_207192_1_) {
             return 8;
         }
 

@@ -3,7 +3,7 @@
   "ingredient": {
     "item": "hamburger:duck"
   },
-  "result": "hamburger:duck_cooked",
+  "result": "hamburger:grilled_duck",
   "experience": 1.0,
   "cookingtime": 100
 }

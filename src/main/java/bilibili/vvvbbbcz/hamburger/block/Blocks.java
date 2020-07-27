@@ -19,6 +19,6 @@ public class Blocks {
     public static final RegistryObject<Block> SALT_ORE = BLOCKS.register("salt_ore", SaltOreBlock::new);
     public static final RegistryObject<Block> IRON_PLATE = BLOCKS.register("iron_plate", IronPlateBlock::new);
 
-    public static Block lemonSapling = new LemonSaplingBlock();
+    // FluidBlocks
 //    public static final RegistryObject<Block> SHIT_FLUID_BLOCK = BLOCKS.register("shit_fluid", ShitFluidBlock::new);
 }

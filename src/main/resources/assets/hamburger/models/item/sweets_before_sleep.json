@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "hamburger:items/sweets_before_sleep"
+  }
+}

@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "hamburger:items/ferment_bean_curd"
+    "layer0": "hamburger:item/ferment_bean_curd"
   }
 }

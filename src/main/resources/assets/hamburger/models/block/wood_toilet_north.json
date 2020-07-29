@@ -1,8 +1,8 @@
 {
 	"parent": "block/block",
 	"textures": {
-		"0": "hamburger:blocks/wood_toilet",
-		"particle": "hamburger:blocks/wood_toilet"
+		"0": "hamburger:block/wood_toilet",
+		"particle": "hamburger:block/wood_toilet"
 	},
 	"elements": [
 		{

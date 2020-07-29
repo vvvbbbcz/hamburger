@@ -1,6 +1,6 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "all": "hamburger:blocks/lemon_planks"
+    "all": "hamburger:block/lemon_planks"
   }
 }

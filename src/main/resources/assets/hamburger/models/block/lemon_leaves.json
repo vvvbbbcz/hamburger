@@ -1,6 +1,6 @@
 {
   "parent": "block/leaves",
   "textures": {
-    "all": "hamburger:blocks/lemon_leaves"
+    "all": "hamburger:block/lemon_leaves"
   }
 }

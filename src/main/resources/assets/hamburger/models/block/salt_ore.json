@@ -1,6 +1,6 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "all": "hamburger:blocks/salt_ore"
+    "all": "hamburger:block/salt_ore"
   }
 }

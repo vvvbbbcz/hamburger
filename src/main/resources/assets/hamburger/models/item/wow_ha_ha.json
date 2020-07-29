@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "hamburger:items/wow_ha_ha"
+    "layer0": "hamburger:item/wow_ha_ha"
   }
 }

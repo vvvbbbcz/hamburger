@@ -1,8 +1,8 @@
 {
 	"parent": "block/block",
 	"textures": {
-		"0": "hamburger:items/tofu",
-		"particle": "hamburger:items/tofu"
+		"0": "hamburger:item/tofu",
+		"particle": "hamburger:item/tofu"
 	},
 	"elements": [
 		{

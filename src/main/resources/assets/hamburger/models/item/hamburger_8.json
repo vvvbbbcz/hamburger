@@ -2,8 +2,8 @@
 	"parent": "block/block",
 	"texture_size": [64, 64],
 	"textures": {
-		"0": "hamburger:items/hamburger_8",
-		"particle": "hamburger:items/hamburger_8"
+		"0": "hamburger:item/hamburger_8",
+		"particle": "hamburger:item/hamburger_8"
 	},
 	"elements": [
 		{

@@ -1,47 +1,45 @@
-/*package bilibili.vvvbbbcz.hamburger.fluid;
+package bilibili.vvvbbbcz.hamburger.fluid;
 
+import bilibili.vvvbbbcz.hamburger.Hamburger;
 import bilibili.vvvbbbcz.hamburger.block.Blocks;
 import bilibili.vvvbbbcz.hamburger.item.Items;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
 import net.minecraft.block.FlowingFluidBlock;
-import net.minecraft.fluid.FlowingFluid;
 import net.minecraft.fluid.Fluid;
 import net.minecraft.fluid.IFluidState;
-import net.minecraft.item.Item;
 import net.minecraft.particles.ParticleTypes;
 import net.minecraft.state.StateContainer;
-import net.minecraft.tags.FluidTags;
-import net.minecraft.tileentity.TileEntity;
-import net.minecraft.util.Direction;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.SoundEvents;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.IBlockReader;
-import net.minecraft.world.IWorld;
-import net.minecraft.world.IWorldReader;
 import net.minecraft.world.World;
+import net.minecraftforge.fluids.FluidAttributes;
+import net.minecraftforge.fluids.ForgeFlowingFluid;
 
 import javax.annotation.Nonnull;
 import java.util.Random;
 
-public abstract class ShitFluid extends FlowingFluid {
-    @Nonnull
-    @Override
-    public Item getFilledBucket() {
-        return Items.SHIT_BUCKET;
-    }
-
-    @Nonnull
-    @Override
-    public Fluid getFlowingFluid() {
-        return Fluids.FLOWING_SHIT;
-    }
-
-    @Nonnull
-    @Override
-    public Fluid getStillFluid() {
-        return Fluids.SHIT;
+public abstract class ShitFluid extends ForgeFlowingFluid {
+    private static final ResourceLocation STILL = new ResourceLocation(Hamburger.MODID, "block/shit_still");
+    private static final ResourceLocation FLOWING = new ResourceLocation(Hamburger.MODID, "block/shit_flow");
+    private static final ResourceLocation OVERLAY = new ResourceLocation(Hamburger.MODID, "block/shit_overlay");
+    protected ShitFluid() {
+        super(new Properties(() -> Fluids.SHIT, () -> Fluids.FLOWING_SHIT, FluidAttributes.builder(STILL, FLOWING)
+//                .color(0xff643c00)
+                .density(2000)
+                .viscosity(4000)
+                .overlay(OVERLAY)
+                .translationKey("block.hamburger.shit")
+                .temperature(300)
+                )
+                .canMultiply()
+                .slopeFindDistance(4)
+                .levelDecreasePerBlock(1)
+                .bucket(() -> Items.SHIT_BUCKET)
+                .tickRate(6)
+                .explosionResistance(100.0F)
+                .block(() -> (FlowingFluidBlock) Blocks.SHIT_FLUID_BLOCK)
+        );
     }
 
     @Override
@@ -53,53 +51,6 @@ public abstract class ShitFluid extends FlowingFluid {
         } else if (random.nextInt(10) == 0) {
             worldIn.addParticle(ParticleTypes.UNDERWATER, (double)pos.getX() + (double)random.nextFloat(), (double)pos.getY() + (double)random.nextFloat(), (double)pos.getZ() + (double)random.nextFloat(), 0.0D, 0.0D, 0.0D);
         }
-    }
-
-    @Override
-    protected boolean canSourcesMultiply() {
-        return true;
-    }
-
-    @Override
-    protected void beforeReplacingBlock(IWorld worldIn, @Nonnull BlockPos pos, BlockState state) {
-        TileEntity tileentity = state.hasTileEntity() ? worldIn.getTileEntity(pos) : null;
-        Block.spawnDrops(state, worldIn.getWorld(), pos, tileentity);
-    }
-
-    @Override
-    protected int getSlopeFindDistance(@Nonnull IWorldReader worldIn) {
-        return 4;
-    }
-
-    @Nonnull
-    @Override
-    protected BlockState getBlockState(@Nonnull IFluidState state) {
-        return Blocks.SHIT_FLUID_BLOCK.getDefaultState().with(FlowingFluidBlock.LEVEL, getLevelFromState(state));
-    }
-
-    @Override
-    public boolean isEquivalentTo(@Nonnull Fluid fluidIn) {
-        return fluidIn == Fluids.SHIT || fluidIn == Fluids.FLOWING_SHIT;
-    }
-
-    @Override
-    protected int getLevelDecreasePerBlock(@Nonnull IWorldReader worldIn) {
-        return 1;
-    }
-
-    @Override
-    public int getTickRate(IWorldReader p_205569_1_) {
-        return 6;
-    }
-
-    @Override
-    protected boolean canDisplace(IFluidState fluidStateIn, IBlockReader blockReader, BlockPos pos, Fluid fluidIn, Direction directionIn) {
-        return directionIn == Direction.DOWN && !fluidIn.isIn(FluidTags.WATER);
-    }
-
-    @Override
-    protected float getExplosionResistance() {
-        return 100.0F;
     }
 
     public static class Flowing extends ShitFluid {
@@ -128,4 +79,4 @@ public abstract class ShitFluid extends FlowingFluid {
             return true;
         }
     }
-}*/
+}

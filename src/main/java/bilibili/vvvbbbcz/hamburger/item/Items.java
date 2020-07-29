@@ -26,7 +26,7 @@ public class Items {
     public static final Item SWEETS_BEFORE_SLEEP = register("sweets_before_sleep", new SweetsBeforeSleepItem());
     public static final Item SWEETS_BEFORE_SLEEP_8 = register("sweets_before_sleep_8", new SweetsBeforeSleep8Item());
     public static final Item DUCK_BUTT = register("duck_butt", new DuckButtItem());
-//    public static final Item SHIT_BUCKET = register("shit_bucket", new ShitFluidBucketItem());
+    public static final Item SHIT_BUCKET = register("shit_bucket", new ShitFluidBucketItem());
 
     // BlockItems
     public static final Item WOOD_TOILET = register("wood_toilet", new BlockItem(Blocks.WOOD_TOILET, new Item.Properties().group(ItemGroups.HAMBURGER)));

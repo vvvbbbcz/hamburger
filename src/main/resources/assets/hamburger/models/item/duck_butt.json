@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "hamburger:items/duck_butt"
+    "layer0": "hamburger:item/duck_butt"
   }
 }

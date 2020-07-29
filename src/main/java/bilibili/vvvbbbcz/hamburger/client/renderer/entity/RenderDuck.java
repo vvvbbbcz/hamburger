@@ -14,7 +14,7 @@ import javax.annotation.Nonnull;
 
 @OnlyIn(Dist.CLIENT)
 public class RenderDuck extends MobRenderer<DuckEntity, ModelDuck> {
-    private static final ResourceLocation TEXTURE = new ResourceLocation(Hamburger.MODID, "textures/entities/duck.png");
+    private static final ResourceLocation TEXTURE = new ResourceLocation(Hamburger.MODID, "textures/entity/duck.png");
 
     public RenderDuck(EntityRendererManager renderManagerIn) {
         super(renderManagerIn, new ModelDuck(), 0.3F);

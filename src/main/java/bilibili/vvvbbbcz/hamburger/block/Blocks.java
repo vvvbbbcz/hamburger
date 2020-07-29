@@ -17,9 +17,8 @@ public class Blocks {
     public static final Block LEMON_PLANKS = register("lemon_planks", new LemonPlanksBlock());
     public static final Block SALT_ORE = register("salt_ore", new SaltOreBlock());
     public static final Block IRON_PLATE = register("iron_plate", new IronPlateBlock());
-
     // FluidBlocks
-//    public static final Block SHIT_FLUID_BLOCK = register("shit_fluid", new ShitFluidBlock());
+    public static final Block SHIT_FLUID_BLOCK = register("shit_fluid", new ShitFluidBlock());
 
     private static Block register(String name, Block block) {
         BLOCKS.register(name, () -> block);

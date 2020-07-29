@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "hamburger:items/old_godmother"
+    "layer0": "hamburger:item/old_godmother"
   }
 }

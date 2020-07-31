@@ -1,4 +1,4 @@
-package bilibili.vvvbbbcz.hamburger.entity;
+/*package bilibili.vvvbbbcz.hamburger.entity;
 
 import net.minecraft.entity.*;
 import net.minecraft.entity.player.PlayerEntity;
@@ -7,6 +7,8 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.nbt.ListNBT;
 import net.minecraft.world.World;
+
+import javax.annotation.Nonnull;
 
 public class LaoBaEntity extends CreatureEntity implements INPC {
     private final Inventory inventory = new Inventory(2);
@@ -20,7 +22,7 @@ public class LaoBaEntity extends CreatureEntity implements INPC {
         return 1.62F;
     }
 
-    public void writeAdditional(CompoundNBT compound) {
+    public void writeAdditional(@Nonnull CompoundNBT compound) {
         super.writeAdditional(compound);
 
         ListNBT listnbt = new ListNBT();
@@ -35,7 +37,7 @@ public class LaoBaEntity extends CreatureEntity implements INPC {
         compound.put("Inventory", listnbt);
     }
 
-    public void readAdditional(CompoundNBT compound) {
+    public void readAdditional(@Nonnull CompoundNBT compound) {
         super.readAdditional(compound);
 
         ListNBT listnbt = compound.getList("Inventory", 10);
@@ -53,3 +55,4 @@ public class LaoBaEntity extends CreatureEntity implements INPC {
         return false;
     }
 }
+*/

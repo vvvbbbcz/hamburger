@@ -18,11 +18,11 @@ version="${file.jarVersion}" #mandatory
  # A display name for the mod
 displayName="Hamburger Of LaoBa" #mandatory
 # A URL to query for updates for this mod. See the JSON update specification <here>
-updateJSONURL="http://myurl.me/" #optional
+# updateJSONURL="http://myurl.me/" #optional
 # A URL for the "homepage" for this mod, displayed in the mod UI
-displayURL="http://example.com/" #optional
+# displayURL="http://example.com/" #optional
 # A file name (in the root of the mod JAR) containing a logo for display
-logoFile="hamburger.png" #optional
+# logoFile="hamburger.png" #optional
 # A text field displayed in the mod UI
 credits="vvvbbbcz and fengming" #optional
 # A text field displayed in the mod UI

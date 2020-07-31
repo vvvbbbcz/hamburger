@@ -25,7 +25,7 @@ public abstract class ShitFluid extends ForgeFlowingFluid {
     private static final ResourceLocation OVERLAY = new ResourceLocation(Hamburger.MODID, "block/shit_overlay");
     protected ShitFluid() {
         super(new Properties(() -> Fluids.SHIT, () -> Fluids.FLOWING_SHIT, FluidAttributes.builder(STILL, FLOWING)
-//                .color(0xff643c00)
+                .color(0xff201600)
                 .density(2000)
                 .viscosity(4000)
                 .overlay(OVERLAY)

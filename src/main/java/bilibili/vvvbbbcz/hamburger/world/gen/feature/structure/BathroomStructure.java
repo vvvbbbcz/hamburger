@@ -15,16 +15,15 @@ import java.util.Random;
 import java.util.function.Function;
 
 public class BathroomStructure extends Structure<NoFeatureConfig> {
+//    private static final List<Biome.SpawnListEntry> SPAWN_LIST = Lists.newArrayList()
+
     public BathroomStructure(Function<Dynamic<?>, ? extends NoFeatureConfig> configFactoryIn) {
         super(configFactoryIn);
     }
 
     @Override
     public boolean canBeGenerated(BiomeManager biomeManagerIn, ChunkGenerator<?> generatorIn, Random randIn, int chunkX, int chunkZ, Biome biomeIn) {
-        if (randIn.nextFloat() < 0.03) {
-            return true;
-        }
-        return false;
+        return true;
     }
 
     @Nonnull
@@ -38,6 +37,12 @@ public class BathroomStructure extends Structure<NoFeatureConfig> {
     public String getStructureName() {
         return "bathroom";
     }
+
+//    @Nonnull
+//    @Override
+//    public List<Biome.SpawnListEntry> getSpawnList() {
+//        return super.getSpawnList();
+//    }
 
     @Override
     public int getSize() {

@@ -57,7 +57,7 @@ public class BathroomStructure extends Structure<NoFeatureConfig> {
 
         @Override
         public void init(ChunkGenerator<?> generator, TemplateManager templateManagerIn, int chunkX, int chunkZ, Biome biomeIn) {
-            BathroomPiece piece = new BathroomPiece(this.rand, chunkX * 16, chunkZ * 16);
+            BathroomPiece piece = new BathroomPiece(this.rand, 128, 128);
             this.components.add(piece);
             this.recalculateStructureSize();
         }

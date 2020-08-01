@@ -14,8 +14,6 @@ import bilibili.vvvbbbcz.hamburger.util.SoundEvents;
 import bilibili.vvvbbbcz.hamburger.world.OreGenerations;
 import bilibili.vvvbbbcz.hamburger.world.TreeGenerations;
 import bilibili.vvvbbbcz.hamburger.world.biome.Biomes;
-import bilibili.vvvbbbcz.hamburger.world.gen.feature.Features;
-import bilibili.vvvbbbcz.hamburger.world.gen.feature.structure.StructureTypes;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
@@ -39,7 +37,7 @@ public class Hamburger {
         Effects.EFFECTS.register(FMLJavaModLoadingContext.get().getModEventBus());
         Entities.ENTITIES.register(FMLJavaModLoadingContext.get().getModEventBus());
         Items.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
-        Features.FEATURES.register(FMLJavaModLoadingContext.get().getModEventBus());
+//        Features.FEATURES.register(FMLJavaModLoadingContext.get().getModEventBus());
         Fluids.FLUIDS.register(FMLJavaModLoadingContext.get().getModEventBus());
         SoundEvents.SOUND_EVENTS.register(FMLJavaModLoadingContext.get().getModEventBus());
         TileEntities.TILE_ENTITIES.register(FMLJavaModLoadingContext.get().getModEventBus());
@@ -57,7 +55,7 @@ public class Hamburger {
         OreGenerations.register();
         TreeGenerations.register();
         Biomes.add();
-        StructureTypes.register();
+//        StructureTypes.register();
     }
 
     private void doClientStuff(final FMLClientSetupEvent event) {

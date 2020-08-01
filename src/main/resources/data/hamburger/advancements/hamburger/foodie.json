@@ -4,10 +4,10 @@
       "item": "hamburger:gold_toilet"
     },
     "title": {
-      "translate": "advancements.hamburger.food_home.title"
+      "translate": "advancements.hamburger.foodie.title"
     },
     "description": {
-      "translate": "advancements.hamburger.food_home.description"
+      "translate": "advancements.hamburger.foodie.description"
     }
   },
   "parent": "hamburger:hamburger/welcome",
@@ -23,11 +23,11 @@
         }
       }
     },
-    "sweets_sweets_before_sleep_8": {
+    "sweets_before_sleep_8": {
       "trigger": "consume_item",
       "conditions": {
         "item": {
-          "item": "hamburger:sweets_sweets_before_sleep_8"
+          "item": "hamburger:sweets_before_sleep_8"
         }
       }
     },

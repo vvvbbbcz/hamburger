@@ -4,10 +4,10 @@
       "item": "hamburger:iron_toilet"
     },
     "title": {
-      "translate": "advancements.hamburger.the_same_time.title"
+      "translate": "advancements.hamburger.the_same_toilet.title"
     },
     "description": {
-      "translate": "advancements.hamburger.the_same_time.description"
+      "translate": "advancements.hamburger.the_same_toilet.description"
     }
   },
   "parent": "hamburger:hamburger/welcome",

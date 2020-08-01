@@ -13,7 +13,7 @@
     "show_toast": false,
     "announce_to_chat": false,
     "hidden": false,
-    "background": "minecraft:textures/gui/advancements/backgrounds/adventure.png"
+    "background": "hamburger:textures/gui/advancements/backgrounds/hamburger.png"
   },
   "criteria": {
     "crafting_table": {

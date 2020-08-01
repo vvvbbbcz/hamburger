@@ -4,15 +4,15 @@
       "item": "hamburger:duck_butt"
     },
     "title": {
-      "translate": "advancements.hamburger.duck.title"
+      "translate": "advancements.hamburger.duck_butt.title"
     },
     "description": {
-      "translate": "advancements.hamburger.duck.description"
+      "translate": "advancements.hamburger.duck_butt.description"
     }
   },
-  "parent": "hamburger:hamburger/the_same_time",
+  "parent": "hamburger:hamburger/the_same_toilet",
   "criteria": {
-    "get_duck": {
+    "get_duck_butt": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [

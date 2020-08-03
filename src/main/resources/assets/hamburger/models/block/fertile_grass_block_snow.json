@@ -1,0 +1,9 @@
+{
+    "parent": "block/cube_bottom_top",
+    "textures": {
+        "particle": "hamburger:block/fertile_dirt",
+        "bottom": "hamburger:block/fertile_dirt",
+        "top": "hamburger:block/fertile_grass_block_top",
+        "side": "hamburger:block/fertile_grass_block_snow"
+    }
+}

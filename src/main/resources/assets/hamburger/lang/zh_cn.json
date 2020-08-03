@@ -25,6 +25,9 @@
   "block.hamburger.lemon_planks": "柠檬木板",
   "block.hamburger.lemon_leaves": "柠檬树叶",
   "block.hamburger.lemon_sapling": "柠檬树苗",
+  "block.hamburger.fertile_grass_block": "肥沃草方块",
+  "block.hamburger.fertile_dirt": "肥沃泥土",
+  "block.hamburger.fertile_farmland": "肥沃耕地",
 
   "item.hamburger.hamburger": "小汉堡",
   "item.hamburger.sweets_before_sleep": "睡前小甜点",

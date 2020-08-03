@@ -1,0 +1,8 @@
+{
+    "parent": "block/template_farmland",
+    "textures": {
+        "particle": "hamburger:block/fertile_dirt",
+        "dirt": "hamburger:block/fertile_dirt",
+        "top": "hamburger:block/fertile_farmland_moist"
+    }
+}

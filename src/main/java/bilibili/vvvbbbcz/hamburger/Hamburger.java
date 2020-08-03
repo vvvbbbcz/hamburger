@@ -22,12 +22,9 @@ import net.minecraftforge.fml.event.lifecycle.InterModEnqueueEvent;
 import net.minecraftforge.fml.event.lifecycle.InterModProcessEvent;
 import net.minecraftforge.fml.event.server.FMLServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 
 @Mod(Hamburger.MODID)
 public class Hamburger {
-    private static final Logger LOGGER = LogManager.getLogger();
     public static final String MODID = "hamburger";
 
     public Hamburger() {

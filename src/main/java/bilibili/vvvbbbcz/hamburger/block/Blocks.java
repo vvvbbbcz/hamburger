@@ -17,10 +17,13 @@ public class Blocks {
     public static final Block LEMON_PLANKS = register("lemon_planks", new LemonPlanksBlock());
     public static final Block SALT_ORE = register("salt_ore", new SaltOreBlock());
     public static final Block IRON_PLATE = register("iron_plate", new IronPlateBlock());
+    public static final Block FERTILE_DIRT = register("fertile_dirt", new FertileDirtBlock());
+    public static final Block FERTILE_GRASS_BLOCK = register("fertile_grass_block", new FertileGrassBlock());
+    public static final Block FERTILE_FARMLAND = register("fertile_farmland", new FertileFarmlandBlock());
     // FluidBlocks
     public static final Block SHIT_FLUID_BLOCK = register("shit_fluid", new ShitFluidBlock());
 
-    private static Block register(String name, Block block) {
+    private static <T extends Block> T register(String name, T block) {
         BLOCKS.register(name, () -> block);
         return block;
     }

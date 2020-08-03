@@ -1,0 +1,10 @@
+{
+    "variants": {
+        "": [
+            { "model": "hamburger:block/fertile_dirt" },
+            { "model": "hamburger:block/fertile_dirt", "y": 90 },
+            { "model": "hamburger:block/fertile_dirt", "y": 180 },
+            { "model": "hamburger:block/fertile_dirt", "y": 270 }
+        ]
+    }
+}

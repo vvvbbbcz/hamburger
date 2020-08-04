@@ -6,7 +6,12 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "hamburger:iron_plate"
+          "name": "hamburger:fertile_dirt"
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
         }
       ]
     }

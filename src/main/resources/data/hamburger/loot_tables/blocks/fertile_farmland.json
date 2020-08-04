@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "hamburger:gold_toilet"
+          "name": "hamburger:fertile_dirt"
         }
       ],
       "conditions": [

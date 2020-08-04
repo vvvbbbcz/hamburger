@@ -8,6 +8,11 @@
           "type": "minecraft:item",
           "name": "hamburger:salt"
         }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
       ]
     }
   ]

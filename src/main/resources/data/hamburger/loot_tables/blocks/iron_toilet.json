@@ -8,6 +8,11 @@
           "type": "minecraft:item",
           "name": "hamburger:iron_toilet"
         }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
       ]
     }
   ]

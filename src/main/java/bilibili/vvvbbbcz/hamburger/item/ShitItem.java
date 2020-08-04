@@ -17,6 +17,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.server.ServerWorld;
+import net.minecraftforge.event.ForgeEventFactory;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -39,12 +40,15 @@ public class ShitItem extends Item {
         World world = context.getWorld();
         BlockPos blockPos = context.getPos();
         BlockPos blockPos1 = blockPos.offset(context.getFace());
-        if (applyBoneMeal(context.getItem(), world, blockPos, context.getPlayer())) {
+        if (makeBlockFertile(world, blockPos)) {
+            return ActionResultType.SUCCESS;
+
+        } else if (applyBoneMeal(context.getItem(), world, blockPos, context.getPlayer())) {
             if (!world.isRemote) {
                 world.playEvent(2005, blockPos, 0);
             }
-
             return ActionResultType.SUCCESS;
+
         } else {
             BlockState blockstate = world.getBlockState(blockPos);
             boolean flag = blockstate.isSolidSide(world, blockPos, context.getFace());
@@ -60,18 +64,37 @@ public class ShitItem extends Item {
         }
     }
 
+    public static boolean makeBlockFertile(World world, BlockPos blockPos) {
+        if (world.getBlockState(blockPos).getBlock() == Blocks.GRASS_BLOCK) {
+            if (world instanceof ServerWorld) {
+                world.setBlockState(blockPos, bilibili.vvvbbbcz.hamburger.block.Blocks.FERTILE_GRASS_BLOCK.getDefaultState());
+            }
+            return true;
+        } else if (world.getBlockState(blockPos).getBlock() == Blocks.DIRT) {
+            if (world instanceof ServerWorld) {
+                world.setBlockState(blockPos, bilibili.vvvbbbcz.hamburger.block.Blocks.FERTILE_DIRT.getDefaultState());
+                return true;
+            }
+        } else if (world.getBlockState(blockPos).getBlock() == Blocks.FARMLAND) {
+            if (world instanceof ServerWorld) {
+                world.setBlockState(blockPos, bilibili.vvvbbbcz.hamburger.block.Blocks.FERTILE_FARMLAND.getDefaultState());
+                return true;
+            }
+        }
+        return false;
+    }
+
     public static boolean applyBoneMeal(ItemStack stack, World worldIn, BlockPos pos, net.minecraft.entity.player.PlayerEntity player) {
         BlockState blockstate = worldIn.getBlockState(pos);
-        int hook = net.minecraftforge.event.ForgeEventFactory.onApplyBonemeal(player, worldIn, pos, blockstate, stack);
+        int hook = ForgeEventFactory.onApplyBonemeal(player, worldIn, pos, blockstate, stack);
         if (hook != 0) return hook > 0;
         if (blockstate.getBlock() instanceof IGrowable) {
-            IGrowable igrowable = (IGrowable)blockstate.getBlock();
+            IGrowable igrowable = (IGrowable) blockstate.getBlock();
             if (igrowable.canGrow(worldIn, pos, blockstate, worldIn.isRemote)) {
                 if (worldIn instanceof ServerWorld) {
                     if (igrowable.canUseBonemeal(worldIn, worldIn.rand, pos, blockstate)) {
-                        igrowable.grow((ServerWorld)worldIn, worldIn.rand, pos, blockstate);
+                        igrowable.grow((ServerWorld) worldIn, worldIn.rand, pos, blockstate);
                     }
-
                     stack.shrink(1);
                 }
 

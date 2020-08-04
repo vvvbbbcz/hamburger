@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "hamburger:gold_toilet"
+          "name": "hamburger:iron_plate"
         }
       ],
       "conditions": [

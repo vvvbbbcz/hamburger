@@ -2,7 +2,7 @@ package bilibili.vvvbbbcz.hamburger.client.renderer.entity;
 
 import bilibili.vvvbbbcz.hamburger.Hamburger;
 import bilibili.vvvbbbcz.hamburger.entity.DuckEntity;
-import bilibili.vvvbbbcz.hamburger.client.renderer.entity.model.ModelDuck;
+import bilibili.vvvbbbcz.hamburger.client.renderer.entity.model.DuckModel;
 import net.minecraft.client.renderer.entity.EntityRendererManager;
 import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.util.ResourceLocation;
@@ -13,11 +13,11 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 import javax.annotation.Nonnull;
 
 @OnlyIn(Dist.CLIENT)
-public class RenderDuck extends MobRenderer<DuckEntity, ModelDuck> {
+public class DuckRenderer extends MobRenderer<DuckEntity, DuckModel> {
     private static final ResourceLocation TEXTURE = new ResourceLocation(Hamburger.MODID, "textures/entity/duck.png");
 
-    public RenderDuck(EntityRendererManager renderManagerIn) {
-        super(renderManagerIn, new ModelDuck(), 0.3F);
+    public DuckRenderer(EntityRendererManager renderManagerIn) {
+        super(renderManagerIn, new DuckModel(), 0.3F);
     }
 
     @Nonnull

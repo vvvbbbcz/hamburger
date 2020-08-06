@@ -11,7 +11,7 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 import javax.annotation.Nonnull;
 
 @OnlyIn(Dist.CLIENT)
-public class ModelDuck extends AgeableModel<DuckEntity> {
+public class DuckModel extends AgeableModel<DuckEntity> {
     private final ModelRenderer head;
     private final ModelRenderer body;
     private final ModelRenderer rightLeg;
@@ -20,7 +20,7 @@ public class ModelDuck extends AgeableModel<DuckEntity> {
     private final ModelRenderer leftWing;
     private final ModelRenderer bill;
 
-    public ModelDuck() {
+    public DuckModel() {
         textureWidth = 64;
         textureHeight = 64;
 

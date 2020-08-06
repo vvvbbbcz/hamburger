@@ -8,8 +8,8 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
 @OnlyIn(Dist.CLIENT)
-public class RenderDuckEgg extends SpriteRenderer<DuckEggEntity> {
-    public RenderDuckEgg(EntityRendererManager renderManagerIn) {
+public class DuckEggRenderer extends SpriteRenderer<DuckEggEntity> {
+    public DuckEggRenderer(EntityRendererManager renderManagerIn) {
         super(renderManagerIn, Minecraft.getInstance().getItemRenderer());
     }
 }

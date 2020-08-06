@@ -8,7 +8,7 @@ import net.minecraft.potion.Effects;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
-public class Hamburger8Item extends Item {
+public class Hamburger8Item extends Item implements IToiletFood {
     private static final Food FOOD = (new Food.Builder())
             .hunger(10)
             .saturation(10.0F)

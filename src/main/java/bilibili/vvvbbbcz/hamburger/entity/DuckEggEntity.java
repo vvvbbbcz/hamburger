@@ -1,10 +1,9 @@
 package bilibili.vvvbbbcz.hamburger.entity;
 
-import bilibili.vvvbbbcz.hamburger.item.Items;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.projectile.EggEntity;
 import net.minecraft.entity.projectile.ProjectileItemEntity;
-import net.minecraft.item.Item;
 import net.minecraft.particles.ItemParticleData;
 import net.minecraft.particles.ParticleTypes;
 import net.minecraft.util.DamageSource;
@@ -14,19 +13,17 @@ import net.minecraft.world.World;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
-import javax.annotation.Nonnull;
-
-public class DuckEggEntity extends ProjectileItemEntity {
-    public DuckEggEntity(EntityType<? extends ProjectileItemEntity> type, World worldIn) {
+public class DuckEggEntity extends EggEntity {
+    public DuckEggEntity(EntityType<? extends EggEntity> type, World worldIn) {
         super(type, worldIn);
     }
 
     public DuckEggEntity(LivingEntity throwerIn, World worldIn) {
-        super(Entities.DUCK_EGG, throwerIn, worldIn); // TODO
+        super(worldIn, throwerIn); // TODO
     }
 
     public DuckEggEntity(EntityType<? extends ProjectileItemEntity> type, double x, double y, double z, World worldIn) {
-        super(type, x, y, z, worldIn);
+        super(worldIn, x, y, z);
     }
 
     @OnlyIn(Dist.CLIENT)
@@ -63,11 +60,5 @@ public class DuckEggEntity extends ProjectileItemEntity {
             this.world.setEntityState(this, (byte) 3);
             this.remove();
         }
-    }
-
-    @Nonnull
-    @Override
-    protected Item getDefaultItem() {
-        return Items.DUCK_EGG;
     }
 }

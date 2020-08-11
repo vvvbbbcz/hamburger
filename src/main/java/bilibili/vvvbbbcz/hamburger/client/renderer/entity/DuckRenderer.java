@@ -1,8 +1,8 @@
 package bilibili.vvvbbbcz.hamburger.client.renderer.entity;
 
 import bilibili.vvvbbbcz.hamburger.Hamburger;
-import bilibili.vvvbbbcz.hamburger.entity.DuckEntity;
 import bilibili.vvvbbbcz.hamburger.client.renderer.entity.model.DuckModel;
+import bilibili.vvvbbbcz.hamburger.entity.DuckEntity;
 import net.minecraft.client.renderer.entity.EntityRendererManager;
 import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.util.ResourceLocation;

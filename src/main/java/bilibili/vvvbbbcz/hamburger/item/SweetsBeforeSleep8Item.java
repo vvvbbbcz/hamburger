@@ -13,7 +13,7 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 
 import javax.annotation.Nonnull;
 
-public class SweetsBeforeSleep8Item extends Item implements IToiletFood {
+public class SweetsBeforeSleep8Item extends Item {
     private static final Food FOOD = (new Food.Builder())
             .hunger(10)
             .saturation(10.0F)

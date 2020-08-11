@@ -41,6 +41,7 @@ public class IslandCityBiome extends Biome {
         this.addFeature(GenerationStage.Decoration.UNDERGROUND_STRUCTURES, Feature.STRONGHOLD.withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG).withPlacement(Placement.NOPE.configure(IPlacementConfig.NO_PLACEMENT_CONFIG)));
         this.addFeature(GenerationStage.Decoration.LOCAL_MODIFICATIONS, Feature.LAKE.withConfiguration(new BlockStateFeatureConfig(bilibili.vvvbbbcz.hamburger.block.Blocks.SHIT_FLUID_BLOCK.getDefaultState())).withPlacement(Placement.WATER_LAKE.configure(new ChanceConfig(4))));
         this.addSpawn(EntityClassification.CREATURE, new SpawnListEntry(Entities.DUCK, 10, 4, 6));
+        this.addSpawn(EntityClassification.CREATURE, new SpawnListEntry(Entities.LAO_BA, 1, 1, 1));
         DefaultBiomeFeatures.addCarvers(this);
         DefaultBiomeFeatures.addMonsterRooms(this);
         DefaultBiomeFeatures.addStoneVariants(this);

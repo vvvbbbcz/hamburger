@@ -20,7 +20,6 @@
   "block.hamburger.iron_toilet": "Iron 撤硕",
   "block.hamburger.gold_toilet": "Gold 撤硕",
   "block.hamburger.salt_ore": "Salt Ore",
-  "block.hamburger.iron_plate": "The Iron Plate Of 老八",
   "block.hamburger.lemon_log": "Lemon Log",
   "block.hamburger.lemon_planks": "Lemon Planks",
   "block.hamburger.lemon_leaves": "Lemon Leaves",
@@ -47,6 +46,8 @@
   "item.hamburger.sweets_before_sleep_8": "The Sweets Before Bed Of 老八",
   "item.hamburger.duck_butt": "Duck Butt",
   "item.hamburger.shit_bucket": "Shit Bucket",
+  "item.hamburger.duck_spawn_egg": "Duck Spawn Egg",
+  "item.hamburger.lao_ba_spawn_egg": "Duck Spawn Egg",
 
   "entity.duck": "Duck",
   "entity.duck_egg": "Duck Eggs",

@@ -8,7 +8,7 @@ import net.minecraft.potion.Effects;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
-public class DuckButtItem extends Item implements IToiletFood {
+public class DuckButtItem extends Item {
     private static final Food FOOD = (new Food.Builder())
             .hunger(12)
             .saturation(12.0F)

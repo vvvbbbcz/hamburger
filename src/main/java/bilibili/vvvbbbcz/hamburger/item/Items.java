@@ -27,6 +27,8 @@ public class Items {
     public static final Item SWEETS_BEFORE_SLEEP_8 = register("sweets_before_sleep_8", new SweetsBeforeSleep8Item());
     public static final Item DUCK_BUTT = register("duck_butt", new DuckButtItem());
     public static final Item SHIT_BUCKET = register("shit_bucket", new ShitFluidBucketItem());
+    public static final Item DUCK_SPAWN_EGG = register("duck_spawn_egg", new DuckSpawnEggItem());
+    public static final Item LAO_BA_SPAWN_EGG = register("lao_ba_spawn_egg", new LaoBaSpawnEggItem());
 
     // BlockItems
     public static final Item WOOD_TOILET = register("wood_toilet", new BlockItem(Blocks.WOOD_TOILET, new Item.Properties().group(ItemGroups.HAMBURGER)));
@@ -37,7 +39,6 @@ public class Items {
     public static final Item LEMON_LEAVES = register("lemon_leaves", new BlockItem(Blocks.LEMON_LEAVES, new Item.Properties().group(ItemGroups.HAMBURGER)));
     public static final Item LEMON_PLANKS = register("lemon_planks", new BlockItem(Blocks.LEMON_PLANKS, new Item.Properties().group(ItemGroups.HAMBURGER)));
     public static final Item SALT_ORE = register("salt_ore", new BlockItem(Blocks.SALT_ORE, new Item.Properties().group(ItemGroups.HAMBURGER)));
-    public static final Item IRON_PLATE = register("iron_plate", new BlockItem(Blocks.IRON_PLATE, new Item.Properties().group(ItemGroups.HAMBURGER)));
     public static final Item FERTILE_DIRT = register("fertile_dirt", new BlockItem(Blocks.FERTILE_DIRT, new Item.Properties().group(ItemGroups.HAMBURGER)));
     public static final Item FERTILE_GRASS_BLOCK = register("fertile_grass_block", new BlockItem(Blocks.FERTILE_GRASS_BLOCK, new Item.Properties().group(ItemGroups.HAMBURGER)));
     public static final Item FERTILE_FARMLAND = register("fertile_farmland", new BlockItem(Blocks.FERTILE_FARMLAND, new Item.Properties().group(ItemGroups.HAMBURGER)));

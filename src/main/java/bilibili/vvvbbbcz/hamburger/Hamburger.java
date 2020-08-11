@@ -1,15 +1,12 @@
 package bilibili.vvvbbbcz.hamburger;
 
 import bilibili.vvvbbbcz.hamburger.block.Blocks;
-import bilibili.vvvbbbcz.hamburger.client.gui.Screens;
 import bilibili.vvvbbbcz.hamburger.client.renderer.RenderTypes;
 import bilibili.vvvbbbcz.hamburger.client.renderer.entity.EntityRenderers;
 import bilibili.vvvbbbcz.hamburger.entity.Entities;
 import bilibili.vvvbbbcz.hamburger.fluid.Fluids;
-import bilibili.vvvbbbcz.hamburger.inventory.container.Containers;
 import bilibili.vvvbbbcz.hamburger.item.Items;
 import bilibili.vvvbbbcz.hamburger.potion.Effects;
-import bilibili.vvvbbbcz.hamburger.tileentity.TileEntities;
 import bilibili.vvvbbbcz.hamburger.util.SoundEvents;
 import bilibili.vvvbbbcz.hamburger.world.OreGenerations;
 import bilibili.vvvbbbcz.hamburger.world.TreeGenerations;
@@ -30,14 +27,12 @@ public class Hamburger {
     public Hamburger() {
         Blocks.BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
         Biomes.BIOMES.register(FMLJavaModLoadingContext.get().getModEventBus());
-        Containers.CONTAINERS.register(FMLJavaModLoadingContext.get().getModEventBus());
         Effects.EFFECTS.register(FMLJavaModLoadingContext.get().getModEventBus());
         Entities.ENTITIES.register(FMLJavaModLoadingContext.get().getModEventBus());
         Items.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
 //        Features.FEATURES.register(FMLJavaModLoadingContext.get().getModEventBus());
         Fluids.FLUIDS.register(FMLJavaModLoadingContext.get().getModEventBus());
         SoundEvents.SOUND_EVENTS.register(FMLJavaModLoadingContext.get().getModEventBus());
-        TileEntities.TILE_ENTITIES.register(FMLJavaModLoadingContext.get().getModEventBus());
 
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::enqueueIMC);
@@ -57,7 +52,6 @@ public class Hamburger {
 
     private void doClientStuff(final FMLClientSetupEvent event) {
         EntityRenderers.register();
-        Screens.register();
         RenderTypes.registerRenderLayers();
     }
 

@@ -20,7 +20,6 @@
   "block.hamburger.iron_toilet": "肛铁撤硕",
   "block.hamburger.gold_toilet": "黄金撤硕",
   "block.hamburger.salt_ore": "盐矿",
-  "block.hamburger.iron_plate": "老⑧的小铁盘",
   "block.hamburger.lemon_log": "柠檬原木",
   "block.hamburger.lemon_planks": "柠檬木板",
   "block.hamburger.lemon_leaves": "柠檬树叶",
@@ -47,12 +46,11 @@
   "item.hamburger.sweets_before_sleep_8": "老八睡前小甜点",
   "item.hamburger.duck_butt": "扒鸭屁股",
   "item.hamburger.shit_bucket": "粑粑水",
-
+  "item.hamburger.duck_spawn_egg": "扒鸭刷怪蛋",
+  "item.hamburger.lao_ba_spawn_egg": "老八刷怪蛋",
 
   "entity.duck": "大扒鸭",
   "entity.duck_egg": "扒鸭蛋",
-
-  "gui.iron_plate.title": "老八的小铁盘",
 
   "effect.hamburger.shit": "撤硕的力量",
 

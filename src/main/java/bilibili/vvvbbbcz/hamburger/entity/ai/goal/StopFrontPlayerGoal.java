@@ -9,17 +9,14 @@ import net.minecraft.util.EntityPredicates;
 import java.util.EnumSet;
 
 public class StopFrontPlayerGoal extends Goal {
-    private MobEntity entity;
+    private final MobEntity entity;
     private Entity closestEntity;
-    private float maxDistance;
-    private int lookTime;
-    private int lookTimeSet;
+    private final float maxDistance;
     private final float chance;
     private final EntityPredicate field_220716_e;
 
-    public StopFrontPlayerGoal(MobEntity entity, int lookTimeSet, float maxDistance, float chance) {
+    public StopFrontPlayerGoal(MobEntity entity, float maxDistance, float chance) {
         this.entity = entity;
-        this.lookTimeSet = lookTimeSet;
         this.maxDistance = maxDistance;
         this.chance = chance;
         this.setMutexFlags(EnumSet.of(Goal.Flag.LOOK));
@@ -41,18 +38,17 @@ public class StopFrontPlayerGoal extends Goal {
         }
     }
 
+    @Override
+    public void startExecuting() {
+        this.entity.getNavigator().clearPath();
+    }
+
     public boolean shouldContinueExecuting() {
         if (!this.closestEntity.isAlive()) {
             return false;
-        } else if (this.entity.getDistanceSq(this.closestEntity) > (double)(this.maxDistance * this.maxDistance)) {
-            return false;
         } else {
-            return this.lookTime > 0;
+            return !(this.entity.getDistanceSq(this.closestEntity) > (double) (this.maxDistance * this.maxDistance));
         }
-    }
-
-    public void startExecuting() {
-        this.lookTime = this.lookTimeSet + this.entity.getRNG().nextInt(this.lookTimeSet);
     }
 
     public void resetTask() {
@@ -61,6 +57,5 @@ public class StopFrontPlayerGoal extends Goal {
 
     public void tick() {
         this.entity.getLookController().setLookPosition(this.closestEntity.getPosX(), this.closestEntity.getPosYEye(), this.closestEntity.getPosZ());
-        --this.lookTime;
     }
 }

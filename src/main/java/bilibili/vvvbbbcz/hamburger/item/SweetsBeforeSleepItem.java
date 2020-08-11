@@ -12,7 +12,7 @@ import net.minecraft.world.World;
 
 import javax.annotation.Nonnull;
 
-public class SweetsBeforeSleepItem extends Item {
+public class SweetsBeforeSleepItem extends Item implements IToiletFood {
     private static final EffectInstance NAUSEA = new EffectInstance(Effects.NAUSEA, 2400, 0);
     private static final Food FOOD = (new Food.Builder())
             .hunger(8)
@@ -29,5 +29,10 @@ public class SweetsBeforeSleepItem extends Item {
     public ItemStack onItemUseFinish(ItemStack stack, World worldIn, LivingEntity entityLiving) {
         super.onItemUseFinish(stack, worldIn, entityLiving);
         return new ItemStack(Items.BOWL);
+    }
+
+    @Override
+    public Item getFinalFood() {
+        return bilibili.vvvbbbcz.hamburger.item.Items.SWEETS_BEFORE_SLEEP_8;
     }
 }

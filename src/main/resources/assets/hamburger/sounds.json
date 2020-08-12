@@ -1,37 +1,60 @@
 {
   "ao": {
     "category": "player",
-    "subtitle": "hamburger.sound.ao",
+    "subtitle": "sound.hamburger.toilet",
     "sounds": [
       "hamburger:ao"
     ]
   },
   "li": {
     "category": "player",
-    "subtitle": "hamburger.sound.ao",
+    "subtitle": "sound.hamburger.toilet",
     "sounds": [
       "hamburger:li"
     ]
   },
   "gei": {
     "category": "player",
-    "subtitle": "hamburger.sound.ao",
+    "subtitle": "sound.hamburger.toilet",
     "sounds": [
       "hamburger:gei"
     ]
   },
   "gan": {
     "category": "player",
-    "subtitle": "hamburger.sound.ao",
+    "subtitle": "sound.hamburger.toilet",
     "sounds": [
       "hamburger:gan"
     ]
   },
   "le": {
     "category": "player",
-    "subtitle": "hamburger.sound.ao",
+    "subtitle": "sound.hamburger.toilet",
     "sounds": [
       "hamburger:le"
+    ]
+  },
+  "lao_ba_ambient": {
+    "category": "neutral",
+    "subtitle": "sound.hamburger.lao_ba_ambient",
+    "sounds": [
+      "hamburger:mob/lao_ba/say1",
+      "hamburger:mob/lao_ba/say2",
+      "hamburger:mob/lao_ba/say3"
+    ]
+  },
+  "lao_ba_hurt": {
+    "category": "neutral",
+    "subtitle": "sound.hamburger.lao_ba_hurt",
+    "sounds": [
+      "hamburger:mob/lao_ba/hurt"
+    ]
+  },
+  "lao_ba_death": {
+    "category": "neutral",
+    "subtitle": "sound.hamburger.lao_ba_death",
+    "sounds": [
+      "hamburger:mob/lao_ba/death"
     ]
   }
 }

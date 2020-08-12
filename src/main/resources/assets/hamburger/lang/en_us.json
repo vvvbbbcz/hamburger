@@ -52,9 +52,10 @@
   "entity.duck": "Duck",
   "entity.duck_egg": "Duck Eggs",
 
-  "gui.iron_plate.title": "The Iron Plate Of 老八",
-
   "effect.hamburger.shit": "The Power Of 撤硕",
 
-  "hamburger.sound.ao": "The Sound Of 撤硕"
+  "sound.hamburger.toilet": "The Sound Of 撤硕",
+  "sound.hamburger.lao_ba_ambient": "Lao Ba: Cough",
+  "sound.hamburger.lao_ba_hurt": "Lao Ba: Hurt",
+  "sound.hamburger.lao_ba_death": "Lao Ba: Death"
 }

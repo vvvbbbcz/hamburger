@@ -3,6 +3,7 @@ package bilibili.vvvbbbcz.hamburger.entity;
 import bilibili.vvvbbbcz.hamburger.entity.ai.goal.StopFrontPlayerGoal;
 import bilibili.vvvbbbcz.hamburger.item.IToiletFood;
 import bilibili.vvvbbbcz.hamburger.item.Items;
+import bilibili.vvvbbbcz.hamburger.util.SoundEvents;
 import net.minecraft.entity.*;
 import net.minecraft.entity.ai.goal.LookAtGoal;
 import net.minecraft.entity.ai.goal.RandomWalkingGoal;
@@ -18,13 +19,16 @@ import net.minecraft.network.datasync.DataSerializers;
 import net.minecraft.network.datasync.EntityDataManager;
 import net.minecraft.particles.ParticleTypes;
 import net.minecraft.util.DamageSource;
+import net.minecraft.util.SoundEvent;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
 
 import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 
 public class LaoBaEntity extends CreatureEntity implements INPC {
     private static final DataParameter<Boolean> SPELLING = EntityDataManager.createKey(LaoBaEntity.class, DataSerializers.BOOLEAN);
+    private static final DataParameter<Boolean> COOLING = EntityDataManager.createKey(LaoBaEntity.class, DataSerializers.BOOLEAN);
     private int waitTime = 0;
     private int coolingDelay = 0;
     private int spellTime = 0;
@@ -41,6 +45,7 @@ public class LaoBaEntity extends CreatureEntity implements INPC {
     protected void registerData() {
         super.registerData();
         this.dataManager.register(SPELLING, false);
+        this.dataManager.register(COOLING, false);
     }
 
     @Override
@@ -58,7 +63,7 @@ public class LaoBaEntity extends CreatureEntity implements INPC {
 
     @Override
     public boolean canPickUpItem(ItemStack stack) {
-        if (this.coolingDelay <= 0) {
+        if (!this.isCooling()) {
             if (stack.getItem() instanceof IToiletFood) {
                 ItemStack offHandHeld = this.getItemStackFromSlot(EquipmentSlotType.OFFHAND);
                 if (offHandHeld.isEmpty()) return true;
@@ -91,7 +96,7 @@ public class LaoBaEntity extends CreatureEntity implements INPC {
             stack.shrink(1);
         }
         if (endProduct != null) {
-            this.entityDropItem(new ItemStack(endProduct));
+            this.entityDropItem(new ItemStack(endProduct), this.getEyeHeight() + 1);
         }
     }
 
@@ -123,8 +128,11 @@ public class LaoBaEntity extends CreatureEntity implements INPC {
                 }
             }
 
-            if (this.coolingDelay > 0) {
+            if (this.isCooling()) {
                 --this.coolingDelay;
+                if (this.coolingDelay <= 0) {
+                    this.dataManager.set(COOLING, false);
+                }
             }
         }
 
@@ -133,6 +141,16 @@ public class LaoBaEntity extends CreatureEntity implements INPC {
                 double d0 = 0.4D;
                 double d1 = 0.3D;
                 double d2 = 0.35D;
+                float f = this.renderYawOffset * ((float)Math.PI / 180F) + MathHelper.cos((float)this.ticksExisted * 0.6662F) * 0.25F;
+                float f1 = MathHelper.cos(f);
+                float f2 = MathHelper.sin(f);
+                this.world.addParticle(ParticleTypes.ENTITY_EFFECT, this.getPosX() + (double)f1 * 0.6D, this.getPosY() + 1.8D, this.getPosZ() + (double)f2 * 0.6D, d0, d1, d2);
+                this.world.addParticle(ParticleTypes.ENTITY_EFFECT, this.getPosX() - (double)f1 * 0.6D, this.getPosY() + 1.8D, this.getPosZ() - (double)f2 * 0.6D, d0, d1, d2);
+            }
+            if (this.isCooling()) {
+                double d0 = 0.7D;
+                double d1 = 0.7D;
+                double d2 = 0.8D;
                 float f = this.renderYawOffset * ((float)Math.PI / 180F) + MathHelper.cos((float)this.ticksExisted * 0.6662F) * 0.25F;
                 float f1 = MathHelper.cos(f);
                 float f2 = MathHelper.sin(f);
@@ -164,10 +182,11 @@ public class LaoBaEntity extends CreatureEntity implements INPC {
         this.dropEndProduct();
         this.dropInventory();
         this.coolingDelay = totalCoolingDelay;
+        this.dataManager.set(COOLING, true);
         this.dataManager.set(SPELLING, false);
     }
 
-    private boolean isSpelling() {
+    public boolean isSpelling() {
         if (this.world.isRemote) {
             return this.dataManager.get(SPELLING);
         } else {
@@ -176,7 +195,7 @@ public class LaoBaEntity extends CreatureEntity implements INPC {
     }
 
     private boolean canSpell() {
-        if (this.coolingDelay <= 0) {
+        if (!this.isCooling()) {
             if (!this.isInventoryEmpty()) {
                 boolean flag = false;
                 boolean flag1 = false;
@@ -188,6 +207,14 @@ public class LaoBaEntity extends CreatureEntity implements INPC {
             }
         }
         return false;
+    }
+
+    private boolean isCooling() {
+        if (this.world.isRemote) {
+            return this.dataManager.get(COOLING);
+        } else {
+            return this.coolingDelay > 0;
+        }
     }
 
     @Override
@@ -250,21 +277,21 @@ public class LaoBaEntity extends CreatureEntity implements INPC {
         return false;
     }
 
-    private static class Recipe {
-        private final Item input;
-        private final Item output;
+    @Nullable
+    @Override
+    protected SoundEvent getAmbientSound() {
+        return SoundEvents.ENTITY_LAO_BA_AMBIENT;
+    }
 
-        public Recipe(Item input, Item output) {
-            this.input = input;
-            this.output = output;
-        }
+    @Nullable
+    @Override
+    protected SoundEvent getHurtSound(DamageSource damageSourceIn) {
+        return SoundEvents.ENTITY_LAO_BA_HURT;
+    }
 
-        public Item getInput() {
-            return input;
-        }
-
-        public Item getOutput() {
-            return output;
-        }
+    @Nullable
+    @Override
+    protected SoundEvent getDeathSound() {
+        return SoundEvents.ENTITY_LAO_BA_DEATH;
     }
 }

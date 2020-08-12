@@ -54,5 +54,8 @@
 
   "effect.hamburger.shit": "撤硕的力量",
 
-  "hamburger.sound.ao": "撤硕之声"
+  "sound.hamburger.toilet": "撤硕之声",
+  "sound.hamburger.lao_ba_ambient": "老八：干咳",
+  "sound.hamburger.lao_ba_hurt": "老八：受伤",
+  "sound.hamburger.lao_ba_death": "老八：死亡"
 }

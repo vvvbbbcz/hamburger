@@ -5,6 +5,6 @@ import net.minecraft.item.SpawnEggItem;
 
 public class LaoBaSpawnEggItem extends SpawnEggItem {
     public LaoBaSpawnEggItem() {
-        super(Entities.LAO_BA, 0x2e0000, 0x500000, new Properties().group(ItemGroups.HAMBURGER));
+        super(Entities.LAO_BA, 0x553434, 0x5f0000, new Properties().group(ItemGroups.HAMBURGER));
     }
 }

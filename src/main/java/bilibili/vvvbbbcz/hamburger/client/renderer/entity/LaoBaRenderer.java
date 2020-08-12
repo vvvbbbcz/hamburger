@@ -7,6 +7,7 @@ import com.mojang.blaze3d.matrix.MatrixStack;
 import net.minecraft.client.renderer.IRenderTypeBuffer;
 import net.minecraft.client.renderer.entity.BipedRenderer;
 import net.minecraft.client.renderer.entity.EntityRendererManager;
+import net.minecraft.client.renderer.entity.layers.HeldItemLayer;
 import net.minecraft.client.renderer.entity.model.BipedModel;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Hand;
@@ -23,6 +24,13 @@ public class LaoBaRenderer extends BipedRenderer<LaoBaEntity, LaoBaModel> {
 
     public LaoBaRenderer(EntityRendererManager renderManagerIn) {
         super(renderManagerIn, new LaoBaModel(0.0F), 0.5F);
+        this.addLayer(new HeldItemLayer<LaoBaEntity, LaoBaModel>(this) {
+            public void render(MatrixStack matrixStackIn, IRenderTypeBuffer bufferIn, int packedLightIn, LaoBaEntity entity, float limbSwing, float limbSwingAmount, float partialTicks, float ageInTicks, float netHeadYaw, float headPitch) {
+                if (entity.isSpelling()) {
+                    super.render(matrixStackIn, bufferIn, packedLightIn, entity, limbSwing, limbSwingAmount, partialTicks, ageInTicks, netHeadYaw, headPitch);
+                }
+            }
+        });
     }
 
     @Override

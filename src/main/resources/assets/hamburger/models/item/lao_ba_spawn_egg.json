@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "hamburger:item/lao_ba_spawn_egg"
+  }
+}

@@ -56,5 +56,26 @@
     "sounds": [
       "hamburger:mob/lao_ba/death"
     ]
+  },
+  "lao_ba_spell_1": {
+    "category": "neutral",
+    "subtitle": "sound.hamburger.lao_ba_spell",
+    "sounds": [
+      "hamburger:mob/lao_ba/spell1"
+    ]
+  },
+  "lao_ba_spell_2": {
+    "category": "neutral",
+    "subtitle": "sound.hamburger.lao_ba_spell",
+    "sounds": [
+      "hamburger:mob/lao_ba/spell2"
+    ]
+  },
+  "lao_ba_spell_3": {
+    "category": "neutral",
+    "subtitle": "sound.hamburger.lao_ba_spell",
+    "sounds": [
+      "hamburger:mob/lao_ba/spell3"
+    ]
   }
 }

@@ -34,7 +34,7 @@ public class LaoBaEntity extends CreatureEntity implements INPC {
     private int spellTime = 0;
     private static final int totalWaitTime = 100; // 即5秒
     private static final int totalCoolingDelay = 1200; // 60 Seconds
-    private static final int totalSpellTime = 233; // TODO: 还没确定
+    private static final int totalSpellTime = 320; // 16 Seconds
 
     protected LaoBaEntity(EntityType<? extends CreatureEntity> type, World worldIn) {
         super(type, worldIn);
@@ -175,6 +175,10 @@ public class LaoBaEntity extends CreatureEntity implements INPC {
     private void startSpell() {
         this.spellTime = totalSpellTime;
         this.dataManager.set(SPELLING, true);
+        Item food = this.getItemStackFromSlot(EquipmentSlotType.OFFHAND).getItem();
+        if (food instanceof IToiletFood) {
+            this.playSound(((IToiletFood) food).getCastSpellSound(), 1.0F, 1.0F);
+        }
         this.getNavigator().clearPath();
     }
 

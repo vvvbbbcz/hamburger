@@ -1,23 +1,20 @@
 package bilibili.vvvbbbcz.hamburger.block;
 
 import bilibili.vvvbbbcz.hamburger.item.Items;
-import bilibili.vvvbbbcz.hamburger.util.SoundEvents;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.HorizontalBlock;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.BlockItemUseContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.state.DirectionProperty;
 import net.minecraft.state.StateContainer;
-import net.minecraft.util.ActionResultType;
-import net.minecraft.util.Hand;
 import net.minecraft.util.Mirror;
 import net.minecraft.util.Rotation;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.BlockRayTraceResult;
 import net.minecraft.world.IWorld;
 import net.minecraft.world.World;
 import net.minecraftforge.common.ToolType;
@@ -25,6 +22,7 @@ import net.minecraftforge.common.ToolType;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import java.util.Objects;
+import java.util.Random;
 
 public class StoneToiletBlock extends Block {
     public static final DirectionProperty FACING = HorizontalBlock.HORIZONTAL_FACING;
@@ -39,34 +37,17 @@ public class StoneToiletBlock extends Block {
         );
     }
 
-    @Nonnull
     @Override
-    public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
-        if (player.getFoodStats().getFoodLevel() >= 6) {
-            switch (clickTime) {
-                case 1:
-                    player.playSound(SoundEvents.AO, 1.0F, 1.0F);
-                    clickTime++;
-                    return ActionResultType.SUCCESS;
-                case 3:
-                    player.playSound(SoundEvents.LI, 1.0F, 1.0F);
-                    clickTime++;
-                    return ActionResultType.SUCCESS;
-                case 5:
-                    player.playSound(SoundEvents.GEI, 1.0F, 1.0F);
-                    clickTime++;
-                    return ActionResultType.SUCCESS;
-                case 6:
-                    player.addItemStackToInventory(new ItemStack(Items.SHIT, 1));
+    public void onEntityWalk(World worldIn, BlockPos pos, Entity entityIn) {
+        if (entityIn instanceof PlayerEntity) {
+            PlayerEntity player = (PlayerEntity) entityIn;
+            if (player.isCrouching() && player.getFoodStats().getFoodLevel() >= 6) {
+                if (new Random().nextInt(10) == 0) {
+                    player.entityDropItem(new ItemStack(Items.SHIT));
                     player.getFoodStats().addStats(-6, 0);
-                    clickTime = 1;
-                    return ActionResultType.SUCCESS;
-                default:
-                    clickTime++;
-                    return ActionResultType.SUCCESS;
+                }
             }
         }
-        return ActionResultType.FAIL;
     }
 
     @Nullable

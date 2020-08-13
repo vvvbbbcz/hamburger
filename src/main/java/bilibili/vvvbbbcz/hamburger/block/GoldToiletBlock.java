@@ -1,23 +1,20 @@
 package bilibili.vvvbbbcz.hamburger.block;
 
 import bilibili.vvvbbbcz.hamburger.item.Items;
-import bilibili.vvvbbbcz.hamburger.util.SoundEvents;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.HorizontalBlock;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.BlockItemUseContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.state.DirectionProperty;
 import net.minecraft.state.StateContainer;
-import net.minecraft.util.ActionResultType;
-import net.minecraft.util.Hand;
 import net.minecraft.util.Mirror;
 import net.minecraft.util.Rotation;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.BlockRayTraceResult;
 import net.minecraft.world.IWorld;
 import net.minecraft.world.World;
 import net.minecraftforge.common.ToolType;
@@ -38,16 +35,15 @@ public class GoldToiletBlock extends Block {
         );
     }
 
-    @Nonnull
     @Override
-    public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity playerIn, Hand handIn, BlockRayTraceResult hit) {
-        if (playerIn.getFoodStats().getFoodLevel() >= 6) {
-            playerIn.playSound(SoundEvents.AO, 1.0F, 1.0F);
-            playerIn.addItemStackToInventory(new ItemStack(Items.SHIT, 2));
-            playerIn.getFoodStats().addStats(-6, 0);
-            return ActionResultType.SUCCESS;
+    public void onEntityWalk(World worldIn, BlockPos pos, Entity entityIn) {
+        if (entityIn instanceof PlayerEntity) {
+            PlayerEntity player = (PlayerEntity) entityIn;
+            if (player.isCrouching() && player.getFoodStats().getFoodLevel() >= 6) {
+                player.entityDropItem(new ItemStack(Items.SHIT, 2));
+                player.getFoodStats().addStats(-6, 0);
+            }
         }
-        return ActionResultType.FAIL;
     }
 
     @Nullable

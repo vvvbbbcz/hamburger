@@ -1,39 +1,4 @@
 {
-  "ao": {
-    "category": "player",
-    "subtitle": "sound.hamburger.toilet",
-    "sounds": [
-      "hamburger:ao"
-    ]
-  },
-  "li": {
-    "category": "player",
-    "subtitle": "sound.hamburger.toilet",
-    "sounds": [
-      "hamburger:li"
-    ]
-  },
-  "gei": {
-    "category": "player",
-    "subtitle": "sound.hamburger.toilet",
-    "sounds": [
-      "hamburger:gei"
-    ]
-  },
-  "gan": {
-    "category": "player",
-    "subtitle": "sound.hamburger.toilet",
-    "sounds": [
-      "hamburger:gan"
-    ]
-  },
-  "le": {
-    "category": "player",
-    "subtitle": "sound.hamburger.toilet",
-    "sounds": [
-      "hamburger:le"
-    ]
-  },
   "lao_ba_ambient": {
     "category": "neutral",
     "subtitle": "sound.hamburger.lao_ba_ambient",

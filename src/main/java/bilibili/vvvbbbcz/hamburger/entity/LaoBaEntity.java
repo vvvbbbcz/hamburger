@@ -6,6 +6,7 @@ import bilibili.vvvbbbcz.hamburger.item.Items;
 import bilibili.vvvbbbcz.hamburger.util.SoundEvents;
 import net.minecraft.entity.*;
 import net.minecraft.entity.ai.goal.LookAtGoal;
+import net.minecraft.entity.ai.goal.OpenDoorGoal;
 import net.minecraft.entity.ai.goal.RandomWalkingGoal;
 import net.minecraft.entity.ai.goal.SwimGoal;
 import net.minecraft.entity.item.ItemEntity;
@@ -54,6 +55,7 @@ public class LaoBaEntity extends CreatureEntity implements INPC {
         this.goalSelector.addGoal(1, new RandomWalkingGoal(this, 0.3D));
         this.goalSelector.addGoal(2, new LookAtGoal(this, PlayerEntity.class, 6.0F, 1.0F));
         this.goalSelector.addGoal(2, new StopFrontPlayerGoal(this, 6.0F, 1.0F));
+        this.goalSelector.addGoal(2, new OpenDoorGoal(this, true));
     }
 
     @Override

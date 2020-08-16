@@ -12,6 +12,7 @@ public class RenderTypes {
     public static void registerRenderLayers() {
         // Blocks
         RenderTypeLookup.setRenderLayer(Blocks.LEMON_SAPLING, RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(Blocks.LEMON_DOOR, RenderType.getCutout());
         // Fluids
         RenderTypeLookup.setRenderLayer(Fluids.SHIT, RenderType.getTranslucent());
         RenderTypeLookup.setRenderLayer(Fluids.FLOWING_SHIT, RenderType.getTranslucent());

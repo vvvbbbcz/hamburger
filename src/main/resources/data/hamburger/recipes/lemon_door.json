@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "wooden_door",
+  "pattern": [
+    "##",
+    "##",
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "hamburger:lemon_planks"
+    }
+  },
+  "result": {
+    "item": "hamburger:lemon_door",
+    "count": 3
+  }
+}

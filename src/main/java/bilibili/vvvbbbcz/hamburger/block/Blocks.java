@@ -19,6 +19,7 @@ public class Blocks {
     public static final Block FERTILE_DIRT = register("fertile_dirt", new FertileDirtBlock());
     public static final Block FERTILE_GRASS_BLOCK = register("fertile_grass_block", new FertileGrassBlock());
     public static final Block FERTILE_FARMLAND = register("fertile_farmland", new FertileFarmlandBlock());
+    public static final Block LEMON_DOOR = register("lemon_door", new LemonDoorBlock());
     // FluidBlocks
     public static final Block SHIT_FLUID_BLOCK = register("shit_fluid", new ShitFluidBlock());
 

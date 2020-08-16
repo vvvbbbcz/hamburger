@@ -1,0 +1,7 @@
+{
+    "parent": "block/door_top",
+    "textures": {
+        "bottom": "hamburger:block/lemon_door_bottom",
+        "top": "hamburger:block/lemon_door_top"
+    }
+}

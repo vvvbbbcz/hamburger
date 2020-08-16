@@ -42,8 +42,8 @@ public class BathroomPiece extends ScatteredStructurePiece {
         this.fillWithRandomizedBlocks(worldIn, mutableBoundingBoxIn, 0, 0, 0, 2, 3, 3, false, randomIn, SELECTOR);
         this.fillWithAir(worldIn, mutableBoundingBoxIn, 1, 1, 0, 1, 2, 2);
         this.setBlockState(worldIn, bilibili.vvvbbbcz.hamburger.block.Blocks.STONE_TOILET.getDefaultState(), 1, 0, 2, mutableBoundingBoxIn);
-        this.setBlockState(worldIn, Blocks.ACACIA_DOOR.getDefaultState(), 1, 1, 0, mutableBoundingBoxIn);
-        this.setBlockState(worldIn, Blocks.ACACIA_DOOR.getDefaultState().with(DoorBlock.HALF, DoubleBlockHalf.UPPER), 1, 2, 0, mutableBoundingBoxIn);
+        this.setBlockState(worldIn, bilibili.vvvbbbcz.hamburger.block.Blocks.LEMON_DOOR.getDefaultState(), 1, 1, 0, mutableBoundingBoxIn);
+        this.setBlockState(worldIn, bilibili.vvvbbbcz.hamburger.block.Blocks.LEMON_DOOR.getDefaultState().with(DoorBlock.HALF, DoubleBlockHalf.UPPER), 1, 2, 0, mutableBoundingBoxIn);
 
         if (!this.laoBa) {
             int x = this.getXWithOffset(1, 2);
@@ -53,8 +53,8 @@ public class BathroomPiece extends ScatteredStructurePiece {
                 this.laoBa = true;
                 LaoBaEntity laoBaEntity = Entities.LAO_BA.create(worldIn.getWorld());
                 laoBaEntity.enablePersistence();
-                laoBaEntity.setLocationAndAngles((double)x + 0.5D, (double)y, (double)z + 0.5D, 0.0F, 0.0F);
-                laoBaEntity.onInitialSpawn(worldIn, worldIn.getDifficultyForLocation(new BlockPos(x, y, z)), SpawnReason.STRUCTURE, (ILivingEntityData)null, (CompoundNBT)null);
+                laoBaEntity.setLocationAndAngles((double) x + 0.5D, (double) y, (double) z + 0.5D, 0.0F, 0.0F);
+                laoBaEntity.onInitialSpawn(worldIn, worldIn.getDifficultyForLocation(new BlockPos(x, y, z)), SpawnReason.STRUCTURE, (ILivingEntityData) null, (CompoundNBT) null);
                 worldIn.addEntity(laoBaEntity);
             }
         }

@@ -3,15 +3,20 @@ package bilibili.vvvbbbcz.hamburger.block;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.HoeItem;
+import net.minecraft.item.ItemStack;
 import net.minecraft.pathfinding.PathType;
 import net.minecraft.tags.FluidTags;
-import net.minecraft.util.Direction;
+import net.minecraft.util.*;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.BlockRayTraceResult;
 import net.minecraft.util.math.shapes.ISelectionContext;
 import net.minecraft.util.math.shapes.VoxelShape;
 import net.minecraft.util.math.shapes.VoxelShapes;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.world.IWorldReader;
+import net.minecraft.world.World;
 import net.minecraft.world.lighting.LightEngine;
 import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.common.IPlantable;
@@ -25,6 +30,27 @@ public class FertileGrassBlock extends GrassBlock {
 
     public FertileGrassBlock() {
         super(Properties.create(Material.ORGANIC).tickRandomly().hardnessAndResistance(0.6F).sound(SoundType.PLANT));
+    }
+
+    @Nonnull
+    @Override
+    public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
+        ItemStack stack = player.getHeldItemMainhand();
+        if (hit.getFace() != Direction.DOWN && worldIn.isAirBlock(pos.up())) {
+            if (stack.getItem() instanceof HoeItem) {
+                worldIn.playSound(player, pos, SoundEvents.ITEM_HOE_TILL, SoundCategory.BLOCKS, 1.0F, 1.0F);
+                if (!worldIn.isRemote) {
+                    worldIn.setBlockState(pos, bilibili.vvvbbbcz.hamburger.block.Blocks.FERTILE_FARMLAND.getDefaultState(), 11);
+                    if (player != null) {
+                        stack.damageItem(1, player, (p_220043_1_) -> {
+                            p_220043_1_.sendBreakAnimation(handIn);
+                        });
+                    }
+                }
+                return ActionResultType.SUCCESS;
+            }
+        }
+        return ActionResultType.FAIL;
     }
 
     private static boolean func_220257_b(BlockState state, IWorldReader worldReader, BlockPos pos) {

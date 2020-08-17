@@ -9,6 +9,7 @@ import net.minecraft.util.math.MutableBoundingBox;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.BiomeManager;
 import net.minecraft.world.gen.ChunkGenerator;
+import net.minecraft.world.gen.Heightmap;
 import net.minecraft.world.gen.feature.NoFeatureConfig;
 import net.minecraft.world.gen.feature.structure.ScatteredStructure;
 import net.minecraft.world.gen.feature.structure.Structure;
@@ -71,7 +72,7 @@ public class BathroomStructure extends ScatteredStructure<NoFeatureConfig> {
         public void init(ChunkGenerator<?> generator, TemplateManager templateManagerIn, int chunkX, int chunkZ, Biome biomeIn) {
             int x = chunkX * 16;
             int y = chunkZ * 16;
-            BlockPos blockpos = new BlockPos(x, 64, y);
+            BlockPos blockpos = new BlockPos(x, generator.getHeight(x, y, Heightmap.Type.WORLD_SURFACE_WG), y);
             StructurePiece piece = new BathroomPiece(this.rand, blockpos);
             this.components.add(piece);
             this.recalculateStructureSize();

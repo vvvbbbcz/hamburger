@@ -1,13 +1,11 @@
 package bilibili.vvvbbbcz.hamburger.world.gen.feature.structure;
 
 import bilibili.vvvbbbcz.hamburger.entity.Entities;
-import bilibili.vvvbbbcz.hamburger.world.biome.Biomes;
 import com.google.common.collect.Lists;
 import com.mojang.datafixers.Dynamic;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MutableBoundingBox;
 import net.minecraft.world.biome.Biome;
-import net.minecraft.world.biome.BiomeManager;
 import net.minecraft.world.gen.ChunkGenerator;
 import net.minecraft.world.gen.Heightmap;
 import net.minecraft.world.gen.feature.NoFeatureConfig;
@@ -19,7 +17,6 @@ import net.minecraft.world.gen.feature.template.TemplateManager;
 
 import javax.annotation.Nonnull;
 import java.util.List;
-import java.util.Random;
 import java.util.function.Function;
 
 public class BathroomStructure extends ScatteredStructure<NoFeatureConfig> {
@@ -27,11 +24,6 @@ public class BathroomStructure extends ScatteredStructure<NoFeatureConfig> {
 
     public BathroomStructure(Function<Dynamic<?>, ? extends NoFeatureConfig> configFactoryIn) {
         super(configFactoryIn);
-    }
-
-    @Override
-    public boolean canBeGenerated(BiomeManager biomeManagerIn, ChunkGenerator<?> generatorIn, Random randIn, int chunkX, int chunkZ, Biome biomeIn) {
-        return biomeIn == Biomes.ISLAND_CITY && super.canBeGenerated(biomeManagerIn, generatorIn, randIn, chunkX, chunkZ, biomeIn);
     }
 
     @Override

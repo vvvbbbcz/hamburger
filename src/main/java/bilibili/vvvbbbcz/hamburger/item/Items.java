@@ -31,10 +31,17 @@ public class Items {
     public static final Item LAO_BA_SPAWN_EGG = register("lao_ba_spawn_egg", new LaoBaSpawnEggItem());
 
     // BlockItems
-    public static final Item WOOD_TOILET = register("wood_toilet", new BlockItem(Blocks.WOOD_TOILET, new Item.Properties().group(ItemGroups.HAMBURGER)));
+    public static final Item OAK_TOILET = register("oak_toilet", new BlockItem(Blocks.OAK_TOILET, new Item.Properties().group(ItemGroups.HAMBURGER)));
+    public static final Item SPRUCE_TOILET = register("spruce_toilet", new BlockItem(Blocks.SPRUCE_TOILET, new Item.Properties().group(ItemGroups.HAMBURGER)));
+    public static final Item BIRCH_TOILET = register("birch_toilet", new BlockItem(Blocks.BIRCH_TOILET, new Item.Properties().group(ItemGroups.HAMBURGER)));
+    public static final Item JUNGLE_TOILET = register("jungle_toilet", new BlockItem(Blocks.JUNGLE_TOILET, new Item.Properties().group(ItemGroups.HAMBURGER)));
+    public static final Item ACACIA_TOILET = register("acacia_toilet", new BlockItem(Blocks.ACACIA_TOILET, new Item.Properties().group(ItemGroups.HAMBURGER)));
+    public static final Item DARK_OAK_TOILET = register("dark_oak_toilet", new BlockItem(Blocks.DARK_OAK_TOILET, new Item.Properties().group(ItemGroups.HAMBURGER)));
+    public static final Item LEMON_TOILET = register("lemon_toilet", new BlockItem(Blocks.LEMON_TOILET, new Item.Properties().group(ItemGroups.HAMBURGER)));
     public static final Item STONE_TOILET = register("stone_toilet", new BlockItem(Blocks.STONE_TOILET, new Item.Properties().group(ItemGroups.HAMBURGER)));
     public static final Item IRON_TOILET = register("iron_toilet", new BlockItem(Blocks.IRON_TOILET, new Item.Properties().group(ItemGroups.HAMBURGER)));
     public static final Item GOLD_TOILET = register("gold_toilet", new BlockItem(Blocks.GOLD_TOILET, new Item.Properties().group(ItemGroups.HAMBURGER)));
+    public static final Item DIAMOND_TOILET = register("diamond_toilet", new BlockItem(Blocks.DIAMOND_TOILET, new Item.Properties().group(ItemGroups.HAMBURGER)));
     public static final Item LEMON_LOG = register("lemon_log", new BlockItem(Blocks.LEMON_LOG, new Item.Properties().group(ItemGroups.HAMBURGER)));
     public static final Item LEMON_LEAVES = register("lemon_leaves", new BlockItem(Blocks.LEMON_LEAVES, new Item.Properties().group(ItemGroups.HAMBURGER)));
     public static final Item LEMON_PLANKS = register("lemon_planks", new BlockItem(Blocks.LEMON_PLANKS, new Item.Properties().group(ItemGroups.HAMBURGER)));
@@ -43,6 +50,7 @@ public class Items {
     public static final Item FERTILE_GRASS_BLOCK = register("fertile_grass_block", new BlockItem(Blocks.FERTILE_GRASS_BLOCK, new Item.Properties().group(ItemGroups.HAMBURGER)));
     public static final Item FERTILE_FARMLAND = register("fertile_farmland", new BlockItem(Blocks.FERTILE_FARMLAND, new Item.Properties().group(ItemGroups.HAMBURGER)));
     public static final Item LEMON_DOOR = register("lemon_door", new BlockItem(Blocks.LEMON_DOOR, new Item.Properties().group(ItemGroups.HAMBURGER)));
+    public static final Item LEMON_STAIRS = register("lemon_stairs", new BlockItem(Blocks.LEMON_STAIRS, new Item.Properties().group(ItemGroups.HAMBURGER)));
 
     private static Item register(String name, Item item) {
         ITEMS.register(name, () -> item);

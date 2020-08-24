@@ -11,7 +11,7 @@ public class ItemGroups {
         @Nonnull
         @Override
         public ItemStack createIcon() {
-            return new ItemStack(Blocks.WOOD_TOILET);
+            return new ItemStack(Blocks.OAK_TOILET);
         }
     };
 }

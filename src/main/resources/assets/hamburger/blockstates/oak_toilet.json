@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "hamburger:block/oak_toilet_north"
+    },
+    "facing=south": {
+      "model": "hamburger:block/oak_toilet_south"
+    },
+    "facing=west": {
+      "model": "hamburger:block/oak_toilet_west"
+    },
+    "facing=east": {
+      "model": "hamburger:block/oak_toilet_east"
+    }
+  }
+}

@@ -6,6 +6,7 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.HorizontalBlock;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
+import net.minecraft.block.material.MaterialColor;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.BlockItemUseContext;
@@ -22,17 +23,16 @@ import net.minecraftforge.common.ToolType;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import java.util.Objects;
-import java.util.Random;
 
-public class WoodToiletBlock extends Block {
+public class DiamondToiletBlock extends Block {
     public static final DirectionProperty FACING = HorizontalBlock.HORIZONTAL_FACING;
 
-    public WoodToiletBlock() {
-        super(Properties.create(Material.WOOD)
-                .sound(SoundType.WOOD)
-                .hardnessAndResistance(2.0F, 5.0F)
-                .harvestTool(ToolType.AXE)
-                .harvestLevel(0)
+    public DiamondToiletBlock() {
+        super(Properties.create(Material.IRON, MaterialColor.DIAMOND)
+                .hardnessAndResistance(5.0F, 6.0F)
+                .sound(SoundType.METAL)
+                .harvestTool(ToolType.PICKAXE)
+                .harvestLevel(2)
         );
     }
 
@@ -40,11 +40,9 @@ public class WoodToiletBlock extends Block {
     public void onEntityWalk(World worldIn, BlockPos pos, Entity entityIn) {
         if (entityIn instanceof PlayerEntity) {
             PlayerEntity player = (PlayerEntity) entityIn;
-            if (player.isCrouching() && player.getFoodStats().getFoodLevel() >= 6) {
-                if (new Random().nextInt(20) == 0) {
-                    player.entityDropItem(new ItemStack(Items.SHIT));
-                    player.getFoodStats().addStats(-6, 0);
-                }
+            if (player.isCrouching() && player.getFoodStats().getFoodLevel() >= 8) {
+                player.entityDropItem(new ItemStack(Items.SHIT, 3));
+                player.getFoodStats().addStats(-8, 0);
             }
         }
     }

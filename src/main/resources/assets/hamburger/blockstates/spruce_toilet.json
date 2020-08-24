@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "hamburger:block/spruce_toilet_north"
+    },
+    "facing=south": {
+      "model": "hamburger:block/spruce_toilet_south"
+    },
+    "facing=west": {
+      "model": "hamburger:block/spruce_toilet_west"
+    },
+    "facing=east": {
+      "model": "hamburger:block/spruce_toilet_east"
+    }
+  }
+}

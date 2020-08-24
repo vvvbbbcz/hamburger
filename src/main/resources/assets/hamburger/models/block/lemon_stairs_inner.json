@@ -1,0 +1,8 @@
+{
+    "parent": "block/inner_stairs",
+    "textures": {
+        "bottom": "hamburger:block/lemon_planks",
+        "top": "hamburger:block/lemon_planks",
+        "side": "hamburger:block/lemon_planks"
+    }
+}

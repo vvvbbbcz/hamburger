@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "hamburger:wood_toilet"
+          "name": "hamburger:dark_oak_toilet"
         }
       ],
       "conditions": [

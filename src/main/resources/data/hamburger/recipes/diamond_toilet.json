@@ -8,17 +8,17 @@
   "key": {
     "#": [
       {
-        "item": "minecraft:gold_ingot"
+        "item": "minecraft:diamond"
       }
     ],
     "X": [
       {
-        "item": "minecraft:gold_block"
+        "item": "minecraft:diamond_block"
       }
     ]
   },
   "result": {
-    "item": "hamburger:gold_toilet",
+    "item": "hamburger:diamond_toilet",
     "count": 3
   }
 }

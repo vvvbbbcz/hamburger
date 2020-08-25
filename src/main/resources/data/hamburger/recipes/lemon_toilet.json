@@ -3,22 +3,17 @@
   "pattern": [
     "# #",
     "###",
-    "#X#"
+    "###"
   ],
   "key": {
     "#": [
       {
-        "item": "minecraft:gold_ingot"
-      }
-    ],
-    "X": [
-      {
-        "item": "minecraft:gold_block"
+        "item": "hamburger:lemon_planks"
       }
     ]
   },
   "result": {
-    "item": "hamburger:gold_toilet",
+    "item": "hamburger:lemon_toilet",
     "count": 3
   }
 }

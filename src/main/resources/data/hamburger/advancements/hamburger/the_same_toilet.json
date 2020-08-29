@@ -12,12 +12,72 @@
   },
   "parent": "hamburger:hamburger/welcome",
   "criteria": {
-    "get_wood_toilet": {
+    "get_oak_toilet": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "item": "hamburger:wood_toilet"
+            "item": "hamburger:oak_toilet"
+          }
+        ]
+      }
+    },
+    "get_spruce_toilet": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "hamburger:spruce_toilet"
+          }
+        ]
+      }
+    },
+    "get_birch_toilet": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "hamburger:birch_toilet"
+          }
+        ]
+      }
+    },
+    "get_jungle_toilet": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "hamburger:jungle_toilet"
+          }
+        ]
+      }
+    },
+    "get_acacia_toilet": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "hamburger:acacia_toilet"
+          }
+        ]
+      }
+    },
+    "get_dark_oak_toilet": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "hamburger:dark_oak_toilet"
+          }
+        ]
+      }
+    },
+    "get_lemon_toilet": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "hamburger:lemon_toilet"
           }
         ]
       }
@@ -45,7 +105,13 @@
   },
   "requirements": [
     [
-      "get_wood_toilet",
+      "get_oak_toilet",
+      "get_spruce_toilet",
+      "get_birch_toilet",
+      "get_jungle_toilet",
+      "get_acacia_toilet",
+      "get_dark_oak_toilet",
+      "get_lemon_toilet",
       "get_stone_toilet",
       "get_iron_toilet"
     ]

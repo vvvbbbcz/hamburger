@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "hamburger:wood_toilet"
+      "item": "hamburger:oak_toilet"
     },
     "title": {
       "translate": "advancements.hamburger.welcome.title"
